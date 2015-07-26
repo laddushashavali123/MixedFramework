@@ -1,0 +1,486 @@
+<html>
+<head><style type='text/css'>
+body, table {
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 12;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+}
+
+a {
+    text-decoration: none;
+}
+
+.title {
+    font-style: italic;
+}
+
+.selected {
+    background-color: #ffffcc;
+}
+
+.status_done {
+    background-color: #eeffee;
+}
+
+.status_passed {
+    background-color: #ccffcc;
+}
+
+.status_failed {
+    background-color: #ffcccc;
+}
+
+.breakpoint {
+    background-color: #cccccc;
+    border: 1px solid black;
+}
+</style><title>Test suite results</title></head>
+<body>
+<h1>Test suite results </h1>
+
+<table>
+<tr>
+<td>result:</td>
+<td>passed</td>
+</tr>
+<tr>
+<td>totalTime:</td>
+<td>18</td>
+</tr>
+<tr>
+<td>numTestTotal:</td>
+<td>4</td>
+</tr>
+<tr>
+<td>numTestPasses:</td>
+<td>4</td>
+</tr>
+<tr>
+<td>numTestFailures:</td>
+<td>0</td>
+</tr>
+<tr>
+<td>numCommandPasses:</td>
+<td>2</td>
+</tr>
+<tr>
+<td>numCommandFailures:</td>
+<td>0</td>
+</tr>
+<tr>
+<td>numCommandErrors:</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Selenium Version:</td>
+<td>2.46</td>
+</tr>
+<tr>
+<td>Selenium Revision:</td>
+<td>.0</td>
+</tr>
+<tr>
+<td>
+<table id="suiteTable" class="selenium" border="1" cellpadding="1" cellspacing="1"><tbody>
+<tr class="title status_passed"><td><b>Test Suite</b></td></tr> 
+<tr class="  status_passed"><td><a href="#testresult0">login</a></td></tr>
+<tr class="  status_passed"><td><a href="#testresult1">add_movie</a></td></tr>
+<tr class="  status_passed"><td><a href="#testresult2">delete_movie</a></td></tr>
+<tr class="  status_passed"><td><a href="#testresult3">log_out</a></td></tr>
+</tbody></table>
+
+
+</td>
+<td>&nbsp;</td>
+</tr>
+</table><table><tr>
+<td><a name="testresult0">login.html</a><br/><div>
+<table border="1" cellpadding="1" cellspacing="1">
+<thead>
+<tr class="title status_passed"><td rowspan="1" colspan="3">login</td></tr>
+</thead><tbody>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>type</td>
+	<td>id=username</td>
+	<td>admin</td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>type</td>
+	<td>name=password</td>
+	<td>admin</td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>clickAndWait</td>
+	<td>name=submit</td>
+	<td></td>
+</tr>
+</tbody></table>
+
+
+</div></td>
+<td>&nbsp;</td>
+</tr><tr>
+<td><a name="testresult1">add_movie.html</a><br/><div>
+<table border="1" cellpadding="1" cellspacing="1">
+<thead>
+<tr class="title status_passed"><td rowspan="1" colspan="3">add_movie</td></tr>
+</thead><tbody>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>clickAndWait</td>
+	<td>css=img[alt="Add movie"]</td>
+	<td></td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>type</td>
+	<td>id=imdbsearch</td>
+	<td>New_movie</td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>type</td>
+	<td>name=imdbid</td>
+	<td>Anakonda</td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>type</td>
+	<td>name=name</td>
+	<td>Anakonda</td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>type</td>
+	<td>name=imdbid</td>
+	<td>1234</td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>type</td>
+	<td>name=aka</td>
+	<td>&nbsp;&nbsp;&nbsp;&nbsp;Read the INSTALLATION/UPGRADE information above to read the explanation how<br>&nbsp;&nbsp;&nbsp;&nbsp;to install and which variables can be adjusted. When you want to adjust the<br>&nbsp;&nbsp;&nbsp;&nbsp;configuration, open config/config.php and adjust the variables. The default<br>&nbsp;&nbsp;&nbsp;&nbsp;configuration file is located at confg/config.default.php.<br>&nbsp;&nbsp;&nbsp;&nbsp;By default, guest users can view your move collection, but are not allowed<br>&nbsp;&nbsp;&nbsp;&nbsp;to change the movie collection. If you don't want guest users to view your<br>&nbsp;&nbsp;&nbsp;&nbsp;collection, set the 'guestview' variable to false in config/config.php after<br>&nbsp;&nbsp;&nbsp;&nbsp;installation or upgrade.</td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>type</td>
+	<td>name=year</td>
+	<td>2012</td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>type</td>
+	<td>name=duration</td>
+	<td>20</td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>type</td>
+	<td>name=rating</td>
+	<td>3.5</td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>type</td>
+	<td>name=notes</td>
+	<td>&nbsp;&nbsp;&nbsp;&nbsp;Read the INSTALLATION/UPGRADE information above to read the explanation how<br>&nbsp;&nbsp;&nbsp;&nbsp;to install and which variables can be adjusted. When you want to adjust the<br>&nbsp;&nbsp;&nbsp;&nbsp;configuration, open config/config.php and adjust the variables. The default<br>&nbsp;&nbsp;&nbsp;&nbsp;configuration file is located at confg/config.default.php.<br>&nbsp;&nbsp;&nbsp;&nbsp;By default, guest users can view your move collection, but are not allowed<br>&nbsp;&nbsp;&nbsp;&nbsp;to change the movie collection. If you don't want guest users to view your<br>&nbsp;&nbsp;&nbsp;&nbsp;collection, set the 'guestview' variable to false in config/config.php after<br>&nbsp;&nbsp;&nbsp;&nbsp;installation or upgrade.</td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>type</td>
+	<td>name=taglines</td>
+	<td>&nbsp;&nbsp;&nbsp;&nbsp;Read the INSTALLATION/UPGRADE information above to read the explanation how<br>&nbsp;&nbsp;&nbsp;&nbsp;to install and which variables can be adjusted. When you want to adjust the<br>&nbsp;&nbsp;&nbsp;&nbsp;configuration, open config/config.php and adjust the variables. The default<br>&nbsp;&nbsp;&nbsp;&nbsp;configuration file is located at confg/config.default.php.<br>&nbsp;&nbsp;&nbsp;&nbsp;By default, guest users can view your move collection, but are not allowed<br>&nbsp;&nbsp;&nbsp;&nbsp;to change the movie collection. If you don't want guest users to view your<br>&nbsp;&nbsp;&nbsp;&nbsp;collection, set the 'guestview' variable to false in config/config.php after<br>&nbsp;&nbsp;&nbsp;&nbsp;installation or upgrade.</td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>type</td>
+	<td>name=plotoutline</td>
+	<td>&nbsp;&nbsp;&nbsp;&nbsp;Read the INSTALLATION/UPGRADE information above to read the explanation how<br>&nbsp;&nbsp;&nbsp;&nbsp;to install and which variables can be adjusted. When you want to adjust the<br>&nbsp;&nbsp;&nbsp;&nbsp;configuration, open config/config.php and adjust the variables. The default<br>&nbsp;&nbsp;&nbsp;&nbsp;configuration file is located at confg/config.default.php.<br>&nbsp;&nbsp;&nbsp;&nbsp;By default, guest users can view your move collection, but are not allowed<br>&nbsp;&nbsp;&nbsp;&nbsp;to change the movie collection. If you don't want guest users to view your<br>&nbsp;&nbsp;&nbsp;&nbsp;collection, set the 'guestview' variable to false in config/config.php after<br>&nbsp;&nbsp;&nbsp;&nbsp;installation or upgrade.</td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>type</td>
+	<td>name=plots</td>
+	<td>&nbsp;&nbsp;&nbsp;&nbsp;Read the INSTALLATION/UPGRADE information above to read the explanation how<br>&nbsp;&nbsp;&nbsp;&nbsp;to install and which variables can be adjusted. When you want to adjust the<br>&nbsp;&nbsp;&nbsp;&nbsp;configuration, open config/config.php and adjust the variables. The default<br>&nbsp;&nbsp;&nbsp;&nbsp;configuration file is located at confg/config.default.php.<br>&nbsp;&nbsp;&nbsp;&nbsp;By default, guest users can view your move collection, but are not allowed<br>&nbsp;&nbsp;&nbsp;&nbsp;to change the movie collection. If you don't want guest users to view your<br>&nbsp;&nbsp;&nbsp;&nbsp;collection, set the 'guestview' variable to false in config/config.php after<br>&nbsp;&nbsp;&nbsp;&nbsp;installation or upgrade.</td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>type</td>
+	<td>id=text_languages_0</td>
+	<td>&nbsp;&nbsp;&nbsp;&nbsp;Read the INSTALLATION/UPGRADE information above to read the explanation how<br>&nbsp;&nbsp;&nbsp;&nbsp;to install and which variables can be adjusted. When you want to adjust the<br>&nbsp;&nbsp;&nbsp;&nbsp;configuration, open config/config.php and adjust the variables. The default<br>&nbsp;&nbsp;&nbsp;&nbsp;configuration file is located at confg/config.default.php.<br>&nbsp;&nbsp;&nbsp;&nbsp;By default, guest users can view your move collection, but are not allowed<br>&nbsp;&nbsp;&nbsp;&nbsp;to change the movie collection. If you don't want guest users to view your<br>&nbsp;&nbsp;&nbsp;&nbsp;collection, set the 'guestview' variable to false in config/config.php after<br>&nbsp;&nbsp;&nbsp;&nbsp;installation or upgrade.</td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>type</td>
+	<td>name=subtitles</td>
+	<td>&nbsp;&nbsp;&nbsp;&nbsp;Read the INSTALLATION/UPGRADE information above to read the explanation how<br>&nbsp;&nbsp;&nbsp;&nbsp;to install and which variables can be adjusted. When you want to adjust the<br>&nbsp;&nbsp;&nbsp;&nbsp;configuration, open config/config.php and adjust the variables. The default<br>&nbsp;&nbsp;&nbsp;&nbsp;configuration file is located at confg/config.default.php.<br>&nbsp;&nbsp;&nbsp;&nbsp;By default, guest users can view your move collection, but are not allowed<br>&nbsp;&nbsp;&nbsp;&nbsp;to change the movie collection. If you don't want guest users to view your<br>&nbsp;&nbsp;&nbsp;&nbsp;collection, set the 'guestview' variable to false in config/config.php after<br>&nbsp;&nbsp;&nbsp;&nbsp;installation or upgrade.</td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>type</td>
+	<td>name=audio</td>
+	<td>&nbsp;&nbsp;&nbsp;&nbsp;Read the INSTALLATION/UPGRADE information above to read the explanation how<br>&nbsp;&nbsp;&nbsp;&nbsp;to install and which variables can be adjusted. When you want to adjust the<br>&nbsp;&nbsp;&nbsp;&nbsp;configuration, open config/config.php and adjust the variables. The default<br>&nbsp;&nbsp;&nbsp;&nbsp;configuration file is located at confg/config.default.php.<br>&nbsp;&nbsp;&nbsp;&nbsp;By default, guest users can view your move collection, but are not allowed<br>&nbsp;&nbsp;&nbsp;&nbsp;to change the movie collection. If you don't want guest users to view your<br>&nbsp;&nbsp;&nbsp;&nbsp;collection, set the 'guestview' variable to false in config/config.php after<br>&nbsp;&nbsp;&nbsp;&nbsp;installation or upgrade.</td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>type</td>
+	<td>name=video</td>
+	<td>&nbsp;&nbsp;&nbsp;&nbsp;Read the INSTALLATION/UPGRADE information above to read the explanation how<br>&nbsp;&nbsp;&nbsp;&nbsp;to install and which variables can be adjusted. When you want to adjust the<br>&nbsp;&nbsp;&nbsp;&nbsp;configuration, open config/config.php and adjust the variables. The default<br>&nbsp;&nbsp;&nbsp;&nbsp;configuration file is located at confg/config.default.php.<br>&nbsp;&nbsp;&nbsp;&nbsp;By default, guest users can view your move collection, but are not allowed<br>&nbsp;&nbsp;&nbsp;&nbsp;to change the movie collection. If you don't want guest users to view your<br>&nbsp;&nbsp;&nbsp;&nbsp;collection, set the 'guestview' variable to false in config/config.php after<br>&nbsp;&nbsp;&nbsp;&nbsp;installation or upgrade.</td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>type</td>
+	<td>name=country</td>
+	<td>&nbsp;&nbsp;&nbsp;&nbsp;Read the INSTALLATION/UPGRADE information above to read the explanation how<br>&nbsp;&nbsp;&nbsp;&nbsp;to install and which variables can be adjusted. When you want to adjust the<br>&nbsp;&nbsp;&nbsp;&nbsp;configuration, open config/config.php and adjust the variables. The default<br>&nbsp;&nbsp;&nbsp;&nbsp;configuration file is located at confg/config.default.php.<br>&nbsp;&nbsp;&nbsp;&nbsp;By default, guest users can view your move collection, but are not allowed<br>&nbsp;&nbsp;&nbsp;&nbsp;to change the movie collection. If you don't want guest users to view your<br>&nbsp;&nbsp;&nbsp;&nbsp;collection, set the 'guestview' variable to false in config/config.php after<br>&nbsp;&nbsp;&nbsp;&nbsp;installation or upgrade.</td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>type</td>
+	<td>name=genres</td>
+	<td>&nbsp;&nbsp;&nbsp;&nbsp;Read the INSTALLATION/UPGRADE information above to read the explanation how<br>&nbsp;&nbsp;&nbsp;&nbsp;to install and which variables can be adjusted. When you want to adjust the<br>&nbsp;&nbsp;&nbsp;&nbsp;configuration, open config/config.php and adjust the variables. The default<br>&nbsp;&nbsp;&nbsp;&nbsp;configuration file is located at confg/config.default.php.<br>&nbsp;&nbsp;&nbsp;&nbsp;By default, guest users can view your move collection, but are not allowed<br>&nbsp;&nbsp;&nbsp;&nbsp;to change the movie collection. If you don't want guest users to view your<br>&nbsp;&nbsp;&nbsp;&nbsp;collection, set the 'guestview' variable to false in config/config.php after<br>&nbsp;&nbsp;&nbsp;&nbsp;installation or upgrade.</td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>type</td>
+	<td>name=director</td>
+	<td>&nbsp;&nbsp;&nbsp;&nbsp;Read the INSTALLATION/UPGRADE information above to read the explanation how<br>&nbsp;&nbsp;&nbsp;&nbsp;to install and which variables can be adjusted. When you want to adjust the<br>&nbsp;&nbsp;&nbsp;&nbsp;configuration, open config/config.php and adjust the variables. The default<br>&nbsp;&nbsp;&nbsp;&nbsp;configuration file is located at confg/config.default.php.<br>&nbsp;&nbsp;&nbsp;&nbsp;By default, guest users can view your move collection, but are not allowed<br>&nbsp;&nbsp;&nbsp;&nbsp;to change the movie collection. If you don't want guest users to view your<br>&nbsp;&nbsp;&nbsp;&nbsp;collection, set the 'guestview' variable to false in config/config.php after<br>&nbsp;&nbsp;&nbsp;&nbsp;installation or upgrade.</td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>type</td>
+	<td>name=writer</td>
+	<td>&nbsp;&nbsp;&nbsp;&nbsp;Read the INSTALLATION/UPGRADE information above to read the explanation how<br>&nbsp;&nbsp;&nbsp;&nbsp;to install and which variables can be adjusted. When you want to adjust the<br>&nbsp;&nbsp;&nbsp;&nbsp;configuration, open config/config.php and adjust the variables. The default<br>&nbsp;&nbsp;&nbsp;&nbsp;configuration file is located at confg/config.default.php.<br>&nbsp;&nbsp;&nbsp;&nbsp;By default, guest users can view your move collection, but are not allowed<br>&nbsp;&nbsp;&nbsp;&nbsp;to change the movie collection. If you don't want guest users to view your<br>&nbsp;&nbsp;&nbsp;&nbsp;collection, set the 'guestview' variable to false in config/config.php after<br>&nbsp;&nbsp;&nbsp;&nbsp;installation or upgrade.</td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>type</td>
+	<td>name=producer</td>
+	<td>&nbsp;&nbsp;&nbsp;&nbsp;Read the INSTALLATION/UPGRADE information above to read the explanation how<br>&nbsp;&nbsp;&nbsp;&nbsp;to install and which variables can be adjusted. When you want to adjust the<br>&nbsp;&nbsp;&nbsp;&nbsp;configuration, open config/config.php and adjust the variables. The default<br>&nbsp;&nbsp;&nbsp;&nbsp;configuration file is located at confg/config.default.php.<br>&nbsp;&nbsp;&nbsp;&nbsp;By default, guest users can view your move collection, but are not allowed<br>&nbsp;&nbsp;&nbsp;&nbsp;to change the movie collection. If you don't want guest users to view your<br>&nbsp;&nbsp;&nbsp;&nbsp;collection, set the 'guestview' variable to false in config/config.php after<br>&nbsp;&nbsp;&nbsp;&nbsp;installation or upgrade.</td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>type</td>
+	<td>name=music</td>
+	<td>&nbsp;&nbsp;&nbsp;&nbsp;Read the INSTALLATION/UPGRADE information above to read the explanation how<br>&nbsp;&nbsp;&nbsp;&nbsp;to install and which variables can be adjusted. When you want to adjust the<br>&nbsp;&nbsp;&nbsp;&nbsp;configuration, open config/config.php and adjust the variables. The default<br>&nbsp;&nbsp;&nbsp;&nbsp;configuration file is located at confg/config.default.php.<br>&nbsp;&nbsp;&nbsp;&nbsp;By default, guest users can view your move collection, but are not allowed<br>&nbsp;&nbsp;&nbsp;&nbsp;to change the movie collection. If you don't want guest users to view your<br>&nbsp;&nbsp;&nbsp;&nbsp;collection, set the 'guestview' variable to false in config/config.php after<br>&nbsp;&nbsp;&nbsp;&nbsp;installation or upgrade.</td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>type</td>
+	<td>name=cast</td>
+	<td>&nbsp;&nbsp;&nbsp;&nbsp;Read the INSTALLATION/UPGRADE information above to read the explanation how<br>&nbsp;&nbsp;&nbsp;&nbsp;to install and which variables can be adjusted. When you want to adjust the<br>&nbsp;&nbsp;&nbsp;&nbsp;configuration, open config/config.php and adjust the variables. The default<br>&nbsp;&nbsp;&nbsp;&nbsp;configuration file is located at confg/config.default.php.<br>&nbsp;&nbsp;&nbsp;&nbsp;By default, guest users can view your move collection, but are not allowed<br>&nbsp;&nbsp;&nbsp;&nbsp;to change the movie collection. If you don't want guest users to view your<br>&nbsp;&nbsp;&nbsp;&nbsp;collection, set the 'guestview' variable to false in config/config.php after<br>&nbsp;&nbsp;&nbsp;&nbsp;installation or upgrade.</td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>clickAndWait</td>
+	<td>id=submit</td>
+	<td></td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>clickAndWait</td>
+	<td>css=h1</td>
+	<td></td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>waitForElementPresent</td>
+	<td>css=div.nocover</td>
+	<td></td>
+</tr>
+</tbody></table>
+
+
+</div></td>
+<td>&nbsp;</td>
+</tr><tr>
+<td><a name="testresult2">delete_movie.html</a><br/><div>
+<table border="1" cellpadding="1" cellspacing="1">
+<thead>
+<tr class="title status_passed"><td rowspan="1" colspan="3">delete_movie</td></tr>
+</thead><tbody>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>clickAndWait</td>
+	<td>css=div.nocover</td>
+	<td></td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>click</td>
+	<td>css=img[alt="Remove"]</td>
+	<td></td>
+</tr>
+<tr class="  status_passed" style="cursor: pointer;">
+	<td>assertConfirmation</td>
+	<td>Are you sure you want to remove this?</td>
+	<td></td>
+</tr>
+</tbody></table>
+
+
+</div></td>
+<td>&nbsp;</td>
+</tr><tr>
+<td><a name="testresult3">log_out.html</a><br/><div>
+<table border="1" cellpadding="1" cellspacing="1">
+<thead>
+<tr class="title status_passed"><td rowspan="1" colspan="3">log_out</td></tr>
+</thead><tbody>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>clickAndWait</td>
+	<td>link=Log out</td>
+	<td></td>
+</tr>
+<tr class="  status_passed" style="cursor: pointer;">
+	<td>assertConfirmation</td>
+	<td>Are you sure you want to log out?</td>
+	<td></td>
+</tr>
+</tbody></table>
+
+
+</div></td>
+<td>&nbsp;</td>
+</tr></table><pre>
+info: Starting test /selenium-server/tests/login.html
+info: Executing: |open | / |  |
+info: Executing: |type | id=username | admin |
+info: Selenium 1.0 (Core, RC, etc) is no longer under active development. Please update to WebDriver ASAP
+info: Executing: |type | name=password | admin |
+info: Executing: |clickAndWait | name=submit |  |
+info: Starting test /selenium-server/tests/add_movie.html
+info: Executing: |clickAndWait | css=img[alt=&quot;Add movie&quot;] |  |
+info: Executing: |type | id=imdbsearch | New_movie |
+info: Executing: |type | name=imdbid | Anakonda |
+info: Executing: |type | name=name | Anakonda |
+info: Executing: |type | name=imdbid | 1234 |
+info: Executing: |type | name=aka | Read the INSTALLATION/UPGRADE information above to read the explanation how
+    to install and which variables can be adjusted. When you want to adjust the
+    configuration, open config/config.php and adjust the variables. The default
+    configuration file is located at confg/config.default.php.
+    By default, guest users can view your move collection, but are not allowed
+    to change the movie collection. If you don&apos;t want guest users to view your
+    collection, set the &apos;guestview&apos; variable to false in config/config.php after
+    installation or upgrade. |
+info: Executing: |type | name=year | 2012 |
+info: Executing: |type | name=duration | 20 |
+info: Executing: |type | name=rating | 3.5 |
+info: Executing: |type | name=notes | Read the INSTALLATION/UPGRADE information above to read the explanation how
+    to install and which variables can be adjusted. When you want to adjust the
+    configuration, open config/config.php and adjust the variables. The default
+    configuration file is located at confg/config.default.php.
+    By default, guest users can view your move collection, but are not allowed
+    to change the movie collection. If you don&apos;t want guest users to view your
+    collection, set the &apos;guestview&apos; variable to false in config/config.php after
+    installation or upgrade. |
+info: Executing: |type | name=taglines | Read the INSTALLATION/UPGRADE information above to read the explanation how
+    to install and which variables can be adjusted. When you want to adjust the
+    configuration, open config/config.php and adjust the variables. The default
+    configuration file is located at confg/config.default.php.
+    By default, guest users can view your move collection, but are not allowed
+    to change the movie collection. If you don&apos;t want guest users to view your
+    collection, set the &apos;guestview&apos; variable to false in config/config.php after
+    installation or upgrade. |
+info: Executing: |type | name=plotoutline | Read the INSTALLATION/UPGRADE information above to read the explanation how
+    to install and which variables can be adjusted. When you want to adjust the
+    configuration, open config/config.php and adjust the variables. The default
+    configuration file is located at confg/config.default.php.
+    By default, guest users can view your move collection, but are not allowed
+    to change the movie collection. If you don&apos;t want guest users to view your
+    collection, set the &apos;guestview&apos; variable to false in config/config.php after
+    installation or upgrade. |
+info: Executing: |type | name=plots | Read the INSTALLATION/UPGRADE information above to read the explanation how
+    to install and which variables can be adjusted. When you want to adjust the
+    configuration, open config/config.php and adjust the variables. The default
+    configuration file is located at confg/config.default.php.
+    By default, guest users can view your move collection, but are not allowed
+    to change the movie collection. If you don&apos;t want guest users to view your
+    collection, set the &apos;guestview&apos; variable to false in config/config.php after
+    installation or upgrade. |
+info: Executing: |type | id=text_languages_0 | Read the INSTALLATION/UPGRADE information above to read the explanation how
+    to install and which variables can be adjusted. When you want to adjust the
+    configuration, open config/config.php and adjust the variables. The default
+    configuration file is located at confg/config.default.php.
+    By default, guest users can view your move collection, but are not allowed
+    to change the movie collection. If you don&apos;t want guest users to view your
+    collection, set the &apos;guestview&apos; variable to false in config/config.php after
+    installation or upgrade. |
+info: Executing: |type | name=subtitles | Read the INSTALLATION/UPGRADE information above to read the explanation how
+    to install and which variables can be adjusted. When you want to adjust the
+    configuration, open config/config.php and adjust the variables. The default
+    configuration file is located at confg/config.default.php.
+    By default, guest users can view your move collection, but are not allowed
+    to change the movie collection. If you don&apos;t want guest users to view your
+    collection, set the &apos;guestview&apos; variable to false in config/config.php after
+    installation or upgrade. |
+info: Selenium 1.0 (Core, RC, etc) is no longer under active development. Please update to WebDriver ASAP
+info: Executing: |type | name=audio | Read the INSTALLATION/UPGRADE information above to read the explanation how
+    to install and which variables can be adjusted. When you want to adjust the
+    configuration, open config/config.php and adjust the variables. The default
+    configuration file is located at confg/config.default.php.
+    By default, guest users can view your move collection, but are not allowed
+    to change the movie collection. If you don&apos;t want guest users to view your
+    collection, set the &apos;guestview&apos; variable to false in config/config.php after
+    installation or upgrade. |
+info: Executing: |type | name=video | Read the INSTALLATION/UPGRADE information above to read the explanation how
+    to install and which variables can be adjusted. When you want to adjust the
+    configuration, open config/config.php and adjust the variables. The default
+    configuration file is located at confg/config.default.php.
+    By default, guest users can view your move collection, but are not allowed
+    to change the movie collection. If you don&apos;t want guest users to view your
+    collection, set the &apos;guestview&apos; variable to false in config/config.php after
+    installation or upgrade. |
+info: Executing: |type | name=country | Read the INSTALLATION/UPGRADE information above to read the explanation how
+    to install and which variables can be adjusted. When you want to adjust the
+    configuration, open config/config.php and adjust the variables. The default
+    configuration file is located at confg/config.default.php.
+    By default, guest users can view your move collection, but are not allowed
+    to change the movie collection. If you don&apos;t want guest users to view your
+    collection, set the &apos;guestview&apos; variable to false in config/config.php after
+    installation or upgrade. |
+info: Executing: |type | name=genres | Read the INSTALLATION/UPGRADE information above to read the explanation how
+    to install and which variables can be adjusted. When you want to adjust the
+    configuration, open config/config.php and adjust the variables. The default
+    configuration file is located at confg/config.default.php.
+    By default, guest users can view your move collection, but are not allowed
+    to change the movie collection. If you don&apos;t want guest users to view your
+    collection, set the &apos;guestview&apos; variable to false in config/config.php after
+    installation or upgrade. |
+info: Executing: |type | name=director | Read the INSTALLATION/UPGRADE information above to read the explanation how
+    to install and which variables can be adjusted. When you want to adjust the
+    configuration, open config/config.php and adjust the variables. The default
+    configuration file is located at confg/config.default.php.
+    By default, guest users can view your move collection, but are not allowed
+    to change the movie collection. If you don&apos;t want guest users to view your
+    collection, set the &apos;guestview&apos; variable to false in config/config.php after
+    installation or upgrade. |
+info: Selenium 1.0 (Core, RC, etc) is no longer under active development. Please update to WebDriver ASAP
+info: Executing: |type | name=writer | Read the INSTALLATION/UPGRADE information above to read the explanation how
+    to install and which variables can be adjusted. When you want to adjust the
+    configuration, open config/config.php and adjust the variables. The default
+    configuration file is located at confg/config.default.php.
+    By default, guest users can view your move collection, but are not allowed
+    to change the movie collection. If you don&apos;t want guest users to view your
+    collection, set the &apos;guestview&apos; variable to false in config/config.php after
+    installation or upgrade. |
+info: Executing: |type | name=producer | Read the INSTALLATION/UPGRADE information above to read the explanation how
+    to install and which variables can be adjusted. When you want to adjust the
+    configuration, open config/config.php and adjust the variables. The default
+    configuration file is located at confg/config.default.php.
+    By default, guest users can view your move collection, but are not allowed
+    to change the movie collection. If you don&apos;t want guest users to view your
+    collection, set the &apos;guestview&apos; variable to false in config/config.php after
+    installation or upgrade. |
+info: Executing: |type | name=music | Read the INSTALLATION/UPGRADE information above to read the explanation how
+    to install and which variables can be adjusted. When you want to adjust the
+    configuration, open config/config.php and adjust the variables. The default
+    configuration file is located at confg/config.default.php.
+    By default, guest users can view your move collection, but are not allowed
+    to change the movie collection. If you don&apos;t want guest users to view your
+    collection, set the &apos;guestview&apos; variable to false in config/config.php after
+    installation or upgrade. |
+info: Executing: |type | name=cast | Read the INSTALLATION/UPGRADE information above to read the explanation how
+    to install and which variables can be adjusted. When you want to adjust the
+    configuration, open config/config.php and adjust the variables. The default
+    configuration file is located at confg/config.default.php.
+    By default, guest users can view your move collection, but are not allowed
+    to change the movie collection. If you don&apos;t want guest users to view your
+    collection, set the &apos;guestview&apos; variable to false in config/config.php after
+    installation or upgrade. |
+info: Executing: |clickAndWait | id=submit |  |
+info: Executing: |clickAndWait | css=h1 |  |
+info: Selenium 1.0 (Core, RC, etc) is no longer under active development. Please update to WebDriver ASAP
+info: Executing: |waitForElementPresent | css=div.nocover |  |
+info: Starting test /selenium-server/tests/delete_movie.html
+info: Executing: |clickAndWait | css=div.nocover |  |
+info: Executing: |click | css=img[alt=&quot;Remove&quot;] |  |
+info: Executing: |assertConfirmation | Are you sure you want to remove this? |  |
+info: Starting test /selenium-server/tests/log_out.html
+info: Executing: |clickAndWait | link=Log out |  |
+info: Executing: |assertConfirmation | Are you sure you want to log out? |  |
+</pre></body></html>

@@ -1,0 +1,9 @@
+us\st\selenium\LogOut.class
+us\st\selenium\Login.class
+us\st\selenium\pages\HomePageTest.class
+us\st\selenium\DeleteMovie.class
+us\st\selenium\util\PropertyLoader.class
+us\st\selenium\pages\TestBase.class
+us\st\selenium\AddMovie.class
+us\st\selenium\pages\Page.class
+us\st\selenium\pages\HomePage.class

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Tests" duration-ms="37807" started-at="2015-07-30T21:21:53Z" finished-at="2015-07-30T21:22:31Z">
+    <groups>
+    </groups>
+    <test name="Test1" duration-ms="37807" started-at="2015-07-30T21:21:53Z" finished-at="2015-07-30T21:22:31Z">
+      <class name="us.st.selenium.DeleteMovie">
+        <test-method status="PASS" signature="init()[pri:0, instance:us.st.selenium.DeleteMovie@4411d970]" name="init" is-config="true" duration-ms="18" started-at="2015-07-30T17:22:25Z" finished-at="2015-07-30T17:22:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testDeleteMovie()[pri:0, instance:us.st.selenium.DeleteMovie@4411d970]" name="testDeleteMovie" duration-ms="1807" started-at="2015-07-30T17:22:25Z" finished-at="2015-07-30T17:22:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeleteMovie -->
+      </class> <!-- us.st.selenium.DeleteMovie -->
+      <class name="us.st.selenium.AddMovie">
+        <test-method status="PASS" signature="init()[pri:0, instance:us.st.selenium.AddMovie@340f438e]" name="init" is-config="true" duration-ms="21" started-at="2015-07-30T17:22:05Z" finished-at="2015-07-30T17:22:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testAddMovie()[pri:0, instance:us.st.selenium.AddMovie@340f438e]" name="testAddMovie" duration-ms="20141" started-at="2015-07-30T17:22:05Z" finished-at="2015-07-30T17:22:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddMovie -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:us.st.selenium.AddMovie@340f438e]" name="tearDown" is-config="true" duration-ms="790" started-at="2015-07-30T17:22:31Z" finished-at="2015-07-30T17:22:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- us.st.selenium.AddMovie -->
+      <class name="us.st.selenium.Login">
+        <test-method status="PASS" signature="init()[pri:0, instance:us.st.selenium.Login@3796751b]" name="init" is-config="true" duration-ms="6436" started-at="2015-07-30T17:21:53Z" finished-at="2015-07-30T17:21:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testLogin()[pri:0, instance:us.st.selenium.Login@3796751b]" name="testLogin" duration-ms="5514" started-at="2015-07-30T17:21:59Z" finished-at="2015-07-30T17:22:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogin -->
+      </class> <!-- us.st.selenium.Login -->
+      <class name="us.st.selenium.LogOut">
+        <test-method status="PASS" signature="init()[pri:0, instance:us.st.selenium.LogOut@67b64c45]" name="init" is-config="true" duration-ms="3578" started-at="2015-07-30T17:22:27Z" finished-at="2015-07-30T17:22:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testLogOut()[pri:0, instance:us.st.selenium.LogOut@67b64c45]" name="testLogOut" duration-ms="281" started-at="2015-07-30T17:22:31Z" finished-at="2015-07-30T17:22:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogOut -->
+      </class> <!-- us.st.selenium.LogOut -->
+    </test> <!-- Test1 -->
+  </suite> <!-- Tests -->
+</testng-results>

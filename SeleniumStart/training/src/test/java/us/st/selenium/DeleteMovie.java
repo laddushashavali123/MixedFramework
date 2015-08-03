@@ -18,7 +18,9 @@ public class DeleteMovie extends us.st.selenium.pages.TestBase {
   public void testDeleteMovie() throws Exception {
     driver.findElement(By.cssSelector("div.nocover")).click();
     driver.findElement(By.cssSelector("img[alt=\"Remove\"]")).click();
+	Thread.sleep(2000);
     assertTrue(closeAlertAndGetItsText().matches("^Are you sure you want to remove this[\\s\\S]$"));
+	Thread.sleep(6000);
   }
 
   private boolean isElementPresent(By by) {

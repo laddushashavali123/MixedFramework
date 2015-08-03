@@ -2,50 +2,50 @@
 <testng-results skipped="0" failed="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Tests" duration-ms="37807" started-at="2015-07-30T21:21:53Z" finished-at="2015-07-30T21:22:31Z">
+  <suite name="Tests" duration-ms="53611" started-at="2015-08-01T21:12:54Z" finished-at="2015-08-01T21:13:47Z">
     <groups>
     </groups>
-    <test name="Test1" duration-ms="37807" started-at="2015-07-30T21:21:53Z" finished-at="2015-07-30T21:22:31Z">
+    <test name="Test1" duration-ms="53611" started-at="2015-08-01T21:12:54Z" finished-at="2015-08-01T21:13:47Z">
       <class name="us.st.selenium.DeleteMovie">
-        <test-method status="PASS" signature="init()[pri:0, instance:us.st.selenium.DeleteMovie@4411d970]" name="init" is-config="true" duration-ms="18" started-at="2015-07-30T17:22:25Z" finished-at="2015-07-30T17:22:25Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:us.st.selenium.DeleteMovie@4411d970]" name="init" is-config="true" duration-ms="9" started-at="2015-08-01T17:13:31Z" finished-at="2015-08-01T17:13:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="testDeleteMovie()[pri:0, instance:us.st.selenium.DeleteMovie@4411d970]" name="testDeleteMovie" duration-ms="1807" started-at="2015-07-30T17:22:25Z" finished-at="2015-07-30T17:22:27Z">
+        <test-method status="PASS" signature="testDeleteMovie()[pri:0, instance:us.st.selenium.DeleteMovie@4411d970]" name="testDeleteMovie" duration-ms="9403" started-at="2015-08-01T17:13:31Z" finished-at="2015-08-01T17:13:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testDeleteMovie -->
       </class> <!-- us.st.selenium.DeleteMovie -->
       <class name="us.st.selenium.AddMovie">
-        <test-method status="PASS" signature="init()[pri:0, instance:us.st.selenium.AddMovie@340f438e]" name="init" is-config="true" duration-ms="21" started-at="2015-07-30T17:22:05Z" finished-at="2015-07-30T17:22:05Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:us.st.selenium.AddMovie@340f438e]" name="init" is-config="true" duration-ms="43" started-at="2015-08-01T17:13:05Z" finished-at="2015-08-01T17:13:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="testAddMovie()[pri:0, instance:us.st.selenium.AddMovie@340f438e]" name="testAddMovie" duration-ms="20141" started-at="2015-07-30T17:22:05Z" finished-at="2015-07-30T17:22:25Z">
+        <test-method status="PASS" signature="testAddMovie()[pri:0, instance:us.st.selenium.AddMovie@340f438e]" name="testAddMovie" duration-ms="26219" started-at="2015-08-01T17:13:05Z" finished-at="2015-08-01T17:13:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAddMovie -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:us.st.selenium.AddMovie@340f438e]" name="tearDown" is-config="true" duration-ms="790" started-at="2015-07-30T17:22:31Z" finished-at="2015-07-30T17:22:32Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:us.st.selenium.AddMovie@340f438e]" name="tearDown" is-config="true" duration-ms="1415" started-at="2015-08-01T17:13:47Z" finished-at="2015-08-01T17:13:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- us.st.selenium.AddMovie -->
       <class name="us.st.selenium.Login">
-        <test-method status="PASS" signature="init()[pri:0, instance:us.st.selenium.Login@3796751b]" name="init" is-config="true" duration-ms="6436" started-at="2015-07-30T17:21:53Z" finished-at="2015-07-30T17:21:59Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:us.st.selenium.Login@3796751b]" name="init" is-config="true" duration-ms="1882" started-at="2015-08-01T17:12:54Z" finished-at="2015-08-01T17:12:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="testLogin()[pri:0, instance:us.st.selenium.Login@3796751b]" name="testLogin" duration-ms="5514" started-at="2015-07-30T17:21:59Z" finished-at="2015-07-30T17:22:05Z">
+        <test-method status="PASS" signature="testLogin()[pri:0, instance:us.st.selenium.Login@3796751b]" name="testLogin" duration-ms="8897" started-at="2015-08-01T17:12:56Z" finished-at="2015-08-01T17:13:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogin -->
       </class> <!-- us.st.selenium.Login -->
       <class name="us.st.selenium.LogOut">
-        <test-method status="PASS" signature="init()[pri:0, instance:us.st.selenium.LogOut@67b64c45]" name="init" is-config="true" duration-ms="3578" started-at="2015-07-30T17:22:27Z" finished-at="2015-07-30T17:22:31Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:us.st.selenium.LogOut@67b64c45]" name="init" is-config="true" duration-ms="34" started-at="2015-08-01T17:13:40Z" finished-at="2015-08-01T17:13:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="testLogOut()[pri:0, instance:us.st.selenium.LogOut@67b64c45]" name="testLogOut" duration-ms="281" started-at="2015-07-30T17:22:31Z" finished-at="2015-07-30T17:22:31Z">
+        <test-method status="PASS" signature="testLogOut()[pri:0, instance:us.st.selenium.LogOut@67b64c45]" name="testLogOut" duration-ms="7109" started-at="2015-08-01T17:13:40Z" finished-at="2015-08-01T17:13:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogOut -->

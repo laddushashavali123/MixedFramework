@@ -22,6 +22,7 @@ public class Login extends us.st.selenium.pages.TestBase {
     driver.findElement(By.name("password")).clear();
     driver.findElement(By.name("password")).sendKeys("admin");
     driver.findElement(By.name("submit")).click();
+	Thread.sleep(4000);
   }
 
   private boolean isElementPresent(By by) {

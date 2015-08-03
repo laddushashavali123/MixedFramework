@@ -64,7 +64,9 @@ public class AddMovie extends us.st.selenium.pages.TestBase {
     driver.findElement(By.name("cast")).clear();
     driver.findElement(By.name("cast")).sendKeys("Read the INSTALLATION/UPGRADE information above to read the explanation how\n    to install and which variables can be adjusted. When you want to adjust the\n    configuration, open config/config.php and adjust the variables. The default\n    configuration file is located at confg/config.default.php.\n    By default, guest users can view your move collection, but are not allowed\n    to change the movie collection. If you don't want guest users to view your\n    collection, set the 'guestview' variable to false in config/config.php after\n    installation or upgrade.");
     driver.findElement(By.id("submit")).click();
+	Thread.sleep(4000);
     driver.findElement(By.cssSelector("h1")).click();
+	Thread.sleep(4000);
     for (int second = 0;; second++) {
     	if (second >= 60) fail("timeout");
     	try { if (isElementPresent(By.cssSelector("div.nocover"))) break; } catch (Exception e) {}

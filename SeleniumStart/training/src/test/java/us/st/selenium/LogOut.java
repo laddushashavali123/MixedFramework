@@ -16,7 +16,7 @@ public class LogOut extends us.st.selenium.pages.TestBase {
 
   @Test
   public void testLogOut() throws Exception {
-    driver.findElement(By.linkText("Log out")).click();
+    driver.findElement(By.xpath("//header//li[4]/a")).click();
 	Thread.sleep(2000);
     assertTrue(closeAlertAndGetItsText().matches("^Are you sure you want to log out[\\s\\S]$"));
 	Thread.sleep(5000);

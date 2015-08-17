@@ -16,11 +16,13 @@ public class Login extends us.st.selenium.pages.TestBase {
 
   @Test
   public void testLogin() throws Exception {
-    driver.get(baseUrl + "/");
-    driver.findElement(By.id("username")).clear();
-    driver.findElement(By.id("username")).sendKeys("admin");
-    driver.findElement(By.name("password")).clear();
-    driver.findElement(By.name("password")).sendKeys("admin");
+    driver.get(baseUrl);
+    WebElement usernameField = driver.findElement(By.id("username"));
+	usernameField.clear();
+    usernameField.sendKeys("admin");
+    WebElement passwordField = driver.findElement(By.name("password"));
+	passwordField.clear();
+    passwordField.sendKeys("admin");
     driver.findElement(By.name("submit")).click();
 	Thread.sleep(4000);
   }

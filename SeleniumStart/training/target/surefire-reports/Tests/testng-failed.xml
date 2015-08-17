@@ -8,23 +8,23 @@
       <class name="us.st.selenium.AddMovie">
         <methods>
           <include name="tearDown"/>
-          <include name="init"/>
+          <include name="testAddMovie"/>
         </methods>
       </class> <!-- us.st.selenium.AddMovie -->
       <class name="us.st.selenium.Login">
         <methods>
+          <include name="testLogin"/>
           <include name="init"/>
         </methods>
       </class> <!-- us.st.selenium.Login -->
       <class name="us.st.selenium.LogOut">
         <methods>
           <include name="testLogOut"/>
-          <include name="init"/>
         </methods>
       </class> <!-- us.st.selenium.LogOut -->
       <class name="us.st.selenium.DeleteMovie">
         <methods>
-          <include name="init"/>
+          <include name="testDeleteMovie"/>
         </methods>
       </class> <!-- us.st.selenium.DeleteMovie -->
     </classes>

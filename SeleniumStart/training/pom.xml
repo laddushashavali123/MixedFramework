@@ -48,6 +48,7 @@
           </suiteXmlFiles>
 		<systemPropertyVariables>
             <webdriver.chrome.driver>${webdriver.chrome}</webdriver.chrome.driver>
+			<webdriver.iexplorer.driver>${webdriver.iexplorer}</webdriver.iexplorer.driver>
 		</systemPropertyVariables>
         </configuration>
       </plugin>
@@ -94,27 +95,28 @@
       </properties>
     </profile>
     <profile>
-      <id>ie</id>
+      <id>iexplorer</id>
       <properties>
         <env>local</env>
+		<webdriver.iexplorer>C:\auto_tools\IEDriverServer.exe</webdriver.iexplorer>
         <user.username></user.username>
         <user.password></user.password>
         <grid2.hub></grid2.hub>
         <site.url>http://php4dvd.com.ua/</site.url>
-        <browser.name>internet explorer</browser.name>
+        <browser.name>iexplorer</browser.name>
         <browser.version></browser.version>
         <browser.platform></browser.platform>
       </properties>
     </profile>
     <profile>
-      <id>prod</id>
+      <id>safari</id>
       <properties>
         <env>local</env>
         <user.username></user.username>
         <user.password></user.password>
         <grid2.hub></grid2.hub>
         <site.url>http://php4dvd.com.ua/</site.url>
-        <browser.name>firefox</browser.name>
+        <browser.name>safari</browser.name>
         <browser.version></browser.version>
         <browser.platform></browser.platform>
       </properties>

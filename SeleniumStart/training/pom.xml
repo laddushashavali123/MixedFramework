@@ -103,7 +103,7 @@
         <user.password></user.password>
         <grid2.hub></grid2.hub>
         <site.url>http://php4dvd.com.ua/</site.url>
-        <browser.name>iexplorer</browser.name>
+        <browser.name>iexplore</browser.name>
         <browser.version></browser.version>
         <browser.platform></browser.platform>
       </properties>
@@ -117,6 +117,19 @@
         <grid2.hub></grid2.hub>
         <site.url>http://php4dvd.com.ua/</site.url>
         <browser.name>safari</browser.name>
+        <browser.version></browser.version>
+        <browser.platform></browser.platform>
+      </properties>
+    </profile>
+	<profile>
+      <id>firefox_centos</id>
+      <properties>
+        <env>remote</env>
+        <user.username></user.username>
+        <user.password></user.password>
+        <grid2.hub>http://192.168.1.4:4444/wd/hub/</grid2.hub>
+        <site.url>http://php4dvd.com.ua/</site.url>
+        <browser.name>firefox</browser.name>
         <browser.version></browser.version>
         <browser.platform></browser.platform>
       </properties>

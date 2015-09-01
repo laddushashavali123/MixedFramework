@@ -10,6 +10,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
+ 
 public class Login extends us.st.selenium.pages.TestBase {
   private boolean acceptNextAlert = true;
   private StringBuffer verificationErrors = new StringBuffer();
@@ -26,7 +27,7 @@ public class Login extends us.st.selenium.pages.TestBase {
     driver.findElement(By.name("submit")).click();
 	Thread.sleep(4000);
   }
-
+ 
   private boolean isElementPresent(By by) {
     try {
       driver.findElement(by);
@@ -35,7 +36,7 @@ public class Login extends us.st.selenium.pages.TestBase {
       return false;
     }
   }
-
+ 
   private String closeAlertAndGetItsText() {
     try {
       Alert alert = driver.switchTo().alert();

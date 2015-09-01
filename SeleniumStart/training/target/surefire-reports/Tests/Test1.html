@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/0/4</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Aug 17 23:44:34 EDT 2015</td>
+<td>Started on:</td><td>Sun Aug 16 22:02:33 EDT 2015</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (47 ms)</td>
+<tr><td>Total time:</td><td>2 seconds (2613 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,17 +76,41 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='us.st.selenium.Login.init()'><b>init</b><br>Test class: us.st.selenium.Login</td>
-<td><div><pre>java.lang.Error: Unrecognized browser type: iexplore
-	at ru.stqa.selenium.factory.WebDriverFactoryInternal.createLocalDriver(WebDriverFactoryInternal.java:93)
+<td><div><pre>org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: &apos;2.46.0&apos;, revision: &apos;61506a4624b13675f24581e453592342b7485d71&apos;, time: &apos;2015-06-04 10:22:50&apos;
+System info: host: &apos;R_O_Y-PC&apos;, ip: &apos;192.168.1.2&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_45&apos;
+Driver info: driver.version: SafariDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:242)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:128)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:141)
+	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:58)
+	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:51)
+	at ru.stqa.selenium.factory.WebDriverFactoryInternal.createLocalDriver(WebDriverFactoryInternal.java:82)
 	at ru.stqa.selenium.factory.WebDriverFactoryInternal.newDriver(WebDriverFactoryInternal.java:58)
 	at ru.stqa.selenium.factory.ThreadLocalSingletonStorage.createNewDriver(ThreadLocalSingletonStorage.java:91)
 	at ru.stqa.selenium.factory.ThreadLocalSingletonStorage.getDriver(ThreadLocalSingletonStorage.java:36)
 	at ru.stqa.selenium.factory.WebDriverFactoryInternal.getDriver(WebDriverFactoryInternal.java:49)
 	at ru.stqa.selenium.factory.WebDriverFactory.getDriver(WebDriverFactory.java:39)
 	at us.st.selenium.pages.TestBase.init(TestBase.java:38)
-... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1345636186", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1345636186'><pre>java.lang.Error: Unrecognized browser type: iexplore
-	at ru.stqa.selenium.factory.WebDriverFactoryInternal.createLocalDriver(WebDriverFactoryInternal.java:93)
+Caused by: java.lang.ClassCastException: com.google.gson.JsonObject cannot be cast to java.lang.String
+	at org.openqa.selenium.remote.JsonToBeanConverter.convert(JsonToBeanConverter.java:111)
+	at org.openqa.selenium.remote.JsonToBeanConverter.convert(JsonToBeanConverter.java:42)
+	at org.openqa.selenium.safari.SafariDriverCommandExecutor.execute(SafariDriverCommandExecutor.java:191)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:578)
+	... 39 more
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace694316372", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace694316372'><pre>org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: &apos;2.46.0&apos;, revision: &apos;61506a4624b13675f24581e453592342b7485d71&apos;, time: &apos;2015-06-04 10:22:50&apos;
+System info: host: &apos;R_O_Y-PC&apos;, ip: &apos;192.168.1.2&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_45&apos;
+Driver info: driver.version: SafariDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:242)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:128)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:141)
+	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:58)
+	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:51)
+	at ru.stqa.selenium.factory.WebDriverFactoryInternal.createLocalDriver(WebDriverFactoryInternal.java:82)
 	at ru.stqa.selenium.factory.WebDriverFactoryInternal.newDriver(WebDriverFactoryInternal.java:58)
 	at ru.stqa.selenium.factory.ThreadLocalSingletonStorage.createNewDriver(ThreadLocalSingletonStorage.java:91)
 	at ru.stqa.selenium.factory.ThreadLocalSingletonStorage.getDriver(ThreadLocalSingletonStorage.java:36)
@@ -120,6 +144,12 @@ function toggleAllBoxes() {
 	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: java.lang.ClassCastException: com.google.gson.JsonObject cannot be cast to java.lang.String
+	at org.openqa.selenium.remote.JsonToBeanConverter.convert(JsonToBeanConverter.java:111)
+	at org.openqa.selenium.remote.JsonToBeanConverter.convert(JsonToBeanConverter.java:42)
+	at org.openqa.selenium.safari.SafariDriverCommandExecutor.execute(SafariDriverCommandExecutor.java:191)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:578)
+	... 39 more
 </pre></div></td>
 <td>0</td>
 <td>us.st.selenium.Login@3796751b</td></tr>

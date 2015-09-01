@@ -2,43 +2,55 @@
 <testng-results skipped="4" failed="0" total="4" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Tests" duration-ms="47" started-at="2015-08-18T03:44:34Z" finished-at="2015-08-18T03:44:34Z">
+  <suite name="Tests" duration-ms="2613" started-at="2015-08-17T02:02:33Z" finished-at="2015-08-17T02:02:36Z">
     <groups>
     </groups>
-    <test name="Test1" duration-ms="47" started-at="2015-08-18T03:44:34Z" finished-at="2015-08-18T03:44:34Z">
+    <test name="Test1" duration-ms="2613" started-at="2015-08-17T02:02:33Z" finished-at="2015-08-17T02:02:36Z">
       <class name="us.st.selenium.DeleteMovie">
-        <test-method status="SKIP" signature="testDeleteMovie()[pri:0, instance:us.st.selenium.DeleteMovie@4411d970]" name="testDeleteMovie" duration-ms="1" started-at="2015-08-17T23:44:34Z" finished-at="2015-08-17T23:44:34Z">
+        <test-method status="SKIP" signature="init()[pri:0, instance:us.st.selenium.DeleteMovie@4411d970]" name="init" is-config="true" duration-ms="0" started-at="2015-08-16T22:02:36Z" finished-at="2015-08-16T22:02:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="SKIP" signature="testDeleteMovie()[pri:0, instance:us.st.selenium.DeleteMovie@4411d970]" name="testDeleteMovie" duration-ms="1" started-at="2015-08-16T22:02:36Z" finished-at="2015-08-16T22:02:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testDeleteMovie -->
-        <test-method status="SKIP" signature="init()[pri:0, instance:us.st.selenium.DeleteMovie@4411d970]" name="init" is-config="true" duration-ms="0" started-at="2015-08-17T23:44:34Z" finished-at="2015-08-17T23:44:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
       </class> <!-- us.st.selenium.DeleteMovie -->
       <class name="us.st.selenium.AddMovie">
-        <test-method status="SKIP" signature="init()[pri:0, instance:us.st.selenium.AddMovie@340f438e]" name="init" is-config="true" duration-ms="0" started-at="2015-08-17T23:44:34Z" finished-at="2015-08-17T23:44:34Z">
+        <test-method status="SKIP" signature="init()[pri:0, instance:us.st.selenium.AddMovie@340f438e]" name="init" is-config="true" duration-ms="0" started-at="2015-08-16T22:02:36Z" finished-at="2015-08-16T22:02:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="SKIP" signature="testAddMovie()[pri:0, instance:us.st.selenium.AddMovie@340f438e]" name="testAddMovie" duration-ms="0" started-at="2015-08-17T23:44:34Z" finished-at="2015-08-17T23:44:34Z">
+        <test-method status="SKIP" signature="testAddMovie()[pri:0, instance:us.st.selenium.AddMovie@340f438e]" name="testAddMovie" duration-ms="0" started-at="2015-08-16T22:02:36Z" finished-at="2015-08-16T22:02:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAddMovie -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:us.st.selenium.AddMovie@340f438e]" name="tearDown" is-config="true" duration-ms="0" started-at="2015-08-17T23:44:34Z" finished-at="2015-08-17T23:44:34Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:us.st.selenium.AddMovie@340f438e]" name="tearDown" is-config="true" duration-ms="0" started-at="2015-08-16T22:02:36Z" finished-at="2015-08-16T22:02:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- us.st.selenium.AddMovie -->
       <class name="us.st.selenium.Login">
-        <test-method status="FAIL" signature="init()[pri:0, instance:us.st.selenium.Login@3796751b]" name="init" is-config="true" duration-ms="0" started-at="2015-08-17T23:44:34Z" finished-at="2015-08-17T23:44:34Z">
-          <exception class="java.lang.Error">
+        <test-method status="FAIL" signature="init()[pri:0, instance:us.st.selenium.Login@3796751b]" name="init" is-config="true" duration-ms="0" started-at="2015-08-16T22:02:33Z" finished-at="2015-08-16T22:02:33Z">
+          <exception class="org.openqa.selenium.remote.UnreachableBrowserException">
             <message>
-              <![CDATA[Unrecognized browser type: iexplore]]>
+              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '2.46.0', revision: '61506a4624b13675f24581e453592342b7485d71', time: '2015-06-04 10:22:50'
+System info: host: 'R_O_Y-PC', ip: '192.168.1.2', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_45'
+Driver info: driver.version: SafariDriver]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Error: Unrecognized browser type: iexplore
-	at ru.stqa.selenium.factory.WebDriverFactoryInternal.createLocalDriver(WebDriverFactoryInternal.java:93)
+              <![CDATA[org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '2.46.0', revision: '61506a4624b13675f24581e453592342b7485d71', time: '2015-06-04 10:22:50'
+System info: host: 'R_O_Y-PC', ip: '192.168.1.2', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_45'
+Driver info: driver.version: SafariDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:242)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:128)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:141)
+	at org.openqa.selenium.safari.SafariDriver.<init>(SafariDriver.java:58)
+	at org.openqa.selenium.safari.SafariDriver.<init>(SafariDriver.java:51)
+	at ru.stqa.selenium.factory.WebDriverFactoryInternal.createLocalDriver(WebDriverFactoryInternal.java:82)
 	at ru.stqa.selenium.factory.WebDriverFactoryInternal.newDriver(WebDriverFactoryInternal.java:58)
 	at ru.stqa.selenium.factory.ThreadLocalSingletonStorage.createNewDriver(ThreadLocalSingletonStorage.java:91)
 	at ru.stqa.selenium.factory.ThreadLocalSingletonStorage.getDriver(ThreadLocalSingletonStorage.java:36)
@@ -72,26 +84,32 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: java.lang.ClassCastException: com.google.gson.JsonObject cannot be cast to java.lang.String
+	at org.openqa.selenium.remote.JsonToBeanConverter.convert(JsonToBeanConverter.java:111)
+	at org.openqa.selenium.remote.JsonToBeanConverter.convert(JsonToBeanConverter.java:42)
+	at org.openqa.selenium.safari.SafariDriverCommandExecutor.execute(SafariDriverCommandExecutor.java:191)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:578)
+	... 39 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.Error -->
+          </exception> <!-- org.openqa.selenium.remote.UnreachableBrowserException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="SKIP" signature="testLogin()[pri:0, instance:us.st.selenium.Login@3796751b]" name="testLogin" duration-ms="0" started-at="2015-08-17T23:44:34Z" finished-at="2015-08-17T23:44:34Z">
+        <test-method status="SKIP" signature="testLogin()[pri:0, instance:us.st.selenium.Login@3796751b]" name="testLogin" duration-ms="1" started-at="2015-08-16T22:02:36Z" finished-at="2015-08-16T22:02:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogin -->
       </class> <!-- us.st.selenium.Login -->
       <class name="us.st.selenium.LogOut">
-        <test-method status="SKIP" signature="testLogOut()[pri:0, instance:us.st.selenium.LogOut@67b64c45]" name="testLogOut" duration-ms="0" started-at="2015-08-17T23:44:34Z" finished-at="2015-08-17T23:44:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testLogOut -->
-        <test-method status="SKIP" signature="init()[pri:0, instance:us.st.selenium.LogOut@67b64c45]" name="init" is-config="true" duration-ms="0" started-at="2015-08-17T23:44:34Z" finished-at="2015-08-17T23:44:34Z">
+        <test-method status="SKIP" signature="init()[pri:0, instance:us.st.selenium.LogOut@67b64c45]" name="init" is-config="true" duration-ms="0" started-at="2015-08-16T22:02:36Z" finished-at="2015-08-16T22:02:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
+        <test-method status="SKIP" signature="testLogOut()[pri:0, instance:us.st.selenium.LogOut@67b64c45]" name="testLogOut" duration-ms="0" started-at="2015-08-16T22:02:36Z" finished-at="2015-08-16T22:02:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogOut -->
       </class> <!-- us.st.selenium.LogOut -->
     </test> <!-- Test1 -->
   </suite> <!-- Tests -->

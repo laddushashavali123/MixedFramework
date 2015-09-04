@@ -1,6 +1,7 @@
 package us.st.selenium.protocols;
 
 import static org.junit.Assert.*;
+import java.lang.System;
 import java.util.concurrent.TimeUnit;
 import org.junit.After;
 import org.junit.Before;
@@ -9,17 +10,23 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
-import ch.qos.logback.core.db.ConnectionSource;
-import ch.qos.logback.classic.db.DBAppender;
+import org.slf4j.Logger;
 
 public class ConsoleOutputToMySql {
 
-private RemoteWebDriver driver;
+	private static final Logger LOG = (ch.qos.logback.classic.Logger) LoggerFactory.getLogger(ConsoleOutputToMySql.class);
+
+	private RemoteWebDriver driver;
 	
-	private static Logger LOG = LoggerFactory.getLogger(ConsoleOutputToMySql.class);
+	static {
+System.setProperty("logback.configurationFile", "D:/Selenium_2.0/Selenium_tests/SeleniumIntermediate/src/logback.xml");
+}
+
+	public void main (String[] args) {
+
+}
+	
 	
 	@Before
 	

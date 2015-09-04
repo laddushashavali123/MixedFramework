@@ -2,16 +2,20 @@
 
 <configuration>
 
-<appender name="DB" class="ch.qos.logback.classic.db.DBAppender">
-		<connectionSource class="ch.qos.logback.core.db.DataSourceConnectionSource">
-				<dataSource class="com.mysql.jdbc.jdbc2.optional.MysqlDataSource">
-			<serverName>http://php4dvd.com.ua/openserver/</serverName>
-			<port>3306</port>
-			<databaseName>ConsoleOutput</databaseName>
+	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+	<encoder>
+	<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+	</encoder>
+	</appender>
+	
+		<appender name="DB" class="ch.qos.logback.classic.db.DBAppender">
+		<connectionSource class="ch.qos.logback.core.db.DriverManagerConnectionSource">
+				<driverClass>com.mysql.jdbc.Driver</driverClass>
+				<url>jdbc:mysql://localhost:3306/ConsoleOutput</url>
 			<user>root</user>
 			<password></password>
-				</dataSource>
 		</connectionSource>
+		<sqlDialect class="ch.qos.logback.core.db.dialect.MySQLDialect"/>
 </appender>
 
 		<root level="DEBUG" >

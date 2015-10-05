@@ -13,7 +13,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
 
-public class ConsoleOutputToMySql {
+public class ConsoleOutputToMySql extends JUnitTestBase {
 
 	private static final Logger LOG = (ch.qos.logback.classic.Logger) LoggerFactory.getLogger(ConsoleOutputToMySql.class);
 

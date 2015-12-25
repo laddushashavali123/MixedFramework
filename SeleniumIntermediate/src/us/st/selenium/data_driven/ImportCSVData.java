@@ -6,7 +6,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.By;
 
 import static org.junit.Assert.*;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -14,13 +13,13 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized.Parameters;
 import org.junit.runners.Parameterized;
 
-import java.util.Arrays;
-import java.util.Collection;
+
+import java.io.*;
+import java.util.*;
 
 
-@RunWith(value = Parameterized.class)
-public class TestDataDriven {
-
+	@RunWith(value=Parameterized.class)
+public class ImportCSVData {
 	private static WebDriver driver;
 	private static StringBuffer verificationErrors = new StringBuffer();
 	private String height;
@@ -29,23 +28,45 @@ public class TestDataDriven {
 	
 	
 	@Parameters
-	//array with data
-	public static Collection testData() {
-		return Arrays.asList(
-				new Object [] []{
-					{"160", "45", "17.6"},
-					{"168", "70", "24.8"},
-					{"181", "89", "27.2"},
-					{"178", "100", "31.6"}
-				});
+	public static Collection testData() throws IOException{
+		return getTestData("C:/testData.csv");
 	}
-	//created a constructor
-	public TestDataDriven(String height, String weight, String bmi) {
-		this.height = height;
-		this.weight = weight;
-		this.bmi = bmi;
+	
+	public ImportCSVData(String height, String weight, String bmi) {
+		this.height=height;
+		this.weight=weight;
+		this.bmi=bmi;
 	}
-
+	
+	public static Collection<String[]> getTestData(String fileName) throws IOException{
+		List<String[]> records = new ArrayList<String[]>();
+		int i=0;
+		String record;
+		
+		
+		BufferedReader file = new BufferedReader(new FileReader(fileName));
+		 
+		while ((record=file.readLine())!=null){
+		if (record.trim().length() == 0 ) {
+		continue;  // Skip blank lines
+		}
+		if (record.contains("#")) {
+			continue;  //Skip string if string contains #
+			}
+		//skip first string
+		if (i!=0){
+		String fields[] = record.split(",");
+		records.add(fields);
+			}
+		i++;
+		}
+		file.close();
+		
+		return records;
+	}
+	
+	
+	
 	@Before
 	public void setUp(){
 		driver = new ChromeDriver();
@@ -55,7 +76,7 @@ public class TestDataDriven {
 	@Test
 	public void testBMICalculator() throws Exception {
 		try{
-		
+			
 		WebElement heightField = driver.findElement(By.xpath("//input[@id='htc']"));
 		heightField.clear();
 		heightField.sendKeys(height);
@@ -70,7 +91,9 @@ public class TestDataDriven {
 		WebElement bmiLabel = driver.findElement(By.xpath("//*[@id='yourbmi']"));
 		assertEquals(bmi, bmiLabel.getAttribute("value"));
 		
-		}
+		driver.quit();
+}
+		
 		catch (Error e){
 			//Capture and append exception errors
 		verificationErrors.append(e.toString());
@@ -80,6 +103,14 @@ public class TestDataDriven {
 	
 	@After
 	public void tearDown(){
+		//Close the browser
 		driver.quit();
+		
+		String verificationErrorString=verificationErrors.toString(); 
+		if(!"".equals(verificationErrorString)) {
+		}
 	}
+	
 }
+
+

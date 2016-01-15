@@ -2,11 +2,17 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="C:/auto_tools/junit-4.12.jar"/>
-	<classpathentry kind="lib" path="C:/auto_tools/selenium-server-standalone-2.47.1.jar"/>
-	<classpathentry kind="lib" path="C:/auto_tools/slf4j-1.7.12/slf4j-api-1.7.12.jar"/>
-	<classpathentry kind="lib" path="C:/auto_tools/logback-1.1.3/logback-classic-1.1.3.jar"/>
-	<classpathentry kind="lib" path="C:/auto_tools/logback-1.1.3/logback-core-1.1.3.jar"/>
-	<classpathentry kind="lib" path="C:/auto_tools/mysql-connector-java-5.1.19.jar"/>
+	<classpathentry kind="lib" path="C:/auto_tools/libs/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="C:/auto_tools/libs/selenium-server-standalone-2.48.2.jar"/>
+	<classpathentry kind="lib" path="C:/auto_tools/libs/slf4j.jar"/>
+	<classpathentry kind="lib" path="C:/auto_tools/libs/logback-classic-1.1.3.jar"/>
+	<classpathentry kind="lib" path="C:/auto_tools/libs/logback-core-1.1.3.jar"/>
+	<classpathentry kind="lib" path="C:/auto_tools/libs/mysql-connector-java-5.1.38.jar"/>
+	<classpathentry kind="lib" path="C:/auto_tools/libs/dom4j.jar"/>
+	<classpathentry kind="lib" path="C:/auto_tools/libs/poi-3.13.jar"/>
+	<classpathentry kind="lib" path="C:/auto_tools/libs/poi-ooxml-3.13.jar"/>
+	<classpathentry kind="lib" path="C:/auto_tools/libs/poi-ooxml-schemas-3.13.jar"/>
+	<classpathentry kind="lib" path="C:/auto_tools/libs/stax-api-1.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/auto_tools/libs/xmlbeans-2.6.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

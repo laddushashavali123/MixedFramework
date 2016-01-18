@@ -5,28 +5,28 @@
   <test name="Test1(failed)">
     <parameter name="path" value="/"/>
     <classes>
-      <class name="us.st.selenium.AddMovie">
-        <methods>
-          <include name="tearDown"/>
-          <include name="testAddMovie"/>
-        </methods>
-      </class> <!-- us.st.selenium.AddMovie -->
       <class name="us.st.selenium.Login">
         <methods>
+          <include name="tearDown"/>
           <include name="testLogin"/>
           <include name="init"/>
         </methods>
       </class> <!-- us.st.selenium.Login -->
-      <class name="us.st.selenium.LogOut">
-        <methods>
-          <include name="testLogOut"/>
-        </methods>
-      </class> <!-- us.st.selenium.LogOut -->
       <class name="us.st.selenium.DeleteMovie">
         <methods>
           <include name="testDeleteMovie"/>
         </methods>
       </class> <!-- us.st.selenium.DeleteMovie -->
+      <class name="us.st.selenium.AddMovie">
+        <methods>
+          <include name="testAddMovie"/>
+        </methods>
+      </class> <!-- us.st.selenium.AddMovie -->
+      <class name="us.st.selenium.LogOut">
+        <methods>
+          <include name="testLogOut"/>
+        </methods>
+      </class> <!-- us.st.selenium.LogOut -->
     </classes>
   </test> <!-- Test1(failed) -->
 </suite> <!-- Failed suite [Tests] -->

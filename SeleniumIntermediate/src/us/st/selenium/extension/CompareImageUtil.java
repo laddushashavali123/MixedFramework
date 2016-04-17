@@ -2,19 +2,13 @@ package us.st.selenium.extension;
 
 
 import org.junit.After;
-import org.junit.Assert.*;
 
 import static org.junit.Assert.*;
 
-import java.awt.Image;
-import java.awt.Rectangle;
-import java.awt.Robot;
-import java.awt.Toolkit;
 import java.awt.image.BufferedImage;
-import java.awt.image.PixelGrabber;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
-import java.util.Arrays;
 
 import javax.imageio.ImageIO;
 
@@ -24,6 +18,9 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
+import org.junit.Assert;
+
 import org.apache.commons.io.FileUtils;
 
 
@@ -33,89 +30,108 @@ public class CompareImageUtil {
 	
 	private StringBuffer verificationErrors = new StringBuffer();
 	private static WebDriver driver;
-	private enum Result {Matched, SizeMismatch, PixelMismatch};
-	//enum - this is data type to declare constants in Java
-	
-	
-	private static Result CompareImage(String baseFile, String actualFile){
+
+	public static BufferedImage getDifferenceImage(BufferedImage img1, BufferedImage img2){
 		
-		Result compareResult = Result.PixelMismatch;
-		Image baseImage = Toolkit.getDefaultToolkit().getImage(baseFile);
-		Image actualImage = Toolkit.getDefaultToolkit().getImage(actualFile);
-		
-	try{
-		PixelGrabber baseImageGrab = new PixelGrabber(baseImage, 0, 0, -1, -1, false);
-		PixelGrabber actualImageGrab = new PixelGrabber(actualImage, 0, 0, -1, -1, false);
-		
-		int [] baseImageData = null;
-		int [] actualImageData = null;
-		
-		if (baseImageGrab.grabPixels()){
-			int width = baseImageGrab.getWidth();
-			int height = baseImageGrab.getHeight();
-			baseImageData = new int [ width * height ];
-			baseImageData = (int[])baseImageGrab.getPixels();
-		}
-		
-		if (actualImageGrab.grabPixels()){
-			int width = actualImageGrab.getWidth();
-			int height = actualImageGrab.getHeight();
-			actualImageData = new int [width * height];
-			actualImageData = (int[])baseImageGrab.getPixels();
-		}
-		
-		System.out.println(baseImageGrab.getHeight() + "<>" +actualImageGrab.getHeight());
-		
-		System.out.println(baseImageGrab.getWidth() + "<>" +actualImageGrab.getWidth());
-		
-		if 	(baseImageGrab.getHeight() != actualImageGrab.getHeight()
-			|| 	baseImageGrab.getWidth() != actualImageGrab.getWidth())
-		{
-			compareResult = Result.SizeMismatch;
-		} else if (Arrays.equals(baseImageData, actualImageData)){
-			compareResult = Result.Matched;
-		}
-		
-	}catch(Exception e){
-		
+		int width1 = img1.getWidth(); // Change - getWidth() and getHeight() for BufferedImage
+	    int width2 = img2.getWidth(); // take no arguments
+	    int height1 = img1.getHeight();
+	    int height2 = img2.getHeight();
+	    if ((width1 != width2) || (height1 != height2)) {
+	        System.err.println("Error: Images dimensions mismatch");
+	        System.exit(1);
+	    }
+	    
+	 // NEW - Create output Buffered image of type RGB
+	    BufferedImage outImg = new BufferedImage(width1, height1, BufferedImage.TYPE_INT_RGB);
+	    
+	 // Modified - Changed to int as pixels are ints
+	    int diff;
+		int result;
+	    
+	    for (int i = 0; i < height1; i++) {
+	        for (int j = 0; j < width1; j++) {
+	            int rgb1 = img1.getRGB(j, i);
+	            int rgb2 = img2.getRGB(j, i);
+	            int r1 = (rgb1 >> 16) & 0xff;
+	            int g1 = (rgb1 >> 8) & 0xff;
+	            int b1 = (rgb1) & 0xff;
+	            int r2 = (rgb2 >> 16) & 0xff;
+	            int g2 = (rgb2 >> 8) & 0xff;
+	            int b2 = (rgb2) & 0xff;
+	            diff = Math.abs(r1 - r2); // Change
+	            diff += Math.abs(g1 - g2);
+	            diff += Math.abs(b1 - b2);
+	            diff /= 3; // Change - Ensure result is between 0 - 255
+	            // Make the difference image gray scale
+	            // The RGB components are all the same
+	            result = (diff << 16) | (diff << 8) | diff;
+	            outImg.setRGB(j, i, result); // Set result
+	        }
+	    }
+	    // Now return
+	    return outImg;
 	}
-	return compareResult;
-}
-	private static void TakeScreenshot(){
-		  try{
-			  BufferedImage image = new Robot().createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
-			  ImageIO.write(image, "JPG", new File("C:/Users/yarkh/Desktop/Selenium_tests/SeleniumIntermediate/resources/googleBase.jpg"));
-		  }
-		  catch(Exception e){
-			  e.printStackTrace();
-		  }
-	  }
+	public boolean ShoudICreateFile(BufferedImage img) throws IOException{
+		boolean result=false;
+		ByteArrayOutputStream tmp = new ByteArrayOutputStream();
+		ImageIO.write(img, "jpg", tmp);
+		tmp.close();
+		Integer contentLength = tmp.size();
+		
+		if (contentLength.intValue() > 20000){
+			result=true;
+		}
+		return result;
+	}
+	
 	
 	@Before
 	public void setUp() throws Exception{
 		driver= new FirefoxDriver();
 		driver.manage().window().maximize();
 	}
+	
 	@Test
 	public void testGoogleImage() throws IOException, InterruptedException{
 		driver.get("https://www.google.com/?gws_rd=ssl");
-		//TakeScreenshot();
-		String srcFile = "C:/Users/yarkh/Desktop/Selenium_tests/SeleniumIntermediate/resources/googleSrc.jpg";
-		String baseFile = "C:/Users/yarkh/Desktop/Selenium_tests/SeleniumIntermediate/resources/googleBase.jpg";
+		Thread.sleep(2000);
+		
+		try {
+		File srcFile = new File("resources/googleSrc.jpg");
+		File baseFile = new File("resources/googleBase.jpg");
+		File diffFile = new File("resources/googlediff.jpg");
 		
 		File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(screenshotFile, new File(srcFile));
+		FileUtils.copyFile(screenshotFile, srcFile);
+		BufferedImage buFileSrc = ImageIO.read(srcFile);
+		BufferedImage buFileBase = ImageIO.read(baseFile);
+		BufferedImage buFilediff = getDifferenceImage(buFileSrc, buFileBase);
 		
-		try{
-			assertEquals(Result.Matched,CompareImage(baseFile, srcFile));
+		if (buFileSrc.getHeight()!=buFileBase.getHeight() || 
+			buFileSrc.getWidth()!=buFileBase.getWidth()){
+			System.out.println("Dimensions of images are different");
+			System.out.println("Size of SRC Image: "+buFileSrc.getHeight()+" x " + buFileSrc.getWidth());
+	        System.out.println("Size of Base Image: "+buFileBase.getHeight()+" x " + buFileBase.getWidth());
+	        Assert.fail("Images have different size");
 		}
-		catch (Error e){
-			Thread.sleep(2000);
-			System.out.println("images are not equal");
-			verificationErrors.append(e.toString());
+		//check if diff file is not empty
+		//System.out.println(buFilediff.toString().split(BufferedImage@));
+
+		if (ShoudICreateFile(buFilediff)){
+		
+			ImageIO.write(buFilediff, "jpg", diffFile);
+			System.out.println("See diff image here: "+ diffFile.getAbsolutePath());
+			Assert.fail("Images are different see diffImage");
+			
 		}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
 	}
 	
+		
 	@After
 	public void tearDown() throws Exception{
 		driver.quit();
@@ -126,4 +142,35 @@ public class CompareImageUtil {
 		}
 		
 	}
-}
+}	
+
+	/*
+	 * implementation using buffer compare image and dimension of image
+	 *  		
+	        BufferedImage bufileInput = ImageIO.read(srcFile);
+	        DataBuffer dafileInput = bufileInput.getData().getDataBuffer();
+	        int sizefileInput = dafileInput.getSize();  
+	        
+	        BufferedImage bufileOutPut = ImageIO.read(baseFile);
+	        DataBuffer dafileOutPut = bufileOutPut.getData().getDataBuffer();
+	        int sizefileOutPut = dafileOutPut.getSize();
+	                
+	        Boolean matchFlag = true;
+	        if(sizefileInput == sizefileOutPut) {                         
+	           for(int j=0; j<sizefileInput; j++) {
+	                 if(dafileInput.getElem(j) != dafileOutPut.getElem(j)) {
+	                       matchFlag = false;
+	                       Assert.assertTrue("Images are not equal", matchFlag);
+	                       break;
+	                 }
+	            }
+	        } else{                           
+	           matchFlag = false;
+	           
+	        System.out.println("Size of Base Image: "+bufileInput.getHeight()+" x " + bufileInput.getWidth());
+	        System.out.println("Size of Base Image: "+bufileOutPut.getHeight()+" x "+ bufileOutPut.getWidth());
+	        Assert.assertTrue("Images have different size", matchFlag);
+	        
+	        }
+	*/
+

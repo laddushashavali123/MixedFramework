@@ -14,9 +14,12 @@ import javax.imageio.ImageIO;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import org.junit.Assert;
@@ -85,6 +88,19 @@ public class CompareImageUtil {
 		return result;
 	}
 	
+	public static void takeScreenshotOfElement(WebElement elem, File src) throws IOException{
+		
+		File elementScr = new File ("resources/elementScr.jpg");
+		BufferedImage image = ImageIO.read(src);
+		Point point = elem.getLocation();
+		BufferedImage elementImage = image.getSubimage(
+		      point.getX(), point.getY(), 
+		      elem.getSize().getWidth(), elem.getSize().getHeight());
+		ImageIO.write(elementImage, "jpg", elementScr);
+		System.out.println("See element image here: " + elementScr.getAbsolutePath());
+		
+	} 
+	
 	
 	@Before
 	public void setUp() throws Exception{
@@ -99,11 +115,15 @@ public class CompareImageUtil {
 		
 		try {
 		File srcFile = new File("resources/googleSrc.jpg");
-		File baseFile = new File("resources/googleBase.jpg");
+		File baseFile = new File("resources/googleSrc3.jpg");
 		File diffFile = new File("resources/googlediff.jpg");
 		
 		File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(screenshotFile, srcFile);
+		
+		WebElement SearchBtn = driver.findElement(By.xpath("//*[@id='tsf']//center/input[1]"));
+		takeScreenshotOfElement(SearchBtn, srcFile);
+		
 		BufferedImage buFileSrc = ImageIO.read(srcFile);
 		BufferedImage buFileBase = ImageIO.read(baseFile);
 		BufferedImage buFilediff = getDifferenceImage(buFileSrc, buFileBase);

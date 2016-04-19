@@ -1,7 +1,5 @@
 package us.st.selenium.extension;
 
-import static org.junit.Assert.*;
-
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -29,6 +27,8 @@ public class WebElementExtender {
 		driver.executeScript("arguments[0].setAttribute('style', arguments[1]);", element, "color: green; border:10px; solid yellow" );
 		}
 	}
+	
+	
 	
 	@Test
 	public void test() {

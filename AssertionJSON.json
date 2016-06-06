@@ -8,7 +8,7 @@ assertions[
 	status: "Success",
 	review: {
 				id: 1,
-				date_created: "date_time"
+				date_created: "date_time",
 				date_edited: "date_time|null"
 	}}
 	

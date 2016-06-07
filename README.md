@@ -12,6 +12,7 @@ Project that contains improvements of framework:
 * /SeleniumIntermediate/src/us/st/selenium/protocols/ tee console output, output to mysql, using logback, sl4j
 * /SeleniumIntermediate/src/us/st/selenium/extension/ - extension of framwork to compare images and highlight DOM elements
 * other scripts
+
 # 3) BDD: 
 Comparison JBehave and Cucumber due to report and code style
 # 4) API-auto:

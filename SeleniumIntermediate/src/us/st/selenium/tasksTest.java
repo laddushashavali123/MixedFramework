@@ -17,10 +17,12 @@ public class tasksTest {
 	@Test
 	public void test() {
 		int[] B = {1,2,5,7,2,3,5};
+		int[] test={1,2,3,4,4,5,6,7,9,10,11,12};
 		//function #1
 		//System.out.println(parseString("work #@#$ bike bannana fun, perl, ##!()**ruby, function"));
 		//function #2 - return unique values
 		//System.out.println(parseUniqueValues("perl,python,ruby,java,go,erlang,perl,python,java,java"));
+		System.out.println(findWrongElements(test));
 		System.out.println(Solution.solution(5, B));
 	}
 	
@@ -96,8 +98,23 @@ public class tasksTest {
 		return result;
 		
 	}
-
 	
+	//function 5 to output wrong elements in array in the way described below:
+	/**
+	[1,2,3,4,4,5,6,7,9,10,11,12]
+			 * 4,8 - output, duplicates and wrong index
+	**/
+	 public List findWrongElements(int[] someList){
+		    List <Integer> result = new <Integer> ArrayList();
+		    for (int i=1; i<someList.length; i++){
+		         if(someList[i]!=someList[i-1]+1){
+		            result.add(i);
+		          }
+		    }
+			return result;
+		    }
+	 }
+
 /*	
 	class Solution {
 	    public int solution(int[] A) {
@@ -126,7 +143,7 @@ public class tasksTest {
 	        return result;
 	    }
 */
-	}
+	
 	class Solution {
 		// function #5 - split array in the right way
 		public static int solution(int X, int[] A) {

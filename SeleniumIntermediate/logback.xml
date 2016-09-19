@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+
+<statusListener class="ch.qos.logback.core.status.NopStatusListener" />
+
+<!--
+<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <filter class="ch.qos.logback.classic.filter.LevelFilter">
+        <level>INFO</level>
+        <onMatch>ACCEPT</onMatch>
+        <onMismatch>DENY</onMismatch>
+    </filter>   
+    <encoder>
+        <pattern>[%-5level] - %msg%n
+        </pattern>
+    </encoder>
+</appender>
+-->
+
+<appender name="FILE" class="ch.qos.logback.core.FileAppender">
+    <append>true</append>
+    <filter class="ch.qos.logback.classic.filter.LevelFilter">
+        <level>ERROR</level>
+    </filter>
+	
+    <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+      <maxFileSize>100MB</maxFileSize>
+    </triggeringPolicy>
+	
+	<encoder>
+        <pattern>\n\n\n%d{HH:mm:ss.SSS} [%thread] %-5level %class - %msg%n
+        </pattern>
+    </encoder>
+    
+	<File>stacktrace.log</File>
+	
+	
+	
+</appender>
+
+<!--
+<logger name="org.test" level="INFO" additivity="false">
+    <appender-ref ref="STDOUT" />
+</logger>
+-->
+<logger name="cue.connect.com" level="ERROR" additivity="false">
+    <appender-ref ref="FILE" />
+</logger>
+
+<root level="OFF">
+	<appender-ref ref="FILE" />
+</root>
+
+</configuration>

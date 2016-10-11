@@ -22,8 +22,10 @@ public class tasksTest {
 		//System.out.println(parseString("work #@#$ bike bannana fun, perl, ##!()**ruby, function"));
 		//function #2 - return unique values
 		//System.out.println(parseUniqueValues("perl,python,ruby,java,go,erlang,perl,python,java,java"));
-		System.out.println(findWrongElements(test));
-		System.out.println(Solution.solution(5, B));
+		//System.out.println(findWrongElements(test));
+		//System.out.println(Solution.solution(5, B));
+		//function #6 - return unique values
+		System.out.println(findPositions("ab"));
 	}
 	
 	//function #1 first implementation
@@ -103,7 +105,7 @@ public class tasksTest {
 	/**
 	[1,2,3,4,4,5,6,7,9,10,11,12]
 			 * 4,8 - output, duplicates and wrong index
-	**/
+	*/
 	 public List findWrongElements(int[] someList){
 		    List <Integer> result = new <Integer> ArrayList();
 		    for (int i=1; i<someList.length; i++){
@@ -113,8 +115,33 @@ public class tasksTest {
 		    }
 			return result;
 		    }
-	 }
-
+	 
+	//function 6 look up in String for Sting pattern and output found positions as array:
+	/**
+		*	"abcfabretyab" - our String
+		* 	"ab" - string-pattern we are looking for
+	*/
+	public List findPositions(String pattern){
+		
+		String string="abcfabretyab";
+		List <Integer> result = new <Integer> ArrayList();
+		
+		int index =0;
+		while (index<string.length()){
+			
+			if (string.indexOf(pattern, index)!=-1){
+				result.add(string.indexOf(pattern, index));
+				if (index!=0){
+					index=string.indexOf(pattern, index);
+				}
+			}
+			index+=1;
+		
+		}
+			    
+		return result;
+	}
+	
 /*	
 	class Solution {
 	    public int solution(int[] A) {
@@ -146,7 +173,7 @@ public class tasksTest {
 	
 	class Solution {
 		// function #5 - split array in the right way
-		public static int solution(int X, int[] A) {
+		public int solution(int X, int[] A) {
 	        int K = 0;
 	        int amount = 0;
 	        //int[] B = {5,5,1,7,2,3,5};
@@ -184,7 +211,8 @@ public class tasksTest {
 	        }
 	        return K;
 		}
-	    }
+	}
+}
 	            	
 
 	

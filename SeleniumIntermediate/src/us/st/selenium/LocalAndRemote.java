@@ -17,12 +17,17 @@ public class LocalAndRemote {
 		driver.get("http://www.msn.com/");
 		driver.quit();
 	}
+
+/*	
 	@Test
 	public void runRemotelyOnLocalHost(){
 		WebDriver driver = new RemoteWebDriver(DesiredCapabilities.firefox());
 		driver.get("http://google.com/");
 		driver.quit();
 	}
+*/	
+
+/*
 	@Test
 	public void runRemotelyonRemoteHost() throws MalformedURLException{
 	WebDriver driver = new RemoteWebDriver(
@@ -31,6 +36,7 @@ public class LocalAndRemote {
 	driver.get("http://google.com/");
 	driver.quit();
 	}
-		
+*/
+	
 	}
 

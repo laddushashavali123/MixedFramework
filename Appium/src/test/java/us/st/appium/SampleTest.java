@@ -22,7 +22,7 @@ public class SampleTest {
   
   @BeforeTest
   public void beforeTest() throws MalformedURLException, InterruptedException {
-	  
+
 	  DesiredCapabilities capabilities = new DesiredCapabilities();
 	  capabilities.setCapability("deviceName", "FA53RYJ17472");
 	  capabilities.setCapability("platformName", "Android");

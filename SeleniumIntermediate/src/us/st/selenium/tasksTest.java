@@ -25,7 +25,11 @@ public class tasksTest {
 		//System.out.println(findWrongElements(test));
 		//System.out.println(Solution.solution(5, B));
 		//function #6 - return unique values
+		String s = "Prrrmogrrammming";
+		findDublicatedValues(s);
 		System.out.println(findPositions("ab"));
+		
+		
 	}
 	
 	//function #1 first implementation
@@ -82,7 +86,8 @@ public class tasksTest {
 	
 	
 	
-	/* function #3 - write class to test api end points:
+	/* 
+	 * function #3 - write class to test api end points:
 	 *  api/users - [{"user_id":1, "user_name":"Luis"},{"user_id":2, "user_name":"mike"}]
 	 * 	api/users/1 - [{"user_id":1, "user_name":"Luis"},{"user_id":2, "user_name":"mike"}]
 	 */
@@ -101,7 +106,7 @@ public class tasksTest {
 		
 	}
 	
-	//function 5 to output wrong elements in array in the way described below:
+	//function #5 to output wrong elements in array in the way described below:
 	/**
 	[1,2,3,4,4,5,6,7,9,10,11,12]
 			 * 4,8 - output, duplicates and wrong index
@@ -116,7 +121,7 @@ public class tasksTest {
 			return result;
 		    }
 	 
-	//function 6 look up in String for Sting pattern and output found positions as array:
+	//function #6 look up in String for Sting pattern and output found positions as array:
 	/**
 		*	"abcfabretyab" - our String
 		* 	"ab" - string-pattern we are looking for
@@ -130,9 +135,12 @@ public class tasksTest {
 		while (index<string.length()){
 			
 			if (string.indexOf(pattern, index)!=-1){
+				
 				result.add(string.indexOf(pattern, index));
 				if (index!=0){
+					
 					index=string.indexOf(pattern, index);
+				
 				}
 			}
 			index+=1;
@@ -141,6 +149,57 @@ public class tasksTest {
 			    
 		return result;
 	}
+	
+	//method #7 look up in String for duplicated values,  print them and their count
+	/*
+	 *  "Programming"
+	 *  r: 2
+	 *  g: 2
+	 *  m: 2
+	 */
+	
+	public void findDublicatedValues(String s){
+		
+		HashMap<Character, Integer> dublicates = new HashMap<Character, Integer>();
+		for (int i=0; i<s.length(); i++){
+			 
+			if(dublicates.containsKey(s.charAt(i))){
+				
+				continue;
+				
+			}
+			for (int j=i+1; j<s.length(); j++){
+					
+				if (s.charAt(i)==s.charAt(j)){
+						
+					if(!dublicates.containsKey(s.charAt(j))){
+						
+						dublicates.put(s.charAt(j), 2);
+					
+					} else {
+						
+						dublicates.put(s.charAt(j), dublicates.get(s.charAt(j))+1);
+						
+					}
+				
+				}
+	
+			}
+		}
+
+			for (Character item : dublicates.keySet()){
+				
+				System.out.println(item + ": "+dublicates.get(item));
+				
+			}
+			
+		
+	}
+	
+	
+	
+	
+	
 	
 /*	
 	class Solution {

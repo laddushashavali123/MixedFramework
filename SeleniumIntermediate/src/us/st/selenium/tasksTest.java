@@ -28,7 +28,12 @@ public class tasksTest {
 		String s = "Prrrmogrrammming";
 		findDublicatedValues(s);
 		System.out.println(findPositions("ab"));
+		System.out.println(findStringOcurance(s,'m'));
 		
+		s= new String ("056");
+		int value = Integer.valueOf(s);
+		
+		System.out.println(value);
 		
 	}
 	
@@ -196,6 +201,25 @@ public class tasksTest {
 		
 	}
 	
+	//method #8 find Occurrence in the String and output count of this occurrence
+		/*
+		 *  "Java"
+		 *  output: 2
+		 */
+	
+	public Integer findStringOcurance (String str, char ch){
+		
+		int count = 0;
+		for (int i=0; i<str.length(); i++){
+		
+			if (str.charAt(i)==ch){
+				
+				count++;
+			}
+		
+		}
+		return count;
+	}
 	
 	
 	

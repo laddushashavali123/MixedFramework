@@ -206,7 +206,6 @@ public class tasksTest {
 		 *  "Java"
 		 *  output: 2
 		 */
-	
 	public Integer findStringOcurance (String str, char ch){
 		
 		int count = 0;
@@ -295,15 +294,4 @@ public class tasksTest {
 	        return K;
 		}
 	}
-}
-	            	
-
-	
-		
-
-	
-	
-	
-
-	
-
+}kk

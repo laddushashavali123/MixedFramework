@@ -5,8 +5,10 @@ package us.st.selenium;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.junit.Test;
 
@@ -16,8 +18,13 @@ public class tasksTest {
 
 	@Test
 	public void test() {
-		int[] B = {1,2,5,7,2,3,5};
-		int[] test={1,2,3,4,4,5,6,7,9,10,11,12};
+		//int[] B = {1,2,5,7,2,3,5};
+		//int[] test={1,2,3,4,4,5,6,7,9,10,11,12};
+		System.out.println("=======================");
+		System.out.println(parseString("Some31203-12:{#()@() text"));
+		System.out.println("=======================");
+		System.out.println(findPositions("b"));
+		System.out.println("=======================");
 		//function #1
 		//System.out.println(parseString("work #@#$ bike bannana fun, perl, ##!()**ruby, function"));
 		//function #2 - return unique values
@@ -25,15 +32,20 @@ public class tasksTest {
 		//System.out.println(findWrongElements(test));
 		//System.out.println(Solution.solution(5, B));
 		//function #6 - return unique values
-		String s = "Prrrmogrrammming";
-		findDublicatedValues(s);
-		System.out.println(findPositions("ab"));
-		System.out.println(findStringOcurance(s,'m'));
+		//String s = "Prrrmogrrammming";
+		//findDublicatedValues(s);
+		//System.out.println(findPositions("ab"));
+		//System.out.println(findStringOcurance(s,'m'));
+		//System.out.println(Arrays.toString(removeDublicate(Arrays.asList("xyz", "abc", "xyz", "abc", "xyz")).toArray()));
 		
-		s= new String ("056");
-		int value = Integer.valueOf(s);
+		System.out.println(countDuplicatess(new int[]{1,3,1,3,3,6,3,2}));
+		System.out.println("=======================");
+		System.out.println(Arrays.toString(checkBraces(new String[] {"[]{}()","[({})]","{}[()]","][{}(("})));
 		
-		System.out.println(value);
+		//s= new String ("056");
+		//int value = Integer.valueOf(s);
+		
+		//System.out.println(value);
 		
 	}
 	
@@ -142,13 +154,18 @@ public class tasksTest {
 			if (string.indexOf(pattern, index)!=-1){
 				
 				result.add(string.indexOf(pattern, index));
-				if (index!=0){
-					
-					index=string.indexOf(pattern, index);
 				
+				if (index!=0){
+					index=string.indexOf(pattern, index);
+					System.out.println("Now index: "+index);
 				}
+				
+			} else{
+				
+				System.out.println(index);
+				System.out.println(string.indexOf(pattern, index));
 			}
-			index+=1;
+			index++;
 		
 		}
 			    
@@ -220,6 +237,191 @@ public class tasksTest {
 		return count;
 	}
 	
+	public static int countDuplicates(int[] numbers) {
+		return 0;
+
+
+    }
+	//method #9 remove duplicates from given list
+			/*
+			 *  "xyz", "abc", "xyz", "abc", "xyz"
+			 *  "xyz", "abc"
+			 */
+	public ArrayList<String> removeDublicate (List<String> data){
+			
+			ArrayList <String> result= new ArrayList<String>();
+			
+			for (String str:data){
+				
+				if (!result.contains(str)){
+					result.add(str);
+				}
+			}
+			
+			return result;
+	}
+	
+	
+	public static int countDuplicatess(int[] numbers) {
+	    
+	    int countDub=0;
+	    Set foundNum= new HashSet<Integer>();
+	    
+	    for (int i=0; i<numbers.length;i++){
+	       
+	    	if(foundNum.contains(numbers[i])){
+	    		
+	    		continue;
+	    
+	    	}
+	    	
+	       for (int j=i+1; j<numbers.length;j++){
+	           
+	           if (numbers[i]==numbers[j]){
+	               
+	               countDub+=1;
+	               foundNum.add(numbers[i]);
+	               break;
+	           }
+	           
+	       }    
+	    }
+	    
+	    return countDub;
+
+	}
+	
+	
+	//method #10 multiply elements in array and put result on position of element
+	/*	
+	 *  i/p: [2,4,3,5]
+	 *  o/p: [60,30,40,24]
+	 *  60 = 4 * 3 * 5
+	 */
+	
+			public int[] changeArray(int[] input){
+			    int[] result=new int[input.length];
+			    for (int i=0;i<input.length;i++){
+			        
+			        int tmp=0;
+			        for (int j=0;j<input.length;j++){
+			            if (j==i){
+			                continue;
+			            }
+			            tmp*=input[j];
+			            
+			        }
+			        result[i]=tmp;
+			    }
+			        
+			    return result;
+			       
+			}
+			
+		public static String[] checkBraces(String[] values) {
+
+		        String[] result = new String[values.length];
+		        
+		        for (int i=0;i<values.length;i++){
+		        	
+		        	System.out.println(values[i]);
+		        	if(values[i].matches("{*}")&&values[i].matches("[*]")&&values[i].matches("(*)")){
+		        		System.out.println("Yes");
+		        		result[i]= new String("Yes");
+		        		
+		        	} else{
+		        		System.out.println("No");
+		        		result[i]=new String("No");
+		        	}
+		        	System.out.println(values[i]);
+		        	/*
+		        	switch(values[i].charAt(0)){
+		        	
+		        	case '(' :
+		        		if (values[i].charAt(1)==')'||values[i].charAt(1)=='[' || values[i].charAt(1)=='{'){
+		        			
+		        			
+		        		} else 
+		        			
+		        		//String [] strArr  = values[i].split("(?!^)");
+		        		break;
+		        	case '[' :
+		        		
+		        		break;
+		        		
+		        	case '{' :
+		        		
+		        		
+		        		break;	
+		        	default :
+		        		
+		        		result[i]="NO";
+		        	}		
+		        	*/	
+		        	
+		        	
+		        	//if (strArr[i].startsWith("(") || strArr[i].startsWith("(")){
+		        			
+		        			
+		        			
+		        		//}
+		        		
+		        	
+		        	//} else {
+		        		
+		        	//	result[i]="NO";
+		        	//}
+		        	
+		        }
+		        
+		        return result;
+		        
+		        
+		    }
+	
+			
+	
+	//method #11 find Occurrence in the String and output count of this occurrence
+			/*
+			 *  "Java"
+			 *  output: 2
+			 */
+	public int[] findGridSize(int n){
+	    int result[] = new int[2]; 
+				if (Math.sqrt(n) % 1 == 0){
+					
+					for (int i=0; i<2;i++){
+						
+						result[i]=(int) Math.sqrt(n);
+						
+					}
+					
+					return result;
+				}else {
+					
+				    int x = (int) Math.floor(Math.sqrt(n));
+				    int y=x;
+				    for (int j=0; j<x;j++){
+				        for (int i=1; i<x;i++)
+				        if((x-j)*(y+i)==n || (x-j)*(y+i)==n+1 || (x-j)*(y+i)==n+2){
+				            	
+				            result[0]=x-j;
+				            result[1]=y+i;
+		                   return result;
+		                    		            
+				        }else if ((x-j)*(y+i)>n+2){
+				            
+		                    break;
+				        }
+				        
+				        
+				    }
+					
+				}
+				return null;
+	    
+	    
+	    }
 	
 	
 	
@@ -294,4 +496,4 @@ public class tasksTest {
 	        return K;
 		}
 	}
-}kk
+}

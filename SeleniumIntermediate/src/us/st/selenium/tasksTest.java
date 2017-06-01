@@ -40,7 +40,7 @@ public class tasksTest {
 		
 		System.out.println(countDuplicatess(new int[]{1,3,1,3,3,6,3,2}));
 		System.out.println("=======================");
-		System.out.println(Arrays.toString(checkBraces(new String[] {"[]{}()","[({})]","{}[()]","][{}(("})));
+		System.out.println(Arrays.toString(checkBraces(new String[] {"[]{}()","[({})]","{}[()]","][{}((","][}}(("})));
 		
 		//s= new String ("056");
 		//int value = Integer.valueOf(s);
@@ -325,60 +325,117 @@ public class tasksTest {
 		        for (int i=0;i<values.length;i++){
 		        	
 		        	System.out.println(values[i]);
-		        	if(values[i].matches("{*}")&&values[i].matches("[*]")&&values[i].matches("(*)")){
-		        		System.out.println("Yes");
+		        	if(values[i].matches(".*\\{.*\\}.*") && values[i].matches(".*\\[.*\\].*") 
+		        			&& values[i].matches(".*\\(.*\\).*")){
+		        		
 		        		result[i]= new String("Yes");
 		        		
 		        	} else{
-		        		System.out.println("No");
+		        		
 		        		result[i]=new String("No");
+		        	
 		        	}
-		        	System.out.println(values[i]);
-		        	/*
-		        	switch(values[i].charAt(0)){
-		        	
-		        	case '(' :
-		        		if (values[i].charAt(1)==')'||values[i].charAt(1)=='[' || values[i].charAt(1)=='{'){
-		        			
-		        			
-		        		} else 
-		        			
-		        		//String [] strArr  = values[i].split("(?!^)");
-		        		break;
-		        	case '[' :
-		        		
-		        		break;
-		        		
-		        	case '{' :
-		        		
-		        		
-		        		break;	
-		        	default :
-		        		
-		        		result[i]="NO";
-		        	}		
-		        	*/	
-		        	
-		        	
-		        	//if (strArr[i].startsWith("(") || strArr[i].startsWith("(")){
-		        			
-		        			
-		        			
-		        		//}
-		        		
-		        	
-		        	//} else {
-		        		
-		        	//	result[i]="NO";
-		        	//}
-		        	
-		        }
+		        }	
 		        
 		        return result;
+		}
 		        
-		        
-		    }
+		
 	
+		public static String[] checkBraces2(String[] values){
+			
+			String[] result = new String[values.length];
+			/* 
+			*	Solve task using removal brackets
+			*
+			/*
+			
+			/*
+        	switch(values[i].charAt(0)){
+        	
+        	case '(' :
+        		if (values[i].charAt(1)==')'||values[i].charAt(1)=='[' || values[i].charAt(1)=='{'){
+        			
+        			
+        		} else 
+        			
+        		//String [] strArr  = values[i].split("(?!^)");
+        		break;
+        	case '[' :
+        		
+        		break;
+        		
+        	case '{' :
+        		
+        		
+        		break;	
+        	default :
+        		
+        		result[i]="NO";
+        	}		
+        	*/	
+        	
+        	
+        	//if (strArr[i].startsWith("(") || strArr[i].startsWith("(")){
+        			
+        			
+        			
+        		//}
+        		
+        	
+        	//} else {
+        		
+        	//	result[i]="NO";
+        	//}
+			
+			
+        	
+      
+        
+			
+			/*
+        	switch(values[i].charAt(0)){
+        	
+        	case '(' :
+        		if (values[i].charAt(1)==')'||values[i].charAt(1)=='[' || values[i].charAt(1)=='{'){
+        			
+        			
+        		} else 
+        			
+        		//String [] strArr  = values[i].split("(?!^)");
+        		break;
+        	case '[' :
+        		
+        		break;
+        		
+        	case '{' :
+        		
+        		
+        		break;	
+        	default :
+        		
+        		result[i]="NO";
+        	}		
+        	*/	
+        	
+        	
+        	//if (strArr[i].startsWith("(") || strArr[i].startsWith("(")){
+        			
+        			
+        			
+        		//}
+        		
+        	
+        	//} else {
+        		
+        	//	result[i]="NO";
+        	//}
+        	
+        //}
+		return result;
+	}
+		        
+		        
 			
 	
 	//method #11 find Occurrence in the String and output count of this occurrence

@@ -2,6 +2,9 @@ package us.st.selenium;
 
 
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -317,7 +320,13 @@ public class tasksTest {
 			    return result;
 			       
 			}
+		
 			
+		//method #11 check braces in String array
+		/*	
+		 *  i/p: {"[]{}()","[({})]","{}[()]","][{}((","][}}(("})
+		 *  o/p: [Yes, Yes, Yes, No, No]
+		 */
 		public static String[] checkBraces(String[] values) {
 
 		        String[] result = new String[values.length];
@@ -335,11 +344,101 @@ public class tasksTest {
 		        		result[i]=new String("No");
 		        	
 		        	}
-		        }	
+		        }
+				return result;
+		}
+		
+		public static boolean[] isBalanced(String values) {
+			
+			String [] input = new String[values.split(",").length];
+			input=	values.split(",");
+			boolean[] result = new boolean[input.length];
+			        
+			 for (int i=0;i<input.length;i++){
+			        	
+			        	
+			        	if((input[i].matches(".*\\{.*\\}.*") && input[i].matches(".*\\[.*\\].*") 
+			        			&& input[i].matches(".*\\(.*\\).*"))||input[i].length()==0){
+			        		
+			        		result[i]= true;
+			        		
+			        	} else{
+			        		
+			        		result[i]=false;
+			        	
+			        	}
+			        }
 		        
 		        return result;
 		}
-		        
+		public static boolean isMatch(String IP) {
+			
+			String pattern = "[0-9]|1[0-9][0-9]|2[0-5][0-5]";
+			String[] digits= new String[IP.split("\\.").length];
+			digits=IP.split("\\.");
+			if (digits.length==4){
+				
+				for (int i=0;i<4;i++){ 
+					if (digits[i].matches(pattern)){
+						
+						if(i==3){
+							return true;
+						}
+					} else{
+						break;
+						
+					}
+				}
+				return false;
+			} else {
+				
+				return false;
+			}
+		
+			
+		}
+		
+		
+		
+		
+		
+		
+		public static void main(String[] args) {
+
+	        BufferedReader br = null;
+
+	        try {
+
+	            br = new BufferedReader(new InputStreamReader(System.in));
+
+	            while (true) {
+
+	                System.out.print("Enter IP : ");
+	                String input = br.readLine();
+
+	                if ("q".equals(input)) {
+	                    System.out.println("Exit!");
+	                    System.exit(0);
+	                }
+	                
+	                	System.out.println("result : " + isMatch(input));
+	                	System.out.println("-----------\n");
+	                	
+	            }
+
+	        } catch (IOException e) {
+	            e.printStackTrace();
+	        } finally {
+	            if (br != null) {
+	                try {
+	                    br.close();
+	                } catch (IOException e) {
+	                    e.printStackTrace();
+	                }
+	            }
+	        }
+
+	    }       
 		
 	
 		public static String[] checkBraces2(String[] values){

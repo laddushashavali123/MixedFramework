@@ -1,10 +1,9 @@
 #!/bin/sh -ev
-git remote rm origin || true
-#git tag | xargs git tag -d
-git branch -D in || true
-(
-cd .git
-rm -rf refs/remotes/ refs/original/ *_HEAD logs/
-)
-git for-each-ref --format="%(refname)" refs/original/ | xargs -n1 --no-run-if-empty git update-ref -d
-git -c gc.reflogExpire=0 -c gc.reflogExpireUnreachable=0 -c gc.rerereresolved=0 -c gc.rerereunresolved=0 -c gc.pruneExpire=now gc "$@"
+git tag | xargs git tag -d
+git filter-branch --index-filter "git rm --cached --ignore-unmatch $FILE"
+rm -rf .git/refs/original/ .git/refs/remotes/ .git/*_HEAD .git/logs/
+git for-each-ref --format="%(403e932b2a6395d47ea060505d3241be2b594fca)" refs/original/ | \
+  xargs -n1 --no-run-if-empty git update-ref -d
+  git reflog expire --expire-unreachable=now --all
+  git repack -A -d
+  git prune

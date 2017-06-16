@@ -74,10 +74,11 @@ public class Script {
 				driver.close();
 				driver.switchTo().window(originalWindow);
 				//i++;
+				
 		}
 		}
 	}
-	}
+}
 
 
 

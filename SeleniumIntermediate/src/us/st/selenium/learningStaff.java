@@ -6,7 +6,7 @@ import java.util.List;
 public class learningStaff {
 
 	//Example of final non-access modifier
-	
+
 	public class TestFinal{
 		
 		//final Object somevar;    - give error
@@ -36,7 +36,7 @@ public class learningStaff {
 		
 		class TestClass1 {
 			
-			  private final ArrayList<String> foo=null;
+			  private ArrayList<String> foo=null;
 
 			  public void Test()
 			  {

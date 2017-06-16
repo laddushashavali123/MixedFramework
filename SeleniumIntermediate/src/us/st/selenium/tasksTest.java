@@ -1,7 +1,6 @@
 package us.st.selenium;
 
 
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -12,6 +11,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+
+import javax.management.RuntimeErrorException;
 
 import org.junit.Test;
 
@@ -98,6 +99,7 @@ public class tasksTest {
 		}
 		for (String key:items.keySet()){
 			result.add(key+":"+items.get(key)); 
+			
 		}
 		System.out.println(result.size());
 		return result;
@@ -264,7 +266,11 @@ public class tasksTest {
 			return result;
 	}
 	
-	
+	//method #9 method to count duplicates in array
+	/*
+	 *  
+	 *  "xyz", "abc"
+	 */
 	public static int countDuplicatess(int[] numbers) {
 	    
 	    int countDub=0;
@@ -272,6 +278,7 @@ public class tasksTest {
 	    
 	    for (int i=0; i<numbers.length;i++){
 	       
+	    	
 	    	if(foundNum.contains(numbers[i])){
 	    		
 	    		continue;
@@ -293,9 +300,67 @@ public class tasksTest {
 	    return countDub;
 
 	}
+	//method #10 Method to find biggest occurrence of character in String 
+			/*	
+			 *  i/p: "Hello! How are you? How is everything?" (case not sensitive)
+			 *  o/p: (h, 3)
+			 */
+		public static String findCharOccurance(String input) {
+	    
+		    
+		    input=input.replaceAll("\\s","").toLowerCase();
+		    System.out.println(input);
+		    if (input.length()==0){
+		    	
+		    	throw new RuntimeException("Input string probably empty or with spaces");
+		    }
+		    char[] chararray=input.toCharArray();
+		    Map<Integer, Character> chars= new HashMap<Integer, Character>();
+		    
+		    for (int i=0; i<chararray.length;i++){
+		       
+		    	int occurance=1;
+		    	
+		    	if(chars.containsValue(chararray[i])){
+		    		
+		    		continue;
+		    
+		    	}
+		    	
+		       for (int j=i+1; j<chararray.length;j++){
+		           
+		           if (chararray[i]==chararray[j]){
+		               
+		        	   occurance++;
+		               
+		           }
+		           if (j==chararray.length-1){
+		        	   
+		        	   chars.put(occurance, chararray[j]);
+		        		   
+		           }   
+		       }
+		       
+		    }
+		    
+		    int maxKey=1;
+		    for (int Key:chars.keySet()){
+		    	
+		    	if(Key>maxKey){
+		    		maxKey=Key;
+		    	}
+		    	System.out.println(chars.get(Key)+","+Key);
+		    }
+		    if (maxKey==1){
+		    	
+		    	System.out.println("There is no same characters in given string");
+		    	return new String("");
+		    }
+		     
+			return new String(chars.get(maxKey)+","+maxKey);
+	}
 	
-	
-	//method #10 multiply elements in array and put result on position of element
+	//method #11 multiply elements in array and put result on position of element
 	/*	
 	 *  i/p: [2,4,3,5]
 	 *  o/p: [60,30,40,24]
@@ -320,9 +385,40 @@ public class tasksTest {
 			    return result;
 			       
 			}
-		
-			
-		//method #11 check braces in String array
+		//method #12 multiply elements in array and put result on position of element
+			/*	
+			 *  i/p: [2,4,3,5]
+			 *  o/p: [60,30,40,24]
+			 *  60 = 4 * 3 * 5
+			 */
+		public static int find2ndMaxNumber(int[]input){
+			    
+				int max=0;
+				int result=max;
+			    if(input.length==0){
+			        return 0; 
+			    }else if(input.length==1){
+			        return input[1];
+			    } 
+			    if(input[input.length-1]>input[input.length-2]){
+			    	max=input[input.length-1];
+				    result=input[input.length-2];
+			    } else {
+			    	max=input[input.length-2];
+				    result=input[input.length-1];
+			    }
+			    
+			    for (int i=0; i<input.length; i++){
+			         if(input[i]>max){
+			             result=max;
+			             max=input[i];
+			             
+			         }
+			    }
+			    return result;
+
+		}	
+		//method #14 check braces in String array
 		/*	
 		 *  i/p: {"[]{}()","[({})]","{}[()]","][{}((","][}}(("})
 		 *  o/p: [Yes, Yes, Yes, No, No]
@@ -348,32 +444,63 @@ public class tasksTest {
 				return result;
 		}
 		
-		public static boolean[] isBalanced(String values) {
+		
+		//method #15 check braces in String array
+		/*
+		Examples: set[] = {3, 34, 4, 12, 5, 2}, sum = 9
+				Output:  True  //There is a subset (4, 5) with sum 9.
+				1 3 6 7 10
+				9
+				1 2 3 6 7 10
+				2 7
+				3 6
+		*/
+		
+		public static void givePairToSum(int[] inputArray, int sum) {
+		
+			if (inputArray.length<2){
+				
+				throw new RuntimeErrorException(null, "given array should contains 2 or more integers");
+				
+			}
+			Map<Integer, Integer> result = new HashMap<Integer, Integer>(); 
+			for (int i=0; i<inputArray.length;i++){
+				
+				if(result.containsKey(inputArray[i])){
+					continue;
+				}
+				for (int j=i+1;j<inputArray.length;j++){
+					
+					if(inputArray[i]+inputArray[j]==sum){
+						
+						result.put(inputArray[i], inputArray[j]);
+						continue;
+						
+					}
+				}
+				
+			}
 			
-			String [] input = new String[values.split(",").length];
-			input=	values.split(",");
-			boolean[] result = new boolean[input.length];
-			        
-			 for (int i=0;i<input.length;i++){
-			        	
-			        	
-			        	if((input[i].matches(".*\\{.*\\}.*") && input[i].matches(".*\\[.*\\].*") 
-			        			&& input[i].matches(".*\\(.*\\).*"))||input[i].length()==0){
-			        		
-			        		result[i]= true;
-			        		
-			        	} else{
-			        		
-			        		result[i]=false;
-			        	
-			        	}
-			        }
-		        
-		        return result;
+			for (Integer key: result.keySet()){
+				
+				System.out.println(key+","+result.get(key));
+			}
+			//return (HashMap<Integer, Integer>) result;
+			
+			
 		}
-		public static boolean isMatch(String IP) {
+	
+		//method #16 Method to check if IP address is valid 1-255.0-255.0-255.0-255
+		/*	
+		 *  i/p: 192.168.0.1
+		 *  o/p: true
+		 *  i/p: 54.2.2
+		 *  o/p: false
+		 */
+		
+		public static boolean parseIP(String IP) {
 			
-			String pattern = "[0-9]|1[0-9][0-9]|2[0-5][0-5]";
+			String pattern = "[0-9]|1[0-9][0-9]|2[0-5][0-5]|[1-9][0-9]";
 			String[] digits= new String[IP.split("\\.").length];
 			digits=IP.split("\\.");
 			if (digits.length==4){
@@ -398,48 +525,70 @@ public class tasksTest {
 			
 		}
 		
+		//method #17 Method 
+		/**
+		 * Given two words as Strings, determine if 
+		 * there exists a 1:1 mapping of characters from the first to the second word. No two letters
+		 * may map to the same letter, but a letter may map to itself.
+		 *
+		 * Example:
+		 *   given "foo", "app"; returns true
+		 *     we can map 'f' -> 'a' and 'o' -> 'p'
+		 *
+		 *   given "foo", "boa"; returns false
+		 *     we can map 'f' -> 'b', 'o' -> 'o', we can't map 'o' -> 'a'
+		 *
+		 *   given "bar", "foo"; returns false
+		 *     we can't map both 'a' and 'r' to 'o'
+		 *
+		 *   given "turtle", "tletur"; returns true
+		 *     we can map 't' -> 't', 'u' -> 'l', 'r' -> 'e', 'l' -> 'u', 'e' ->'r'
+		 *
+		 *   given "ab", "ca"; returns true
+		 *     we can map 'a' -> 'c', 'b' -> 'a'
+		 *
+		 *   given "ofo", "pop"; returns true
+		 *     we can map 'o' -> 'p' and 'f' -> 'o'
+		 */
+		 
+		 public static boolean MapStrings(String str1, String str2){
+		     
+		     if(str1.length()!=str2.length()){
+		         return false;
+		     }
+		    char[] charArr1=str1.toCharArray();
+		    char[] charArr2=str2.toCharArray();
+		    Map<Character,Character> ourMap = new HashMap<Character,Character>();
+		    
+		    for (int i=0;i<charArr1.length;i++){
+		        if(!ourMap.containsKey(charArr1[i])){
+		            
+		            ourMap.put(charArr1[i],charArr2[i]);
+		            
+		        }else{
+		            if(!(ourMap.get(charArr1[i])==charArr2[i])){
+		                return false;
+		            }
+		            
+		        }
+		        if(i==charArr1.length-1){
+		                
+		                Set<Character> values= new HashSet<Character>();
+		                for (char Key:ourMap.keySet()){
+		                    if(values.contains(ourMap.get(Key))){
+		                        return false;
+		                    }
+		                    values.add(ourMap.get(Key));
+		                }
+		                return true;
+		            } 
+		    
+		    }
+		    return false;
+		 }
+		 
 		
-		
-		
-		
-		
-		public static void main(String[] args) {
-
-	        BufferedReader br = null;
-
-	        try {
-
-	            br = new BufferedReader(new InputStreamReader(System.in));
-
-	            while (true) {
-
-	                System.out.print("Enter IP : ");
-	                String input = br.readLine();
-
-	                if ("q".equals(input)) {
-	                    System.out.println("Exit!");
-	                    System.exit(0);
-	                }
-	                
-	                	System.out.println("result : " + isMatch(input));
-	                	System.out.println("-----------\n");
-	                	
-	            }
-
-	        } catch (IOException e) {
-	            e.printStackTrace();
-	        } finally {
-	            if (br != null) {
-	                try {
-	                    br.close();
-	                } catch (IOException e) {
-	                    e.printStackTrace();
-	                }
-	            }
-	        }
-
-	    }       
-		
+				
 	
 		public static String[] checkBraces2(String[] values){
 			
@@ -579,6 +728,58 @@ public class tasksTest {
 	    
 	    }
 	
+	
+	
+	public static void main(String[] args) {
+
+        BufferedReader br = null;
+        System.out.println(countDuplicatess(new int[]{1,3,1,3,3,6,3,2}));
+        /*
+        System.out.println("T: "+MapStrings("foo", "app"));
+        System.out.println("F "+MapStrings("foo", "boa"));
+        System.out.println("F: "+MapStrings("bar", "foo"));
+        System.out.println("T: "+MapStrings("turtle", "tletur"));
+        System.out.println("T: "+MapStrings("ab", "ca"));
+        System.out.println("T: "+MapStrings("ofo", "pop"));
+        */
+        System.out.println(findCharOccurance("Input string probably empty or with spaces"));
+        givePairToSum(new int[] {0, 2, 5, 6, 0, 10}, 9);
+		
+        //System.out.println("2nd number in array: "+find2ndMaxNumber(new int[]{2,1}));
+        
+        try {
+
+            br = new BufferedReader(new InputStreamReader(System.in));
+
+            while (true) {
+
+                System.out.print("Enter IP : ");
+                String input = br.readLine();
+
+                if ("q".equals(input)) {
+                    System.out.println("Exit!");
+                    System.exit(0);
+                }
+                
+                	System.out.println("result : " + parseIP(input));
+                	System.out.println("-----------\n");
+                	
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (br != null) {
+                try {
+                    br.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
+    }       
+
 	
 	
 	

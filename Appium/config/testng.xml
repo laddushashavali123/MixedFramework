@@ -4,7 +4,7 @@
   <test name="Test">
     <classes>  	  
 	<!--	<class name="us.st.appium.SampleTest"/> -->
-		<class name="us.st.appium.SampleWebDriverTest"/>
+		<class name="us.st.appium.SampleTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

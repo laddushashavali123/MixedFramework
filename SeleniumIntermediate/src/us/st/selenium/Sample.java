@@ -19,7 +19,6 @@ public class Sample {
 		
 		driver = new FirefoxDriver();
 		wait = new WebDriverWait(driver, 20);
-			
 		
 	long startTime= System.currentTimeMillis();
 	long endTime;

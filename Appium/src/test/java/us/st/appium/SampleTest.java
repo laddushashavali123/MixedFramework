@@ -2,7 +2,7 @@ package us.st.appium;
 
 import org.testng.annotations.Test;
 
-import io.appium.java_client.MobileElement;
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidKeyCode;
 
@@ -13,11 +13,10 @@ import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.apache.xalan.templates.ElemTemplate;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
@@ -41,11 +40,13 @@ public class SampleTest {
 	  capabilities.setCapability("noReset", "true");
 	  capabilities.setCapability("fullReset", "false");
 	  
+	  
 	  driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub") , capabilities);
 	  wait = new WebDriverWait (driver, 10);
 	  Map<String, String> params = new HashMap<String, String>();
-	  driver.pressKeyCode(AndroidKeyCode.HOME);
-	  //driver.pressKeyCode(AndroidKeyCode.KEYCODE_SEARCH);
+	  //driver.pressKeyCode(AndroidKeyCode.HOME);
+	  TouchAction action = new TouchAction(driver);
+	  driver.pressKeyCode(AndroidKeyCode.KEYCODE_SEARCH);
 	  
 	  
 	  wait.until(ExpectedConditions.visibilityOfElementLocated(

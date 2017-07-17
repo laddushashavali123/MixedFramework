@@ -1,5 +1,8 @@
 #################task 1 ##############################
-An integer X and a non-empty zero-indexed array A consisting of N integers are given. We are interested in which elements of A are equal to X and which are different from X. The goal is to split array A into two parts, such that the number of elements equal to X in the first part is the same as the number of elements different from X in the other part. More formally, we are looking for a number K such that:
+An integer X and a non-empty zero-indexed array A consisting of N integers are given. 
+We are interested in which elements of A are equal to X and which are different from X. 
+The goal is to split array A into two parts, such that the number of elements equal to X in the first part is the same 
+as the number of elements different from X in the other part. More formally, we are looking for a number K such that:
 0 = K = N, and the number of elements equal to X in A[0..K-1] is the same as the number of elements different from X in A[K..N-1]. 
 (For K = 0, A[0..K-1] does not contain any elements. For K = N, A[K..N-1] does not contain any elements.)
 
@@ -34,7 +37,9 @@ Complexity:
 Elements of input arrays can be modified.
 
 #################task 2 ##############################
-In base -2, integers are represented by sequences of bits in the following way. Bits are ordered from the least to the most significant. Sequence B of N bits represents the number: sum { B[i]*(-2)i for  i = 0..N-1 }. 
+In base -2, integers are represented by sequences of bits in the following way.
+Bits are ordered from the least to the most significant. 
+Sequence B of N bits represents the number: sum { B[i]*(-2)i for  i = 0..N-1 }. 
 The empty sequence represents 0.
 Note that such a representation is suitable for both positive and negative integers.
 Write a function:
@@ -46,7 +51,8 @@ a vector of integers (in C++), or
 a record Results (in Pascal), or
 an array of integers (in any other programming language).
 
-For example, given A = [1,0,0,1,1] (X = 9), the function should return [1,1,0,1] (-X = -9). Given A = [1,0,0,1,1,1] (X = -23), the function should return [1,1,0,1,0,1,1] (-X = 23).
+For example, given A = [1,0,0,1,1] (X = 9), the function should return [1,1,0,1] (-X = -9). 
+Given A = [1,0,0,1,1,1] (X = -23), the function should return [1,1,0,1,0,1,1] (-X = 23).
 Assume that:
 M is an integer within the range [0..100,000];
 each element of array A is an integer that can have one of the following values: 0, 1.
@@ -75,3 +81,57 @@ A and B are integers within the range [-100,000,000..100,000,000].
 Complexity:
 1) expected worst-case time complexity is O(1);
 2) expected worst-case space complexity is O(1).
+
+##################Amex-task ############################
+
+		/*****************************************************************************
+		 * Complete this class to validate credit card number using 
+		 * this Algorithm to validate check digits:
+		 * 1 - Beginning at the rightmost digit, moving right to left, sum the digits.
+		 * 2 - For every 2nd digit(from right), double value first, then sum
+		 * the value of each digit in the doubled number.e.g 6 -> 12, add 1 + 2
+		 * 3 - Sum for all digits
+		 * 4 - Take Sum modulo 10, if equal 0, then return true, else false.
+		 * Ex. "6314", Right->Left digits: 4, (2*1), 3, (2*6), so
+		 * Sum = (4) + (0+2) + (3) + (1+2) = 12, MOD10(12) = 2, so false
+		 ***************************************************************************** 
+		 */
+		public class CreditCardCheckDigits {
+
+		    public static boolean checkDigits(String card) {
+		        
+		      longint card = LongInteger.parse(card);
+		      for(int i=0; i<card.length; i++){
+		      
+		      	if (card[i]%2=0){
+		        
+		         		card[i]=card[i]*2;
+		          	if(card[i]>9){
+		            
+		            }
+		        }
+		      
+		      }
+		        
+		    }
+
+		    public static void lookup(String s) {
+		        System.out.println("Card Number " + s + " validation is "
+		                + checkDigits(s));
+		    }
+
+		    public static void main(String[] args) {
+		        lookup("6314");
+		        lookup("33344555588907");
+		        lookup("49927398716");
+		        lookup("8888888555888888");
+
+		    }
+
+		}
+		// Sample output
+		// Card Number 6314 validation is false
+		// Card Number 33344555588907 validation is true
+		// Card Number 49927398716 validation is true
+		// Card Number 8888888555888888 validation is false
+

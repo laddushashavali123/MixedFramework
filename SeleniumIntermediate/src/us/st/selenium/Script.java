@@ -1,22 +1,12 @@
 package us.st.selenium;
 
-import static org.junit.Assert.*;
 
-import java.util.List;
-import java.util.Set;
+
 import java.util.concurrent.TimeUnit;
 import java.lang.System;
-import java.util.Arrays;
-import java.*;
 import org.openqa.selenium.*;
-import org.openqa.selenium.By.ById;
-import org.openqa.selenium.By.ByXPath;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.*;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.Wait;
 import org.junit.Test;
 
 public class Script {

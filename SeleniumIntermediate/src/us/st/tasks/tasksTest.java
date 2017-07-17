@@ -1,4 +1,4 @@
-package us.st.selenium;
+package us.st.tasks;
 
 
 import java.io.BufferedReader;
@@ -63,7 +63,7 @@ public class tasksTest {
 	}
 	
 	//function #1 second implementation
-	public String parseString(String input){
+	public static String parseString(String input){
 		ArrayList<String> inputList=new ArrayList<String>();
 		int index =0;
 		while (index<input.length()){
@@ -252,9 +252,11 @@ public class tasksTest {
 			 *  "xyz", "abc", "xyz", "abc", "xyz"
 			 *  "xyz", "abc"
 			 */
-	public ArrayList<String> removeDublicate (List<String> data){
+	public static ArrayList<String> removeDublicate (List<String> data){
 			
 			ArrayList <String> result= new ArrayList<String>();
+			data.stream().forEach(e -> System.out.println(e));
+			//System.out.println(data.stream().sorted(s->"a"));
 			
 			for (String str:data){
 				
@@ -262,6 +264,8 @@ public class tasksTest {
 					result.add(str);
 				}
 			}
+			
+			
 			
 			return result;
 	}
@@ -300,6 +304,41 @@ public class tasksTest {
 	    return countDub;
 
 	}
+	
+static int countDuplicatesss(int[] numbers) {
+        
+		if(numbers.length==0||numbers.length>1000){
+			throw new RuntimeException("Array is too long");
+    	}
+        int count=0;
+        Set<Integer> dublicates = new HashSet<Integer>();
+        
+           for (int i=0; i<numbers.length; i++){
+               
+        	   
+        	   if(numbers[i]<1||numbers[i]>1000){
+                   throw new RuntimeException("Number is too long");
+        	   }
+               if(dublicates.contains(numbers[i])){
+                   
+                   continue;
+               }
+               for (int j=i+1; j<numbers.length; j++){
+                   
+                   
+                   if (numbers[i]==numbers[j]){
+                       count++;
+                       dublicates.add(numbers[i]);
+                       continue;
+                   }
+                   
+               }
+               
+               
+           }
+        return count;
+
+    }
 	//method #10 Method to find biggest occurrence of character in String 
 			/*	
 			 *  i/p: "Hello! How are you? How is everything?" (case not sensitive)
@@ -443,6 +482,25 @@ public class tasksTest {
 		        }
 				return result;
 		}
+		
+		static String[] Braces(String[] values) {
+	        
+	        String[] result = new String[values.length];
+	        
+	        for (int i=0; i<values.length;i++){
+	            
+	            if(values[i].matches(".*\\{.*\\}.*") && values[i].matches(".*\\[.*\\].*") && values[i].matches(".*\\(.*\\).*")){
+	                
+	                result[i]=new String("Yes");
+	            } else {
+	                
+	                result[i]=new String("No");
+	            }
+	        }
+	        return result;
+	        
+
+	    }
 		
 		
 		//method #15 check braces in String array
@@ -733,7 +791,7 @@ public class tasksTest {
 	public static void main(String[] args) {
 
         BufferedReader br = null;
-        System.out.println(countDuplicatess(new int[]{1,3,1,3,3,6,3,2}));
+        //System.out.println(countDuplicatess(new int[]{12,5,4,3,2,4,4,4,444,4,4,4,4}));
         /*
         System.out.println("T: "+MapStrings("foo", "app"));
         System.out.println("F "+MapStrings("foo", "boa"));
@@ -742,8 +800,13 @@ public class tasksTest {
         System.out.println("T: "+MapStrings("ab", "ca"));
         System.out.println("T: "+MapStrings("ofo", "pop"));
         */
-        System.out.println(findCharOccurance("Input string probably empty or with spaces"));
-        givePairToSum(new int[] {0, 2, 5, 6, 0, 10}, 9);
+        System.out.println("hello".substring(2,3));
+        //System.out.println(Arrays.toString( Braces(new String[] {"[]{}()","[({})]","{}[()]","][{}((","][}}((","{[}]"})));
+        
+        //System.out.println(findCharOccurance("Input string probably empty or with spaces"));
+        //System.out.println(Arrays.toString(removeDublicate(
+        //		   Arrays.asList("xyz", "abc", "xyz", "abc", "xyz", "bac", "cab", "dab", "efa")).toArray())); 
+        //givePairToSum(new int[] {0, 2, 5, 6, 0, 10}, 9);
 		
         //System.out.println("2nd number in array: "+find2ndMaxNumber(new int[]{2,1}));
         
@@ -812,45 +875,6 @@ public class tasksTest {
 	    }
 */
 	
-	class Solution {
-		// function #5 - split array in the right way
-		public int solution(int X, int[] A) {
-	        int K = 0;
-	        int amount = 0;
-	        //int[] B = {5,5,1,7,2,3,5};
-	        if (!((A.length==1))){
-	        	
-	            for (int i=0; i<A.length; i++){
-	            	
-	            	if (A[i]==X){
-	            		for (int j=i+1; j<A.length;j++){
-	            		if(!(A[j]==X)){
-	            			amount = j-i;
-	            			for (int k=A.length-1; k>=i+amount; k--){
-		            			if (A[k]==X){
-		    	            		continue;
-		            		}
-		            			for (int e=k; e>=i+amount;e--){
-		    	            		if(A[e]==X){
-		    	            			break;
-		    	            		}
-		    	            		if(k-e==amount){
-		    	            		System.out.println("Solution found!");
-		    	            		K = e+1;
-		    	            		}
-		    	            		}
-		            			break;
-		            		}
-	            			break;
-	            		}
-	            		}
-	            		break;
-	            		
-	            		
-	            		}
-	            	}
-	        }
-	        return K;
-		}
-	}
+	
+
 }

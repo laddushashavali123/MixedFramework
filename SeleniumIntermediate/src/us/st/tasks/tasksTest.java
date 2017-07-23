@@ -502,6 +502,28 @@ static int countDuplicatesss(int[] numbers) {
 
 	    }
 		
+		public static String removeExtraSpaces(String input){
+			
+			
+			StringBuilder result= new StringBuilder("");
+			if(input.contains(" ")){
+				
+				//char chars[] = input.toCharArray();
+				for (int i=0; i<input.length();i++){
+					if(!(input.charAt(i)==' '&& input.charAt(i+1)==' ')){
+						
+						result.append(input.charAt(i));
+						
+					}
+				}
+				
+				return result.toString();
+				
+				
+			}
+			return input;
+			
+		}
 		
 		//method #15 check braces in String array
 		/*

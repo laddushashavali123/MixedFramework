@@ -7,6 +7,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 public class LocalAndRemote {
@@ -14,8 +17,10 @@ public class LocalAndRemote {
 	@Test
 	public void runInLocalBrowser() {
 		WebDriver driver = new FirefoxDriver();
+		WebDriverWait wait = new WebDriverWait(driver, 10);
 		driver.get("http://www.msn.com/");
 		driver.quit();
+		
 	}
 
 /*	

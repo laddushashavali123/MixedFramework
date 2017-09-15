@@ -133,7 +133,7 @@ public class tasksTest {
 	[1,2,3,4,4,5,6,7,9,10,11,12]
 			 * 4,8 - output, duplicates and wrong index
 	*/
-	 public List findWrongElements(int[] someList){
+	 public static List findWrongElements(int[] someList){
 		    List <Integer> result = new <Integer> ArrayList();
 		    for (int i=1; i<someList.length; i++){
 		         if(someList[i]!=someList[i-1]+1){
@@ -432,8 +432,8 @@ static int countDuplicatesss(int[] numbers) {
 			 */
 		public static int find2ndMaxNumber(int[]input){
 			    
-				int max=0;
-				int result=max;
+				int max;
+				int result;
 			    if(input.length==0){
 			        return 0; 
 			    }else if(input.length==1){
@@ -813,6 +813,7 @@ static int countDuplicatesss(int[] numbers) {
 	public static void main(String[] args) {
 
         BufferedReader br = null;
+        System.out.println(findWrongElements(new int[]{1,2,3,4,4,5,6,7,9,10,11,12}));
         //System.out.println(countDuplicatess(new int[]{12,5,4,3,2,4,4,4,444,4,4,4,4}));
         /*
         System.out.println("T: "+MapStrings("foo", "app"));

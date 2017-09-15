@@ -1,0 +1,120 @@
+================Selenium-1================
+write a script that will:
+1) go to https://simplify.com/commerce/docs/testing/test-card-numbers
+2) will scan each point of block "Please note:"
+3) and will get card number of this point if it exist
+4) if card number is found - no reason to scan further
+
+Note:
+1) Card number can be found in any of bullet point
+2) Card number is dynamic, each time we load page it changes
+Example 1:
+ ¦ Real card numbers are prohibited and will decline in Sandbox mode.
+ ¦ Strip spaces & trim card numbers before use.
+ ¦ All transaction amounts used are in the smallest unit of your currency. Example: 513 = $5.13USD
+ ¦ 5555 5555 5555 4444 is the simplest card number to use when testing APPROVED payments.
+ ¦ Changing accepted cards in Merchant Settings will affect the behavior of the test card numbers.
+
+Example 2:
+ ¦ Real card number is 5455 3307 6000 0018 prohibited and will decline in Sandbox mode.
+ ¦ Strip spaces & trim card numbers before use.
+ ¦ All transaction amounts used are in the smallest unit of your currency. Example: 513 = $5.13USD
+ ¦ The simplest card number to use when testing APPROVED payments.
+ ¦ Changing accepted cards in Merchant Settings will affect the behavior of the test card numbers.
+
+================Selenium-2================
+1) write a function that will true or false if element is present on page or not accordingly.
+input is By type
+
+2) write a function that will wait for allert for specific amount of time and dissmiss it if it present
+================Selenium-3================
+write a script that will go to https://developer.mastercard.com/account/sign-up
+1) will click on captcha and will wait for captcha modal window will appear
+if it appear - script sleeps 2 minutes
+if it is not appeared it will continue running
+
+2) will click on 'sign up' button and verify error message text of each unfilled element
+Note:
+static is just id of each field and tag name of error text
+================language-1================ (15 min)
+write a function that will output of element that is dublicated or missing
+/**
+	[1,2,3,4,4,5,6,7,9,10,11,12]
+			 * 4,8 - output, duplicates and wrong index
+*/
+================language-2================(15 - 20 min)
+//method #11 multiply elements in array and put result on position of element
+	/*	
+	 *  i/p: [2,4,3,5]
+	 *  o/p: [60,30,40,24]
+	 *  60 = 4 * 3 * 5
+	 */
+================language-3================(15 min)
+//Given array of integers.
+//Find a integer that is 2nd max in this array
+
+================Java-4================(20 min)
+//method #16 Method to check if IP address is valid 1-255.0-255.0-255.0-255
+		/*	
+		 *  i/p: 192.168.0.1
+		 *  o/p: true
+		 *  i/p: 54.2.2
+		 *  o/p: false
+		 */
+
+================Java-5================(20 min)
+//method #14 check braces in String array
+		/*	
+		 *  i/p: { "[]{}()", "[({})]", "{}[()]", "][{}((", "][}}((" }
+		 *  o/p: [Yes, Yes, Yes, No, No]
+		 */
+A string of brackets is balanced under the following conditions:
+
+ ¦    It is the empty string.
+ ¦    If a and b are balanced, then ab is balanced.
+ ¦    If a is balanced, then (a) and {a} are balanced.
+Some examples of balanced strings are {}(), {()}, and ({()}).
+Some examples of unbalanced strings are {}(, ({)}, ((, and }{.
+The locked portion of the editor contains the declaration for a class named Solution with a main method that does the following:
+
+ ¦    Creates a Parser object.
+ ¦    Reads an unknown number of strings from stdin.
+ ¦    Passes each string as an argument to the Parser object's isBalanced method and prints value returned by the method on a new line.
+
+Sample Input: 0
+"{}()", "({()})", "{}("
+Sample Output 0
+"true", "true", "false"
+Explanation 0
+
+ ¦ {}() contains two adjacent balanced strings, {} and (), so we return true.
+
+ ¦ ({()}) contains a balanced string, (), nested inside another balanced string, {}, nested inside another balanced string, (). Thus, we return true.
+
+ ¦ {}( contains a balanced string, {}, followed by an unbalanced string, (. Thus, we return false.
+
+================Java-6================(20 min)
+/**
+		 * Given two words as Strings, determine if 
+		 * there exists a 1:1 mapping of characters from the first to the second word. No two letters
+		 * may map to the same letter, but a letter may map to itself.
+		 *
+		 * Example:
+		 *   given "foo", "app"; returns true
+		 *     we can map 'f' -> 'a' and 'o' -> 'p'
+		 *
+		 *   given "foo", "boa"; returns false
+		 *     we can map 'f' -> 'b', 'o' -> 'o', we can't map 'o' -> 'a'
+		 *
+		 *   given "bar", "foo"; returns false
+		 *     we can't map both 'a' and 'r' to 'o'
+		 *
+		 *   given "turtle", "tletur"; returns true
+		 *     we can map 't' -> 't', 'u' -> 'l', 'r' -> 'e', 'l' -> 'u', 'e' ->'r'
+		 *
+		 *   given "ab", "ca"; returns true
+		 *     we can map 'a' -> 'c', 'b' -> 'a'
+		 *
+		 *   given "ofo", "pop"; returns true
+		 *     we can map 'o' -> 'p' and 'f' -> 'o'
+		 */

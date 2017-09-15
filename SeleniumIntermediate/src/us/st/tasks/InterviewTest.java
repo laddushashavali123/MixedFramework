@@ -1,7 +1,7 @@
 package us.st.tasks;
 
 
-import java.util.ArrayList;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -58,13 +58,12 @@ public class InterviewTest {
 		
 		
 	}
-	
+
 	public void appendMap (String line, HashMap<String, Integer> map){
 		
 		String[] words= line.split(" ");
 		
 		StringBuffer b= new StringBuffer("");
-		b.
 		for (int i=0; i< words.length; i++){
 			if (map.containsKey(words[i])){
 				
@@ -78,10 +77,10 @@ public class InterviewTest {
 			}
 		}
 		//for (String key:)
-		return (HashMap<String, Integer>) globMap; 
+		//return (HashMap<String, Integer>) globMap; 
 		
 	}
-	
+
 }
 
 

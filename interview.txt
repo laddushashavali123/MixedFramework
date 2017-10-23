@@ -118,3 +118,24 @@ Explanation 0
 		 *   given "ofo", "pop"; returns true
 		 *     we can map 'o' -> 'p' and 'f' -> 'o'
 		 */
+================Test-Design-7================(10 min) 
+We have a triangle. We have a app with inputs of size of each line of it. Program should count Perimeter of triangle
+Alowable size of each line 1-10 sm.
+How are you going to test it?
+================Linux=========================
+1) how to change permissions of the file (rwx) && how to change ownership of file 
+2) what is $PATH ? how to set new value to $PATH
+3) man; dog; cut; cat - what here is extra?
+4) how to find a file in specified directory and remove this file in one command
+5) we have log file. How can I check that last 100 lines are not contains 'Error' case not sensetive
+6) we have a appending log. How can I output appending 10 lines of this log
+7) we have a log file. I want to output lines from 100 from top, except 300 lines at the end.
+8) Linux hiearchy
+9) regex in linux
+10) difference betweeen > and >> in linux
+11) output all python processes currently running. What is top?
+================SQL=========================
+1) List and explain the different types of JOIN clauses
+2) Write a SQL query to find the 10th highest employee salary from an Employee table. Explain your answer.
+(Note: You may assume that there are at least 10 records in the Employee table.)
+3) What is a key difference between Truncate and Delete?

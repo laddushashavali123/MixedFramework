@@ -1,10 +1,46 @@
 package us.st.tasks;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.LinkedList;
+
+import com.fasterxml.jackson.core.JsonFactory;
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.core.JsonToken;
+
 public class MoviesTitlesRest {
 	
 	public static void main(String[] args) throws Exception {
-		 
-		 //System.out.println(longestSubsequence("aeiaaioooaauuaeiou"));
+		int totalPages;
+		String response =sendGet("spiderman", 1);
+
+		JsonFactory factory = new JsonFactory();
+		JsonParser  parser  = factory.createParser(response);
+		
+		while (!parser.isClosed()){
+			
+			JsonToken jsonToken = parser.nextToken();
+			if(jsonToken.FIELD_NAME.equals(jsonToken)){
+				
+				String fieldName = parser.getCurrentName();
+		        System.out.println(fieldName);
+		        
+		        if("total_pages".equals(fieldName)){
+		        	totalPages=Integer.parseInt(fieldName)
+		        } 
+		        
+		        //if()
+		        
+		        jsonToken = parser.nextToken();
+		        
+		        
+			}
+		}
+			
+		sendGet("spiderman", 1);
 	}
 	
 	/*
@@ -172,4 +208,45 @@ public class MoviesTitlesRest {
 	 * We then store each title in our titles array, sort it in ascending order, and return it as our answer.
 	 * 
 	 */
+	
+	
+	public LinkedList getTitles(String substr, int page){
+		
+		
+		return null;
+		
+		
+	}
+	
+	private static String sendGet(String substring, int num) throws Exception {
+
+		String url = "https://jsonmock.hackerrank.com/api/movies/search/?Title="+substring+"&page="+num;
+
+		URL obj = new URL(url);
+		HttpURLConnection con = ( (HttpURLConnection) obj.openConnection());
+		
+		// optional default is GET
+		con.setRequestMethod("GET");
+
+		//add request header
+		con.setRequestProperty("User-Agent", "Mozilla/5.0");
+
+		int responseCode = con.getResponseCode();
+		System.out.println("\nSending 'GET' request to URL : " + url);
+		System.out.println("Response Code : " + responseCode);
+
+		BufferedReader in = new BufferedReader(
+		        new InputStreamReader(con.getInputStream()));
+		String inputLine;
+		StringBuffer response = new StringBuffer();
+
+		while ((inputLine = in.readLine()) != null) {
+			response.append(inputLine);
+		}
+		in.close();
+
+		//return result
+		return response.toString();
+
+	}
 }

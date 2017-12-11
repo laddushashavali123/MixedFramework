@@ -18,7 +18,7 @@
 	<classpathentry kind="lib" path="C:/Users/yarkh/Desktop/Selenium_tests/SeleniumIntermediate/libs/selenium-server-standalone-3.0.1.jar"/>
 	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
 	<classpathentry kind="lib" path="C:/Users/yarkh/Desktop/Selenium_tests/SeleniumIntermediate/libs/jackson-annotations-2.9.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/yarkh/Desktop/Selenium_tests/SeleniumIntermediate/libs/jackson-core-2.9.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/yarkh/Desktop/Selenium_tests/SeleniumIntermediate/libs/jackson-core-2.9.2.jar" sourcepath="C:/Users/yarkh/AppData/Local/Temp/decompiler/source/jackson-core-2.9.2-sources.jar"/>
 	<classpathentry kind="lib" path="C:/Users/yarkh/Desktop/Selenium_tests/SeleniumIntermediate/libs/jackson-databind-2.9.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

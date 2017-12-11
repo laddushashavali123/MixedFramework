@@ -6,10 +6,13 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.LinkedList;
+import java.util.List;
 
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonToken;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.type.TypeFactory;
 
 public class MoviesTitlesRest {
 	
@@ -18,6 +21,7 @@ public class MoviesTitlesRest {
 		String response =sendGet("spiderman", 1);
 
 		JsonFactory factory = new JsonFactory();
+		
 		JsonParser  parser  = factory.createParser(response);
 		
 		while (!parser.isClosed()){
@@ -26,22 +30,37 @@ public class MoviesTitlesRest {
 			if(jsonToken.FIELD_NAME.equals(jsonToken)){
 				
 				String fieldName = parser.getCurrentName();
-		        System.out.println(fieldName);
-		        
-		        if("total_pages".equals(fieldName)){
-		        	totalPages=Integer.parseInt(fieldName)
-		        } 
-		        
+				
+				
+				//if value is not array
+				if(!JsonToken.START_ARRAY.equals(jsonToken)){
+					//next token for value
+					jsonToken = parser.nextToken();
+					if(!JsonToken.START_ARRAY.equals(jsonToken)){
+					
+						String value = parser.getValueAsString();
+						System.out.println(fieldName+": "+value);
+					}
+				} else {
+						System.out.println(fieldName);
+		        		ObjectMapper objectMapper = new ObjectMapper();
+		        		TypeFactory typeFactory = objectMapper.getTypeFactory();
+		        		List<String> datavalues = objectMapper.readValue(response, typeFactory.constructCollectionType(List.class, String.class));
+		        		
+		        	
+		        }
+		        	
+			}
+		}    
 		        //if()
 		        
-		        jsonToken = parser.nextToken();
+		        //jsonToken = parser.nextToken();
 		        
-		        
-			}
-		}
 			
-		sendGet("spiderman", 1);
 	}
+			
+		//sendGet("spiderman", 1);
+	
 	
 	/*
 	 * write an HTTP GET method to retrieve information from a particular movie database. 

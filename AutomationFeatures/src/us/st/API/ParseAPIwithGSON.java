@@ -7,59 +7,40 @@ import java.net.URL;
 import java.util.LinkedList;
 import java.util.List;
 
-import com.fasterxml.jackson.core.JsonFactory;
-import com.fasterxml.jackson.core.JsonParser;
-import com.fasterxml.jackson.core.JsonToken;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.type.TypeFactory;
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 
-public class MoviesTitlesRest {
+
+
+public class ParseAPIwithGSON {
 	
 	public static void main(String[] args) throws Exception {
 		int totalPages;
 		String response =sendGet("spiderman", 1);
 
-		JsonFactory factory = new JsonFactory();
+		Gson gson = new Gson();
+		JsonObject jsonObject = gson.fromJson(response, JsonObject.class);
+
+		String perPage = jsonObject.get("per_page").getAsString();
+		System.out.println(perPage);
+		int IntperPage = jsonObject.get("per_page").getAsInt();
+		System.out.println(IntperPage);
+		//String pagePic = jsonObject.getAsJsonObject("pageInfo").get("pagePic").getAsString();
+		//String postId = jsonObject.getAsJsonArray("posts").get(0).getAsJsonObject().get("post_id").getAsString();
 		
-		JsonParser  parser  = factory.createParser(response);
 		
-		while (!parser.isClosed()){
-			
-			JsonToken jsonToken = parser.nextToken();
-			if(jsonToken.FIELD_NAME.equals(jsonToken)){
-				
-				String fieldName = parser.getCurrentName();
-				
-				
-				//if value is not array
-				if(!JsonToken.START_ARRAY.equals(jsonToken)){
-					//next token for value
-					jsonToken = parser.nextToken();
-					if(!JsonToken.START_ARRAY.equals(jsonToken)){
-					
-						String value = parser.getValueAsString();
-						System.out.println(fieldName+": "+value);
-					}
-				} else {
-					
-						System.out.println(fieldName);
-		        		ObjectMapper objectMapper = new ObjectMapper();
-		        		TypeFactory typeFactory = objectMapper.getTypeFactory();
-		        		List<String> datavalues = objectMapper.readValue(response, typeFactory.constructCollectionType(List.class, String.class));
-		        		
-		        }
-		        	
-			}
-		}    
-		        //if()
-		        
-		        //jsonToken = parser.nextToken();
-		        
-			
-	}
-			
+		//array
+/*		
+		JsonArray posts = jsonObject.getAsJsonArray("posts");
+		for (JsonElement post : posts) {
+		  String postId = post.getAsJsonObject().get("post_id").getAsString();
+		  //do something
+		}
+*/		
+		
 		//sendGet("spiderman", 1);
 	
+	}
 	
 	/*
 	 * write an HTTP GET method to retrieve information from a particular movie database. 

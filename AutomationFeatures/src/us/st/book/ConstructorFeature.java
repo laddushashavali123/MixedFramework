@@ -1,4 +1,4 @@
-package us.st.javaFeatures;
+package us.st.book;
 
 
 

@@ -2,23 +2,24 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="C:/Users/yarkh/Desktop/Selenium_tests/SeleniumIntermediate/libs/junit-4.12.jar" sourcepath="C:/Users/yarkh/AppData/Local/Temp/decompiler/source/junit-4.12-sources.jar"/>
-	<classpathentry kind="lib" path="C:/Users/yarkh/Desktop/Selenium_tests/SeleniumIntermediate/libs/slf4j.jar"/>
-	<classpathentry kind="lib" path="C:/Users/yarkh/Desktop/Selenium_tests/SeleniumIntermediate/libs/logback-classic-1.1.7.jar"/>
-	<classpathentry kind="lib" path="C:/Users/yarkh/Desktop/Selenium_tests/SeleniumIntermediate/libs/logback-core-1.0.13.jar"/>
-	<classpathentry kind="lib" path="C:/Users/yarkh/Desktop/Selenium_tests/SeleniumIntermediate/libs/mysql-connector-java-5.1.38.jar"/>
-	<classpathentry kind="lib" path="C:/Users/yarkh/Desktop/Selenium_tests/SeleniumIntermediate/libs/dom4j-1.6.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/yarkh/Desktop/Selenium_tests/SeleniumIntermediate/libs/poi-3.14.jar"/>
-	<classpathentry kind="lib" path="C:/Users/yarkh/Desktop/Selenium_tests/SeleniumIntermediate/libs/poi-ooxml-3.14.jar"/>
-	<classpathentry kind="lib" path="C:/Users/yarkh/Desktop/Selenium_tests/SeleniumIntermediate/libs/poi-ooxml-schemas-3.14.jar"/>
-	<classpathentry kind="lib" path="C:/Users/yarkh/Desktop/Selenium_tests/SeleniumIntermediate/libs/stax-api-1.0.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/yarkh/Desktop/Selenium_tests/SeleniumIntermediate/libs/xmlbeans-2.4.0.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
-	<classpathentry kind="lib" path="C:/Users/yarkh/Desktop/Selenium_tests/SeleniumIntermediate/libs/im4java-1.4.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/yarkh/Desktop/Selenium_tests/SeleniumIntermediate/libs/selenium-server-standalone-3.0.1.jar"/>
 	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
-	<classpathentry kind="lib" path="C:/Users/yarkh/Desktop/Selenium_tests/SeleniumIntermediate/libs/jackson-annotations-2.9.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/yarkh/Desktop/Selenium_tests/SeleniumIntermediate/libs/jackson-core-2.9.2.jar" sourcepath="C:/Users/yarkh/AppData/Local/Temp/decompiler/source/jackson-core-2.9.2-sources.jar"/>
-	<classpathentry kind="lib" path="C:/Users/yarkh/Desktop/Selenium_tests/SeleniumIntermediate/libs/jackson-databind-2.9.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/yarkh/Desktop/Selenium_tests/AutomationFeatures/libs/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/yarkh/Desktop/Selenium_tests/AutomationFeatures/libs/im4java-1.4.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/yarkh/Desktop/Selenium_tests/AutomationFeatures/libs/jackson-annotations-2.9.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/yarkh/Desktop/Selenium_tests/AutomationFeatures/libs/jackson-core-2.9.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/yarkh/Desktop/Selenium_tests/AutomationFeatures/libs/jackson-databind-2.9.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/yarkh/Desktop/Selenium_tests/AutomationFeatures/libs/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="C:/Users/yarkh/Desktop/Selenium_tests/AutomationFeatures/libs/logback-classic-1.1.7.jar"/>
+	<classpathentry kind="lib" path="C:/Users/yarkh/Desktop/Selenium_tests/AutomationFeatures/libs/logback-core-1.0.13.jar"/>
+	<classpathentry kind="lib" path="C:/Users/yarkh/Desktop/Selenium_tests/AutomationFeatures/libs/mysql-connector-java-5.1.38.jar"/>
+	<classpathentry kind="lib" path="C:/Users/yarkh/Desktop/Selenium_tests/AutomationFeatures/libs/poi-3.14.jar"/>
+	<classpathentry kind="lib" path="C:/Users/yarkh/Desktop/Selenium_tests/AutomationFeatures/libs/poi-ooxml-3.14.jar"/>
+	<classpathentry kind="lib" path="C:/Users/yarkh/Desktop/Selenium_tests/AutomationFeatures/libs/poi-ooxml-schemas-3.14.jar"/>
+	<classpathentry kind="lib" path="C:/Users/yarkh/Desktop/Selenium_tests/AutomationFeatures/libs/selenium-server-standalone-3.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/yarkh/Desktop/Selenium_tests/AutomationFeatures/libs/slf4j.jar"/>
+	<classpathentry kind="lib" path="C:/Users/yarkh/Desktop/Selenium_tests/AutomationFeatures/libs/stax-api-1.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/yarkh/Desktop/Selenium_tests/AutomationFeatures/libs/xmlbeans-2.4.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/yarkh/Desktop/Selenium_tests/AutomationFeatures/libs/gson-2.8.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -1,4 +1,4 @@
-package us.st.selenium.http;
+package us.st.API;
 
 import static org.junit.Assert.*;
 import java.io.BufferedReader;

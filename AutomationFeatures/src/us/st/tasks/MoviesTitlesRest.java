@@ -42,12 +42,12 @@ public class MoviesTitlesRest {
 						System.out.println(fieldName+": "+value);
 					}
 				} else {
+					
 						System.out.println(fieldName);
 		        		ObjectMapper objectMapper = new ObjectMapper();
 		        		TypeFactory typeFactory = objectMapper.getTypeFactory();
 		        		List<String> datavalues = objectMapper.readValue(response, typeFactory.constructCollectionType(List.class, String.class));
 		        		
-		        	
 		        }
 		        	
 			}

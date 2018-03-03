@@ -4,27 +4,40 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
+
+import org.openqa.selenium.remote.server.JsonParametersAware;
+
 
 import com.google.gson.Gson;
+import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+
+
 
 
 
 public class ParseAPIwithGSON {
 	
+	static Set <String> titles = new HashSet<String>();
+	
 	public static void main(String[] args) throws Exception {
-		int totalPages;
-		String response =sendGet("spiderman", 1);
+		
 
-		Gson gson = new Gson();
-		JsonObject jsonObject = gson.fromJson(response, JsonObject.class);
-
-		String perPage = jsonObject.get("per_page").getAsString();
-		System.out.println(perPage);
-		int IntperPage = jsonObject.get("per_page").getAsInt();
-		System.out.println(IntperPage);
+		getTitles("spiderman", 0);
+		List<String> sortedTitles = new LinkedList<String>(titles);
+		Collections.sort(sortedTitles);
+		for (String title : sortedTitles){
+			System.out.println(title);
+		}
+		
 		//String pagePic = jsonObject.getAsJsonObject("pageInfo").get("pagePic").getAsString();
 		//String postId = jsonObject.getAsJsonArray("posts").get(0).getAsJsonObject().get("post_id").getAsString();
 		
@@ -209,18 +222,43 @@ public class ParseAPIwithGSON {
 	 */
 	
 	
-	public LinkedList getTitles(String substr, int page){
+	public static void getTitles(String substr, int page) throws Exception{
 		
 		
-		return null;
+		String response =sendGet(substr, page);
 		
+		Gson gson = new Gson();
+		
+		JsonObject jsonObject = gson.fromJson(response, JsonObject.class);
+
+		int total=jsonObject.get("total_pages").getAsInt();
+		System.out.println("Total pages: "+total);
+		
+		//go through pages
+		while(page<=total){
+			
+			gson = new Gson();
+			String resp =sendGet(substr, page);
+			jsonObject = gson.fromJson(resp, JsonObject.class);
+			JsonArray data = jsonObject.get("data").getAsJsonArray();
+			int i=0;
+			
+			//getting movie data from array
+			while (i<data.size()){
+				
+				String title=data.get(i).getAsJsonObject().get("Title").getAsString();
+				titles.add(title);
+				System.out.println("Title for "+i +" is "+title);
+				i++;
+			}
+			page++;
+		}
 		
 	}
 	
 	private static String sendGet(String substring, int num) throws Exception {
 
 		String url = "https://jsonmock.hackerrank.com/api/movies/search/?Title="+substring+"&page="+num;
-
 		URL obj = new URL(url);
 		HttpURLConnection con = ( (HttpURLConnection) obj.openConnection());
 		
@@ -243,7 +281,7 @@ public class ParseAPIwithGSON {
 			response.append(inputLine);
 		}
 		in.close();
-
+	
 		//return result
 		return response.toString();
 

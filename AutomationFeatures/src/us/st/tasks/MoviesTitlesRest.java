@@ -1,7 +1,6 @@
 package us.st.tasks;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -19,7 +18,7 @@ public class MoviesTitlesRest {
 	public static void main(String[] args) throws Exception {
 		int totalPages;
 		String response =sendGet("spiderman", 1);
-
+		
 		JsonFactory factory = new JsonFactory();
 		
 		JsonParser  parser  = factory.createParser(response);
@@ -30,6 +29,7 @@ public class MoviesTitlesRest {
 			if(jsonToken.FIELD_NAME.equals(jsonToken)){
 				
 				String fieldName = parser.getCurrentName();
+				
 				
 				
 				//if value is not array

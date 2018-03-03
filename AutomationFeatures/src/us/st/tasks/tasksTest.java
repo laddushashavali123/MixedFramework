@@ -4,6 +4,8 @@ package us.st.tasks;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -14,6 +16,7 @@ import java.util.Set;
 
 import javax.management.RuntimeErrorException;
 
+import org.apache.commons.lang3.ArrayUtils;
 import org.junit.Test;
 
 
@@ -92,6 +95,7 @@ public class tasksTest {
 			if (!items.containsKey(inputList[i])){
 			items.put(inputList[i], 1);
 			} else {
+				
 				int oldvalue=(int) items.get(inputList[i]);
 				
 				items.replace(inputList[i], items.get(inputList[i]), oldvalue+1);
@@ -808,11 +812,77 @@ static int countDuplicatesss(int[] numbers) {
 	    
 	    }
 	
+	/*
+		Lets say I have a string "waterbottle" and I want to check if my second string is substring
+		of the first "ttlewa"? -> True
+	*/
+	public boolean isSubstring(String str1, String str2){
+	    char[] str1C=str1.toCharArray();
+	    char[] str2C=str2.toCharArray();
+	    
+	    for(int i=0; i<str2C.length; i++){
+	        if (str1.contains(String.valueOf(str1C[i]))){
+	        
+	            for(int j=0; j<str1C.length; j++){
+	                
+	            	if(str2C[j]==str1C[i]){
+	                   str1C=ArrayUtils.removeElement(str1C, str1C[i]);
+	                }
+	            }
+	        
+	        } else {
+	        
+	            return false;
+	        }
+	    }
+	    return true;
+
+	}
+
+/*
+	Find all the numbers whose length to the adjacent number is 1. you can define you own N = 1000
+	Eg: 121 
+*/
+
+	public static ArrayList<Integer>findAjustendNum(int maxNum){
+			List<Integer> result = new ArrayList<Integer>();
+			
+			int k = 0;
+	        for(int i=10; i<=maxNum; i++){
+	        	
+	        	if(i>=10 && i<100){
+	        		
+	        		
+	                int firstPoint = Math.floorDiv(i, 10);
+	                //System.out.println("My firstPoint is "+ i+ " "+ firstPoint);
+	                DecimalFormat df = new DecimalFormat("#.#");
+	                df.setRoundingMode(RoundingMode.HALF_EVEN);
+	                double divRes = (double)i/10 - firstPoint;
+	                divRes = Double.parseDouble(df.format(divRes));
+	                int secondPoint = (int) (divRes*10);
+	                //System.out.println("My secondPoint is "+ i+ " "+ secondPoint);
+	                
+	                if(secondPoint-firstPoint==1 || firstPoint-secondPoint==1){
+	                	System.out.println("======Found number: "+ i);
+	                	result.add(i);
+	                	k++;
+	                	if(k==2){
+	                		i=i+8;
+	                		k=0;}
+	                }
+	            }
+	        }
+	        System.out.println("total elements in array is: "+result.size());
+			return (ArrayList<Integer>) result;
+
+	}
+	
 	
 	
 	public static void main(String[] args) {
-
+		
         BufferedReader br = null;
+        List someList = new ArrayList(findAjustendNum(99));
         System.out.println(findWrongElements(new int[]{1,2,3,4,4,5,6,7,9,10,11,12}));
         //System.out.println(countDuplicatess(new int[]{12,5,4,3,2,4,4,4,444,4,4,4,4}));
         /*

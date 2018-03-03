@@ -55,7 +55,7 @@ public class ParseAPIwithJackson {
 		        
 		        //jsonToken = parser.nextToken();
 		        
-			
+		
 	}
 			
 		//sendGet("spiderman", 1);

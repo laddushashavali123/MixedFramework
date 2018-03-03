@@ -12,6 +12,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Mouse;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.Point;
+import org.openqa.selenium.Rectangle;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.interactions.TouchScreen;
 import org.openqa.selenium.WebDriver;
@@ -424,6 +425,12 @@ public class TracingWebDriver implements WebDriver, JavascriptExecutor,
 
 	@Override
 	public <X> X getScreenshotAs(OutputType<X> arg0) throws WebDriverException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Rectangle getRect() {
 		// TODO Auto-generated method stub
 		return null;
 	}

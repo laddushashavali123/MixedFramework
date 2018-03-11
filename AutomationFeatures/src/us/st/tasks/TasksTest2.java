@@ -5,7 +5,7 @@ package us.st.tasks;
 import java.util.HashMap;
 import java.util.Map;
 
-public class InterviewTest {
+public class TasksTest2 {
 	
 	
 	Map<String, Integer> globMap = new HashMap<String, Integer>();

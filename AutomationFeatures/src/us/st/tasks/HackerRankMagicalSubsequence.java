@@ -1,12 +1,15 @@
 package us.st.tasks;
 
+import java.awt.List;
+import java.util.ArrayList;
 
-public class HackerRank {
+public class HackerRankMagicalSubsequence {
 	
 	
 	 public static void main(String[] args) throws Exception {
 		 
 		 System.out.println(longestSubsequence("aeiaaioooaauuaeiou"));
+		 System.out.println(maxDifference(new int[]{7, 9, 5, 6, 3, 2}));
 	 }
 	 /*
 	  * A string, s, consisting of one or more of the following letters: a, e, i, o, and u.
@@ -107,7 +110,22 @@ public class HackerRank {
 	 
 	 static int maxDifference(int [] a){
 		 //write code here
-		 return 0;
+		 
+		 int max_diff = a[1] - a[0];
+		 int min_element= a[0];
+		 
+		 for (int i=0; i<a.length; i++){
+			 
+			 if(a[i]<min_element){
+				 min_element=a[i];
+			 }
+			 if(a[i] - min_element>max_diff){
+				 max_diff=a[i] - min_element;
+			 }
+			 
+		 }
+		 
+		 return max_diff;
 	 }
 	 
 	 

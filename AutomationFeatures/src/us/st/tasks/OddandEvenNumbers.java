@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 
-public class JPChaseTest {
+public class OddandEvenNumbers {
 
 	public static void main(String[] args) throws IOException {
 		InputStreamReader reader = new InputStreamReader(System.in, StandardCharsets.UTF_8);

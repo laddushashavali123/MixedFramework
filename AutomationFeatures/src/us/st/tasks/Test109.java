@@ -1,3 +1,12 @@
 package us.st.tasks;
 
-public class Test109 {         public static void main(String[] args) {                 System.out.println( 10/3 > 3 ? "MORE" : 10/4 < 3 ? "LESS" : "MORE" );          } }
+
+public class Test109 {
+    public static void main(String arg[]) {
+        meth(arg);
+    }
+    public void meth(String[] arg) {
+        System.out.println(arg);
+        System.out.println(arg[1]);
+    }
+}

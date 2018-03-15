@@ -27,12 +27,13 @@ import com.google.gson.JsonObject;
 public class ParseAPIwithGSON {
 	
 	static Set <String> titles = new HashSet<String>();
-	
+	//static List<String> titles = new ArrayList<String>();
 	public static void main(String[] args) throws Exception {
 		
 
 		getTitles("spiderman", 0);
 		List<String> sortedTitles = new LinkedList<String>(titles);
+		
 		Collections.sort(sortedTitles);
 		for (String title : sortedTitles){
 			System.out.println(title);
@@ -222,12 +223,19 @@ public class ParseAPIwithGSON {
 	 */
 	
 	
-	public static void getTitles(String substr, int page) throws Exception{
+	public static void getTitles(String substr, int page) {
 		
 		
-		String response =sendGet(substr, page);
+		String response = "";
+		try {
+			response = sendGet(substr, page);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		Gson gson = new Gson();
+		
 		
 		JsonObject jsonObject = gson.fromJson(response, JsonObject.class);
 
@@ -238,7 +246,13 @@ public class ParseAPIwithGSON {
 		while(page<=total){
 			
 			gson = new Gson();
-			String resp =sendGet(substr, page);
+			String resp="";
+			try {
+				resp = sendGet(substr, page);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			jsonObject = gson.fromJson(resp, JsonObject.class);
 			JsonArray data = jsonObject.get("data").getAsJsonArray();
 			int i=0;

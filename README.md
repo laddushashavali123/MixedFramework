@@ -23,12 +23,10 @@ Examples of automation of api testing using JSON parser and HttpClientBuilder:
 https://jsonmock.hackerrank.com/api/movies/search/?Title=spiderman&page=0
 # 6) Appium tests:
 Example how Appium tests are working:
-* us.st.appium - has next tests: 
-                  - AmazonPriceCompareTest - put all prices in Hahmap and compare them and output the cheapest given item
-                  
-                  - SampleTest - navigate through android system
-                  
-               - AppiumServerJava wrapper for how start and stop appium via Java code
+* us.st.appium - has next tests.
+      **AmazonPriceCompareTest** - put all prices in Hahmap and compare them and output the cheapest given item
+      **SampleTest** - navigate through android system
+      **AppiumServerJava** - wrapper for how start and stop appium via Java code
                
 
 

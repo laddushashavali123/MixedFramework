@@ -3,7 +3,10 @@ package us.st.java_features;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.Stream;
 
 
 
@@ -40,7 +43,7 @@ public final class LambdaExpression{
  * 
  */
 	public static int CountSum(Integer[] arr){
-		sum=0;
+		
 		List<Integer> nums = new ArrayList<Integer>(Arrays.asList(arr));
 		
 		nums.stream().forEach((el) ->{
@@ -56,6 +59,7 @@ public final class LambdaExpression{
 	 * @param AtamicInteger
 	 * 
 	 */
+	
 	public static int CountSum(List<Integer> arr){
 		AtomicInteger sum=new AtomicInteger();
 		
@@ -66,9 +70,31 @@ public final class LambdaExpression{
 		return sum.intValue();
 	}
 	
-	
+	public static void streamExample(List<Integer> arr){
+		
+		Stream<Integer> sequentialStream = arr.stream();
+		
+		//basically paralel stream is splitted between cores of CPU
+		Stream<Integer> paralelStream = arr.stream().parallel();
+		
+		
+	}
 	
 	public static void main(String[] args){
+		
+		
+		for (String arg : args) {
+		    new Thread(() -> System.out.println(arg)).start();
+		        // OK to capture arg
+		}
+		
+		List<String> persons = Arrays.asList(new String("Joe"), new String("Jim"), new String("John"));
+		persons.stream().forEach(p -> p.substring(2, 1));
+		
+		//parallel version 
+		Stream<String> parallelStream = persons.parallelStream(); 
+		
+		
 		System.out.println(CountSum(new Integer[]{1,2,3,4,5,6,7,9,10,11,12}));
 		System.out.println(CountSum(Arrays.asList(new Integer[]{1,2,3,4,5,6,7,9,10,11,12})));
 	}

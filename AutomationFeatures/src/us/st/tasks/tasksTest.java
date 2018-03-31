@@ -884,6 +884,7 @@ static int countDuplicatesss(int[] numbers) {
         BufferedReader br = null;
         List someList = new ArrayList(findAjustendNum(99));
         System.out.println(findWrongElements(new int[]{1,2,3,4,4,5,6,7,9,10,11,12}));
+       
         //System.out.println(countDuplicatess(new int[]{12,5,4,3,2,4,4,4,444,4,4,4,4}));
         /*
         System.out.println("T: "+MapStrings("foo", "app"));
@@ -968,7 +969,26 @@ static int countDuplicatesss(int[] numbers) {
 	        return result;
 	    }
 */
-	
+	 
+	 
+	  public static String reverseStr( String str ){
+
+		  if( str.length() <= 1 )
+		   return str;
+
+		  int strLength = str.length() - 1;
+		  StringBuilder sb = new StringBuilder( strLength );
+
+		  for( int i = strLength/2; --i >= 0;)
+		  {
+		    sb.append(str.charAt(i));
+		    strLength += i;
+		  };
+
+		  return sb.toString();
+	  };
+	    
+
 	
 
 }

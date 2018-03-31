@@ -31,7 +31,7 @@ public final class LambdaExpression{
 	
 	Runnable r2 = () ->{
 	
-			System.out.println("How it was in Java 7");
+			System.out.println("How it is now in Java 8");
 			
 	};
 	

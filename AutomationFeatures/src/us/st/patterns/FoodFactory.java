@@ -19,10 +19,6 @@ public class FoodFactory {
 		food2.serveFood();
 
 	}
-	
-	
-	
-
 }
 
 interface Food{

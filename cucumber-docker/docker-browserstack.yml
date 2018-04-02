@@ -1,0 +1,8 @@
+tester:
+  build: .
+  environment:
+    BROWSER: browserstack
+    CHECK_IMAGE: "false"
+    BROWSERSTACK_USER:
+    BROWSERSTACK_KEY:
+    APPLITOOLS_KEY:

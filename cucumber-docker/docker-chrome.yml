@@ -1,0 +1,5 @@
+chrome_tester:
+  build: .
+  dockerfile: Dockerfile
+  environment:
+    CHECK_IMAGE: "false"

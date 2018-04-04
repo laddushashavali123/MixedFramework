@@ -20,7 +20,7 @@ Example of cucumber framework to run in docker container in chrome and selenium 
 * sh run_docker.sh chrome - will run chrome in headless in Docker container;
 * sh run_docker.sh grid - will run on registered chrome node in Docker container;
 
-*Report folder-location:* cucumber-docker/
+*Report folder-location:* cucumber-docker/target/
 
 **#ToDO:**
 fix ReporterMerger class for parsable to this plugin:

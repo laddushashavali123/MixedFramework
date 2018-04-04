@@ -1,0 +1,1801 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4218976049,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.before()"
+            }
+          }
+        ],
+        "line": 25,
+        "name": "Login Messages",
+        "description": "",
+        "id": "login-messages;login-messages;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 655827507,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 892280269,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I login with username \"tomsmith\" and password \"SuperSecretPassword!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "tomsmith",
+                  "offset": 23
+                },
+                {
+                  "val": "SuperSecretPassword!",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginMessages.java:47"
+            },
+            "matchedColumns": [
+              1,
+              2
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 111597651,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I see the message \"You logged into a secure area!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "You logged into a secure area!",
+                  "offset": 19
+                }
+              ],
+              "location": "LoginMessages.java:51"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Login Messages",
+    "description": "",
+    "id": "login-messages",
+    "keyword": "Feature",
+    "uri": "C:/Users/yarkh/Desktop/Selenium_tests/cucumber-docker/src/test/resources/features/LoginMessages.feature"
+  }
+][
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3366903914,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.before()"
+            }
+          }
+        ],
+        "line": 34,
+        "name": "Login Messages",
+        "description": "",
+        "id": "login-messages;login-messages;;11",
+        "after": [
+          {
+            "result": {
+              "duration": 561888298,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 699742894,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I login with username \"tomsmith\" and password \"SuperSecretPassword!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "tomsmith",
+                  "offset": 23
+                },
+                {
+                  "val": "SuperSecretPassword!",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginMessages.java:47"
+            },
+            "matchedColumns": [
+              1,
+              2
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 77564717,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I see the message \"You logged into a secure area!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "You logged into a secure area!",
+                  "offset": 19
+                }
+              ],
+              "location": "LoginMessages.java:51"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Login Messages",
+    "description": "",
+    "id": "login-messages",
+    "keyword": "Feature",
+    "uri": "C:/Users/yarkh/Desktop/Selenium_tests/cucumber-docker/src/test/resources/features/LoginMessages.feature"
+  }
+][
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4125708444,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.before()"
+            }
+          }
+        ],
+        "line": 26,
+        "name": "Login Messages",
+        "description": "",
+        "id": "login-messages;login-messages;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 603906996,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 909774760,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I login with username \"timsmith\" and password \"SuperSecretPassword!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "timsmith",
+                  "offset": 23
+                },
+                {
+                  "val": "SuperSecretPassword!",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginMessages.java:47"
+            },
+            "matchedColumns": [
+              1,
+              2
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 171115581,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I see the message \"Your username is invalid!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Your username is invalid!",
+                  "offset": 19
+                }
+              ],
+              "location": "LoginMessages.java:51"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Login Messages",
+    "description": "",
+    "id": "login-messages",
+    "keyword": "Feature",
+    "uri": "C:/Users/yarkh/Desktop/Selenium_tests/cucumber-docker/src/test/resources/features/LoginMessages.feature"
+  }
+][
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4219118666,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.before()"
+            }
+          }
+        ],
+        "line": 27,
+        "name": "Login Messages",
+        "description": "",
+        "id": "login-messages;login-messages;;4",
+        "after": [
+          {
+            "result": {
+              "duration": 577659136,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 817366017,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I login with username \"tomsmith\" and password \"wrong\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "tomsmith",
+                  "offset": 23
+                },
+                {
+                  "val": "wrong",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginMessages.java:47"
+            },
+            "matchedColumns": [
+              1,
+              2
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 173811083,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I see the message \"Your password is invalid!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Your password is invalid!",
+                  "offset": 19
+                }
+              ],
+              "location": "LoginMessages.java:51"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Login Messages",
+    "description": "",
+    "id": "login-messages",
+    "keyword": "Feature",
+    "uri": "C:/Users/yarkh/Desktop/Selenium_tests/cucumber-docker/src/test/resources/features/LoginMessages.feature"
+  }
+][
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4225219200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.before()"
+            }
+          }
+        ],
+        "line": 28,
+        "name": "Login Messages",
+        "description": "",
+        "id": "login-messages;login-messages;;5",
+        "after": [
+          {
+            "result": {
+              "duration": 580076910,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 873130077,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I login with username \"tomsmith\" and password \"SuperSecretPassword!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "tomsmith",
+                  "offset": 23
+                },
+                {
+                  "val": "SuperSecretPassword!",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginMessages.java:47"
+            },
+            "matchedColumns": [
+              1,
+              2
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 127582613,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I see the message \"You logged into a secure area!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "You logged into a secure area!",
+                  "offset": 19
+                }
+              ],
+              "location": "LoginMessages.java:51"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Login Messages",
+    "description": "",
+    "id": "login-messages",
+    "keyword": "Feature",
+    "uri": "C:/Users/yarkh/Desktop/Selenium_tests/cucumber-docker/src/test/resources/features/LoginMessages.feature"
+  }
+][
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4216508102,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.before()"
+            }
+          }
+        ],
+        "line": 29,
+        "name": "Login Messages",
+        "description": "",
+        "id": "login-messages;login-messages;;6",
+        "after": [
+          {
+            "result": {
+              "duration": 578761357,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 901624649,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I login with username \"timsmith\" and password \"SuperSecretPassword!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "timsmith",
+                  "offset": 23
+                },
+                {
+                  "val": "SuperSecretPassword!",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginMessages.java:47"
+            },
+            "matchedColumns": [
+              1,
+              2
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 136263291,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I see the message \"Your username is invalid!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Your username is invalid!",
+                  "offset": 19
+                }
+              ],
+              "location": "LoginMessages.java:51"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Login Messages",
+    "description": "",
+    "id": "login-messages",
+    "keyword": "Feature",
+    "uri": "C:/Users/yarkh/Desktop/Selenium_tests/cucumber-docker/src/test/resources/features/LoginMessages.feature"
+  }
+][
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3646710287,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.before()"
+            }
+          }
+        ],
+        "line": 30,
+        "name": "Login Messages",
+        "description": "",
+        "id": "login-messages;login-messages;;7",
+        "after": [
+          {
+            "result": {
+              "duration": 539243000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 586110679,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I login with username \"tomsmith\" and password \"wrong\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "tomsmith",
+                  "offset": 23
+                },
+                {
+                  "val": "wrong",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginMessages.java:47"
+            },
+            "matchedColumns": [
+              1,
+              2
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 73224971,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I see the message \"Your password is invalid!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Your password is invalid!",
+                  "offset": 19
+                }
+              ],
+              "location": "LoginMessages.java:51"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Login Messages",
+    "description": "",
+    "id": "login-messages",
+    "keyword": "Feature",
+    "uri": "C:/Users/yarkh/Desktop/Selenium_tests/cucumber-docker/src/test/resources/features/LoginMessages.feature"
+  }
+][
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3312594074,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.before()"
+            }
+          }
+        ],
+        "line": 31,
+        "name": "Login Messages",
+        "description": "",
+        "id": "login-messages;login-messages;;8",
+        "after": [
+          {
+            "result": {
+              "duration": 565965328,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 709125201,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I login with username \"tomsmith\" and password \"SuperSecretPassword!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "tomsmith",
+                  "offset": 23
+                },
+                {
+                  "val": "SuperSecretPassword!",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginMessages.java:47"
+            },
+            "matchedColumns": [
+              1,
+              2
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 144343476,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I see the message \"You logged into a secure area!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "You logged into a secure area!",
+                  "offset": 19
+                }
+              ],
+              "location": "LoginMessages.java:51"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Login Messages",
+    "description": "",
+    "id": "login-messages",
+    "keyword": "Feature",
+    "uri": "C:/Users/yarkh/Desktop/Selenium_tests/cucumber-docker/src/test/resources/features/LoginMessages.feature"
+  }
+][
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3347591747,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.before()"
+            }
+          }
+        ],
+        "line": 32,
+        "name": "Login Messages",
+        "description": "",
+        "id": "login-messages;login-messages;;9",
+        "after": [
+          {
+            "result": {
+              "duration": 573865760,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 727766159,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I login with username \"timsmith\" and password \"SuperSecretPassword!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "timsmith",
+                  "offset": 23
+                },
+                {
+                  "val": "SuperSecretPassword!",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginMessages.java:47"
+            },
+            "matchedColumns": [
+              1,
+              2
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 90421586,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I see the message \"Your username is invalid!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Your username is invalid!",
+                  "offset": 19
+                }
+              ],
+              "location": "LoginMessages.java:51"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Login Messages",
+    "description": "",
+    "id": "login-messages",
+    "keyword": "Feature",
+    "uri": "C:/Users/yarkh/Desktop/Selenium_tests/cucumber-docker/src/test/resources/features/LoginMessages.feature"
+  }
+][
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 2661672831,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.before()"
+            }
+          }
+        ],
+        "line": 33,
+        "name": "Login Messages",
+        "description": "",
+        "id": "login-messages;login-messages;;10",
+        "after": [
+          {
+            "result": {
+              "duration": 844725184,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 684261240,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I login with username \"tomsmith\" and password \"wrong\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "tomsmith",
+                  "offset": 23
+                },
+                {
+                  "val": "wrong",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginMessages.java:47"
+            },
+            "matchedColumns": [
+              1,
+              2
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 92513434,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I see the message \"Your password is invalid!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Your password is invalid!",
+                  "offset": 19
+                }
+              ],
+              "location": "LoginMessages.java:51"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Login Messages",
+    "description": "",
+    "id": "login-messages",
+    "keyword": "Feature",
+    "uri": "C:/Users/yarkh/Desktop/Selenium_tests/cucumber-docker/src/test/resources/features/LoginMessages.feature"
+  }
+][
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4218976049,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.before()"
+            }
+          }
+        ],
+        "line": 25,
+        "name": "Login Messages",
+        "description": "",
+        "id": "login-messages;login-messages;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 655827507,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 892280269,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I login with username \"tomsmith\" and password \"SuperSecretPassword!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "tomsmith",
+                  "offset": 23
+                },
+                {
+                  "val": "SuperSecretPassword!",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginMessages.java:47"
+            },
+            "matchedColumns": [
+              1,
+              2
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 111597651,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I see the message \"You logged into a secure area!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "You logged into a secure area!",
+                  "offset": 19
+                }
+              ],
+              "location": "LoginMessages.java:51"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Login Messages",
+    "description": "",
+    "id": "login-messages",
+    "keyword": "Feature",
+    "uri": "C:/Users/yarkh/Desktop/Selenium_tests/cucumber-docker/src/test/resources/features/LoginMessages.feature"
+  }
+][
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3366903914,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.before()"
+            }
+          }
+        ],
+        "line": 34,
+        "name": "Login Messages",
+        "description": "",
+        "id": "login-messages;login-messages;;11",
+        "after": [
+          {
+            "result": {
+              "duration": 561888298,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 699742894,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I login with username \"tomsmith\" and password \"SuperSecretPassword!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "tomsmith",
+                  "offset": 23
+                },
+                {
+                  "val": "SuperSecretPassword!",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginMessages.java:47"
+            },
+            "matchedColumns": [
+              1,
+              2
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 77564717,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I see the message \"You logged into a secure area!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "You logged into a secure area!",
+                  "offset": 19
+                }
+              ],
+              "location": "LoginMessages.java:51"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Login Messages",
+    "description": "",
+    "id": "login-messages",
+    "keyword": "Feature",
+    "uri": "C:/Users/yarkh/Desktop/Selenium_tests/cucumber-docker/src/test/resources/features/LoginMessages.feature"
+  }
+][
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4125708444,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.before()"
+            }
+          }
+        ],
+        "line": 26,
+        "name": "Login Messages",
+        "description": "",
+        "id": "login-messages;login-messages;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 603906996,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 909774760,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I login with username \"timsmith\" and password \"SuperSecretPassword!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "timsmith",
+                  "offset": 23
+                },
+                {
+                  "val": "SuperSecretPassword!",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginMessages.java:47"
+            },
+            "matchedColumns": [
+              1,
+              2
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 171115581,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I see the message \"Your username is invalid!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Your username is invalid!",
+                  "offset": 19
+                }
+              ],
+              "location": "LoginMessages.java:51"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Login Messages",
+    "description": "",
+    "id": "login-messages",
+    "keyword": "Feature",
+    "uri": "C:/Users/yarkh/Desktop/Selenium_tests/cucumber-docker/src/test/resources/features/LoginMessages.feature"
+  }
+][
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4219118666,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.before()"
+            }
+          }
+        ],
+        "line": 27,
+        "name": "Login Messages",
+        "description": "",
+        "id": "login-messages;login-messages;;4",
+        "after": [
+          {
+            "result": {
+              "duration": 577659136,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 817366017,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I login with username \"tomsmith\" and password \"wrong\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "tomsmith",
+                  "offset": 23
+                },
+                {
+                  "val": "wrong",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginMessages.java:47"
+            },
+            "matchedColumns": [
+              1,
+              2
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 173811083,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I see the message \"Your password is invalid!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Your password is invalid!",
+                  "offset": 19
+                }
+              ],
+              "location": "LoginMessages.java:51"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Login Messages",
+    "description": "",
+    "id": "login-messages",
+    "keyword": "Feature",
+    "uri": "C:/Users/yarkh/Desktop/Selenium_tests/cucumber-docker/src/test/resources/features/LoginMessages.feature"
+  }
+][
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4225219200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.before()"
+            }
+          }
+        ],
+        "line": 28,
+        "name": "Login Messages",
+        "description": "",
+        "id": "login-messages;login-messages;;5",
+        "after": [
+          {
+            "result": {
+              "duration": 580076910,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 873130077,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I login with username \"tomsmith\" and password \"SuperSecretPassword!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "tomsmith",
+                  "offset": 23
+                },
+                {
+                  "val": "SuperSecretPassword!",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginMessages.java:47"
+            },
+            "matchedColumns": [
+              1,
+              2
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 127582613,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I see the message \"You logged into a secure area!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "You logged into a secure area!",
+                  "offset": 19
+                }
+              ],
+              "location": "LoginMessages.java:51"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Login Messages",
+    "description": "",
+    "id": "login-messages",
+    "keyword": "Feature",
+    "uri": "C:/Users/yarkh/Desktop/Selenium_tests/cucumber-docker/src/test/resources/features/LoginMessages.feature"
+  }
+][
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4216508102,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.before()"
+            }
+          }
+        ],
+        "line": 29,
+        "name": "Login Messages",
+        "description": "",
+        "id": "login-messages;login-messages;;6",
+        "after": [
+          {
+            "result": {
+              "duration": 578761357,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 901624649,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I login with username \"timsmith\" and password \"SuperSecretPassword!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "timsmith",
+                  "offset": 23
+                },
+                {
+                  "val": "SuperSecretPassword!",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginMessages.java:47"
+            },
+            "matchedColumns": [
+              1,
+              2
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 136263291,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I see the message \"Your username is invalid!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Your username is invalid!",
+                  "offset": 19
+                }
+              ],
+              "location": "LoginMessages.java:51"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Login Messages",
+    "description": "",
+    "id": "login-messages",
+    "keyword": "Feature",
+    "uri": "C:/Users/yarkh/Desktop/Selenium_tests/cucumber-docker/src/test/resources/features/LoginMessages.feature"
+  }
+][
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3646710287,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.before()"
+            }
+          }
+        ],
+        "line": 30,
+        "name": "Login Messages",
+        "description": "",
+        "id": "login-messages;login-messages;;7",
+        "after": [
+          {
+            "result": {
+              "duration": 539243000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 586110679,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I login with username \"tomsmith\" and password \"wrong\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "tomsmith",
+                  "offset": 23
+                },
+                {
+                  "val": "wrong",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginMessages.java:47"
+            },
+            "matchedColumns": [
+              1,
+              2
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 73224971,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I see the message \"Your password is invalid!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Your password is invalid!",
+                  "offset": 19
+                }
+              ],
+              "location": "LoginMessages.java:51"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Login Messages",
+    "description": "",
+    "id": "login-messages",
+    "keyword": "Feature",
+    "uri": "C:/Users/yarkh/Desktop/Selenium_tests/cucumber-docker/src/test/resources/features/LoginMessages.feature"
+  }
+][
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3312594074,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.before()"
+            }
+          }
+        ],
+        "line": 31,
+        "name": "Login Messages",
+        "description": "",
+        "id": "login-messages;login-messages;;8",
+        "after": [
+          {
+            "result": {
+              "duration": 565965328,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 709125201,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I login with username \"tomsmith\" and password \"SuperSecretPassword!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "tomsmith",
+                  "offset": 23
+                },
+                {
+                  "val": "SuperSecretPassword!",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginMessages.java:47"
+            },
+            "matchedColumns": [
+              1,
+              2
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 144343476,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I see the message \"You logged into a secure area!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "You logged into a secure area!",
+                  "offset": 19
+                }
+              ],
+              "location": "LoginMessages.java:51"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Login Messages",
+    "description": "",
+    "id": "login-messages",
+    "keyword": "Feature",
+    "uri": "C:/Users/yarkh/Desktop/Selenium_tests/cucumber-docker/src/test/resources/features/LoginMessages.feature"
+  }
+][
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3347591747,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.before()"
+            }
+          }
+        ],
+        "line": 32,
+        "name": "Login Messages",
+        "description": "",
+        "id": "login-messages;login-messages;;9",
+        "after": [
+          {
+            "result": {
+              "duration": 573865760,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 727766159,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I login with username \"timsmith\" and password \"SuperSecretPassword!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "timsmith",
+                  "offset": 23
+                },
+                {
+                  "val": "SuperSecretPassword!",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginMessages.java:47"
+            },
+            "matchedColumns": [
+              1,
+              2
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 90421586,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I see the message \"Your username is invalid!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Your username is invalid!",
+                  "offset": 19
+                }
+              ],
+              "location": "LoginMessages.java:51"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Login Messages",
+    "description": "",
+    "id": "login-messages",
+    "keyword": "Feature",
+    "uri": "C:/Users/yarkh/Desktop/Selenium_tests/cucumber-docker/src/test/resources/features/LoginMessages.feature"
+  }
+][
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 2661672831,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.before()"
+            }
+          }
+        ],
+        "line": 33,
+        "name": "Login Messages",
+        "description": "",
+        "id": "login-messages;login-messages;;10",
+        "after": [
+          {
+            "result": {
+              "duration": 844725184,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 684261240,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I login with username \"tomsmith\" and password \"wrong\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "tomsmith",
+                  "offset": 23
+                },
+                {
+                  "val": "wrong",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginMessages.java:47"
+            },
+            "matchedColumns": [
+              1,
+              2
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 92513434,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I see the message \"Your password is invalid!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Your password is invalid!",
+                  "offset": 19
+                }
+              ],
+              "location": "LoginMessages.java:51"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Login Messages",
+    "description": "",
+    "id": "login-messages",
+    "keyword": "Feature",
+    "uri": "C:/Users/yarkh/Desktop/Selenium_tests/cucumber-docker/src/test/resources/features/LoginMessages.feature"
+  }
+]

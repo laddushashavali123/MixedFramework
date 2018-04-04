@@ -1,4 +1,4 @@
-tester:
+browserstack_tester:
   build: .
   environment:
     BROWSER: browserstack

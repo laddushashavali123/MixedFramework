@@ -11,33 +11,60 @@
     <name>cucumber</name>
     <url>http://maven.apache.org</url>
     <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-        </dependency>
+       
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>3.6.0</version>
         </dependency>
+        
         <dependency>
             <groupId>com.applitools</groupId>
             <artifactId>eyes-selenium-java3</artifactId>
             <version>3.24</version>
         </dependency>
+        
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.9.8</version>
+            <scope>compile</scope>
+		</dependency>
+        
         <dependency>
             <groupId>info.cukes</groupId>
             <artifactId>cucumber-java8</artifactId>
             <version>1.2.5</version>
-            <scope>test</scope>
+            <scope>compile</scope>
         </dependency>
-        <dependency>
+        
+       <dependency>
             <groupId>info.cukes</groupId>
-            <artifactId>cucumber-junit</artifactId>
+            <artifactId>cucumber-testng</artifactId>
             <version>1.2.5</version>
+            <scope>compile</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>junit</groupId>
+                    <artifactId>junit</artifactId>
+                </exclusion>
+            </exclusions>
+		</dependency>
+		
+		<dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-jvm-deps</artifactId>
             <scope>test</scope>
-        </dependency>
+            <version>1.0.3</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>net.masterthought</groupId>
+		    <artifactId>maven-cucumber-reporting</artifactId>
+		    <version>3.8.0</version>
+		</dependency>
+		
+		
     </dependencies>
     <build>
         <plugins>
@@ -51,26 +78,10 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
-             
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.20.1</version>
-                <configuration>
-                    <excludes>
-                        <exclude>**/spec/*Test.java</exclude>
-                    </excludes>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>test</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-         
-            <plugin>
+ <!-- ========================== Cucumber plugin runners ========================== -->    
+
+ 
+     <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-failsafe-plugin</artifactId>
                 <version>2.20.1</version>
@@ -78,15 +89,11 @@
                     <systemPropertyVariables>
                         <cucumber.output.dir>target/cucumber</cucumber.output.dir>
                     </systemPropertyVariables>
-                    <includes>
-                        <include>**/Parallel*IT.class</include>
-                    </includes>
-                    <excludes>
-                        <exclude>**/test/*Test.java</exclude>
-                    </excludes>
-                    <parallelMavenExecution>true</parallelMavenExecution>
-                    <threadCount>5</threadCount>
-                    <parallel>all</parallel>
+                    <parallel>methods</parallel>
+						<threadCount>5</threadCount>
+						<includes>
+          				  <include>**/Parallel*IT.class</include>
+        				</includes>
                 </configuration>
                 <executions>
                     <execution>
@@ -97,8 +104,9 @@
                     </execution>
                 </executions>
             </plugin>
-           
-           <plugin>
+     
+     
+       <plugin>
                 <groupId>com.github.temyers</groupId>
                 <artifactId>cucumber-jvm-parallel-plugin</artifactId>
                 <version>4.2.0</version>
@@ -110,10 +118,23 @@
                             <goal>generateRunners</goal>
                         </goals>
                         <configuration>
+                        <useTestNG>true</useTestNG>
+                         <mainClass>cucumber.jvm.parallel.ReportMerger</mainClass>
+                    	<arguments>
+                        <argument>target/cucumber-report/</argument>
+						</arguments>
                             <plugins>
                                 <plugin>
-                                    <name>junit</name>
+                                    <name>testng</name>
                                 </plugin>
+                                
+                                <plugin>
+              					<name>json</name>
+              					<extension>json</extension>
+						        <!--Optional output directory. Overrides cucumberOutputDirectory. Usefull when different 
+						            plugins create files with the same extension-->
+						        <outputDirectory>${project.build.directory}/cucumber-parallel/json</outputDirectory>
+          						</plugin> 
                                 <!--<plugin>-->
                                     <!--<name>html</name>-->
                                     <!--<target>target/cucumber-parallel/cucumber.html</target>-->
@@ -137,16 +158,54 @@
                     </execution>
                 </executions>
             </plugin>
-            
+    		
+    		<plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.2.1</version>
+                <executions>
+                    <execution>
+                        <phase>post-integration-test</phase>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <mainClass>com.docker.cucumber.merger.ReportMerger</mainClass>
+                    <arguments>
+                        <argument>${project.build.directory}/cucumber-parallel/json/</argument>
+                    </arguments>
+                </configuration>
+			</plugin>
+<!-- ======================================================================================================== -->      
+
+                 
+    	<plugin>
+                <groupId>net.masterthought</groupId>
+                <artifactId>maven-cucumber-reporting</artifactId>
+                <version>3.8.0</version>
+                <executions>
+                    <execution>
+                        <id>execution</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <projectName>Cucumber-Docker</projectName> 
+                            <outputDirectory>target/cucumber-reports/advanced-reports</outputDirectory>
+                            <cucumberOutput>target/cucumber-parallel/json/report.json</cucumberOutput>
+                            <buildNumber>1</buildNumber>
+                            <parallelTesting>true</parallelTesting>
+                        </configuration>
+                    </execution>
+                </executions>
+			</plugin>    
+	
         </plugins>
     </build>
     <reporting>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-report-plugin</artifactId>
-                <version>2.20.1</version>
-            </plugin>
-        </plugins>
+     
     </reporting>
 </project>

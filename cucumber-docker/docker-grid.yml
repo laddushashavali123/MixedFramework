@@ -1,17 +1,17 @@
-tester:
+chrome_tester:
   build: .
   links:
-    - hub
+  - hub
   environment:
-    HUB_URL: http://hub:4444/wd/hub
-    BROWSER: docker
-    CHECK_IMAGE: "false"
+   HUB_URL: http://hub:4444/wd/hub
+   BROWSER: docker
+   CHECK_IMAGE: "false"
 hub:
-  image: selenium/hub
-  ports:
-    - "4444:4444"
-  environment:
-     - GRID_CLEAN_UP_CYCLE=1000
+   image: selenium/hub
+   ports:
+   - "4444:4444"
+   environment:
+   - GRID_CLEAN_UP_CYCLE=1000
 #firefox:
 #  image: selenium/node-firefox
 #  links:
@@ -19,7 +19,7 @@ hub:
 chrome:
   image: selenium/node-chrome
   links:
-    - hub
+  - hub
   environment:
-    - NODE_MAX_INSTANCES=5
-    - NODE_MAX_SESSION=5
+  - NODE_MAX_INSTANCES=5
+  - NODE_MAX_SESSION=5

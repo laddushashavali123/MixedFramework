@@ -1,14 +1,17 @@
 package com.docker.cucumber.steps;
 
+import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java8.En;
 import pages.LoginPage;
 import pages.SecurePage;
 
+import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 
-import static org.junit.Assert.assertEquals;
+import org.testng.Assert;
+
 
 
 public class LoginMessages extends BaseCucumberTest implements En {
@@ -27,7 +30,7 @@ public class LoginMessages extends BaseCucumberTest implements En {
         tearDown();
     }
 
-
+    
     public LoginMessages() {
 
         When("^I login with a valid username and password$", () -> {
@@ -46,7 +49,7 @@ public class LoginMessages extends BaseCucumberTest implements En {
         });
 
         Then("^I see the message \"([^\"]*)\"$", (String message) -> {
-            assertEquals(message, loginPage.getLoginText().trim());
+            Assert.assertEquals(message, loginPage.getLoginText().trim());
         });
 
     }

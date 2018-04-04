@@ -2,6 +2,11 @@ package com.docker.cucumber.steps;
 
 import com.applitools.eyes.RectangleSize;
 import com.applitools.eyes.selenium.Eyes;
+
+import cucumber.api.CucumberOptions;
+import cucumber.api.testng.AbstractTestNGCucumberTests;
+
+import org.apache.commons.lang3.SystemUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -12,13 +17,17 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
-public class BaseCucumberTest {
+
+
+public class BaseCucumberTest{
 
     private WebDriver driver;
     private Eyes eyes;
-
+    
     public void setup() throws MalformedURLException {
-    	System.setProperty("webdriver.chrome.driver", "driver/chromedriver.exe");
+    	if (SystemUtils.IS_OS_WINDOWS) {
+    		System.setProperty("webdriver.chrome.driver", "driver/chromedriver.exe");
+    	}
         if ((System.getenv("BROWSER") != null && System.getenv("BROWSER").equalsIgnoreCase("docker"))) {
             String hubUrl = System.getenv("HUB_URL") != null ? System.getenv("HUB_URL") : "http://localhost:4444/wd/hub";
             driver = new RemoteWebDriver(new URL(hubUrl), DesiredCapabilities.chrome());
@@ -34,7 +43,9 @@ public class BaseCucumberTest {
             driver = new RemoteWebDriver(new URL("https://" + getEnvKey("BROWSERSTACK_USER") + ":" + getEnvKey("BROWSERSTACK_KEY") + "@hub-cloud.browserstack.com/wd/hub"), desiredCapabilities);
 
         } else {
+        	
             driver = new ChromeDriver(new ChromeOptions().addArguments("headless"));
+        	//driver = new ChromeDriver();
         }
 
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -74,6 +85,5 @@ public class BaseCucumberTest {
             throw new IllegalArgumentException(key + " not set!");
         return System.getenv(key);
     }
-
 
 }

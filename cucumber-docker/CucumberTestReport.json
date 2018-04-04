@@ -1,0 +1,1006 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3041057120,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.before()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Valid Username and Password",
+        "description": "",
+        "id": "login-messages;valid-username-and-password",
+        "after": [
+          {
+            "result": {
+              "duration": 540779788,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 515109112,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I login with a valid username and password",
+            "match": {
+              "location": "LoginMessages.java:36"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 61711310,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I see the message \"You logged into a secure area!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "You logged into a secure area!",
+                  "offset": 19
+                }
+              ],
+              "location": "LoginMessages.java:51"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@ignored"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 2451226941,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.before()"
+            }
+          }
+        ],
+        "line": 9,
+        "name": "Invalid Username",
+        "description": "",
+        "id": "login-messages;invalid-username",
+        "after": [
+          {
+            "result": {
+              "duration": 539309370,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 443542607,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I login with an invalid username",
+            "match": {
+              "location": "LoginMessages.java:40"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 59886127,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I see the message \"Your username is invalid!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Your username is invalid!",
+                  "offset": 19
+                }
+              ],
+              "location": "LoginMessages.java:51"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 8,
+            "name": "@ignored"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 2404170423,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.before()"
+            }
+          }
+        ],
+        "line": 14,
+        "name": "Invalid Password",
+        "description": "",
+        "id": "login-messages;invalid-password",
+        "after": [
+          {
+            "result": {
+              "duration": 539557468,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 385348527,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I login with an invalid password",
+            "match": {
+              "location": "LoginMessages.java:43"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 56029936,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I see the message \"Your password is invalid!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Your password is invalid!",
+                  "offset": 19
+                }
+              ],
+              "location": "LoginMessages.java:51"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 13,
+            "name": "@ignored"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 2337537047,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.before()"
+            }
+          }
+        ],
+        "line": 24,
+        "name": "Login Messages",
+        "description": "",
+        "id": "login-messages;login-messages;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 540696429,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 428710434,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I login with username \"tomsmith\" and password \"SuperSecretPassword!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "tomsmith",
+                  "offset": 23
+                },
+                {
+                  "val": "SuperSecretPassword!",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginMessages.java:47"
+            },
+            "matchedColumns": [
+              1,
+              2
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 57174033,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I see the message \"You logged into a secure area!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "You logged into a secure area!",
+                  "offset": 19
+                }
+              ],
+              "location": "LoginMessages.java:51"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 2360476665,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.before()"
+            }
+          }
+        ],
+        "line": 25,
+        "name": "Login Messages",
+        "description": "",
+        "id": "login-messages;login-messages;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 540814948,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 436492743,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I login with username \"timsmith\" and password \"SuperSecretPassword!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "timsmith",
+                  "offset": 23
+                },
+                {
+                  "val": "SuperSecretPassword!",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginMessages.java:47"
+            },
+            "matchedColumns": [
+              1,
+              2
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 57464403,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I see the message \"Your username is invalid!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Your username is invalid!",
+                  "offset": 19
+                }
+              ],
+              "location": "LoginMessages.java:51"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 2403252696,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.before()"
+            }
+          }
+        ],
+        "line": 26,
+        "name": "Login Messages",
+        "description": "",
+        "id": "login-messages;login-messages;;4",
+        "after": [
+          {
+            "result": {
+              "duration": 538829765,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 416892181,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I login with username \"tomsmith\" and password \"wrong\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "tomsmith",
+                  "offset": 23
+                },
+                {
+                  "val": "wrong",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginMessages.java:47"
+            },
+            "matchedColumns": [
+              1,
+              2
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 54062137,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I see the message \"Your password is invalid!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Your password is invalid!",
+                  "offset": 19
+                }
+              ],
+              "location": "LoginMessages.java:51"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 2397784260,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.before()"
+            }
+          }
+        ],
+        "line": 27,
+        "name": "Login Messages",
+        "description": "",
+        "id": "login-messages;login-messages;;5",
+        "after": [
+          {
+            "result": {
+              "duration": 548337306,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 430222332,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I login with username \"tomsmith\" and password \"SuperSecretPassword!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "tomsmith",
+                  "offset": 23
+                },
+                {
+                  "val": "SuperSecretPassword!",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginMessages.java:47"
+            },
+            "matchedColumns": [
+              1,
+              2
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 57700254,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I see the message \"You logged into a secure area!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "You logged into a secure area!",
+                  "offset": 19
+                }
+              ],
+              "location": "LoginMessages.java:51"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 2380217474,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.before()"
+            }
+          }
+        ],
+        "line": 28,
+        "name": "Login Messages",
+        "description": "",
+        "id": "login-messages;login-messages;;6",
+        "after": [
+          {
+            "result": {
+              "duration": 542542945,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 433231118,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I login with username \"timsmith\" and password \"SuperSecretPassword!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "timsmith",
+                  "offset": 23
+                },
+                {
+                  "val": "SuperSecretPassword!",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginMessages.java:47"
+            },
+            "matchedColumns": [
+              1,
+              2
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 53564360,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I see the message \"Your username is invalid!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Your username is invalid!",
+                  "offset": 19
+                }
+              ],
+              "location": "LoginMessages.java:51"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 2380438312,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.before()"
+            }
+          }
+        ],
+        "line": 29,
+        "name": "Login Messages",
+        "description": "",
+        "id": "login-messages;login-messages;;7",
+        "after": [
+          {
+            "result": {
+              "duration": 544017708,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 394904265,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I login with username \"tomsmith\" and password \"wrong\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "tomsmith",
+                  "offset": 23
+                },
+                {
+                  "val": "wrong",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginMessages.java:47"
+            },
+            "matchedColumns": [
+              1,
+              2
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 58354871,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I see the message \"Your password is invalid!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Your password is invalid!",
+                  "offset": 19
+                }
+              ],
+              "location": "LoginMessages.java:51"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 2380264091,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.before()"
+            }
+          }
+        ],
+        "line": 30,
+        "name": "Login Messages",
+        "description": "",
+        "id": "login-messages;login-messages;;8",
+        "after": [
+          {
+            "result": {
+              "duration": 540156776,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 449090056,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I login with username \"tomsmith\" and password \"SuperSecretPassword!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "tomsmith",
+                  "offset": 23
+                },
+                {
+                  "val": "SuperSecretPassword!",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginMessages.java:47"
+            },
+            "matchedColumns": [
+              1,
+              2
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 53740162,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I see the message \"You logged into a secure area!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "You logged into a secure area!",
+                  "offset": 19
+                }
+              ],
+              "location": "LoginMessages.java:51"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 2424085849,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.before()"
+            }
+          }
+        ],
+        "line": 31,
+        "name": "Login Messages",
+        "description": "",
+        "id": "login-messages;login-messages;;9",
+        "after": [
+          {
+            "result": {
+              "duration": 538795790,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 418171389,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I login with username \"timsmith\" and password \"SuperSecretPassword!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "timsmith",
+                  "offset": 23
+                },
+                {
+                  "val": "SuperSecretPassword!",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginMessages.java:47"
+            },
+            "matchedColumns": [
+              1,
+              2
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 54521988,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I see the message \"Your username is invalid!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Your username is invalid!",
+                  "offset": 19
+                }
+              ],
+              "location": "LoginMessages.java:51"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 2515329556,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.before()"
+            }
+          }
+        ],
+        "line": 32,
+        "name": "Login Messages",
+        "description": "",
+        "id": "login-messages;login-messages;;10",
+        "after": [
+          {
+            "result": {
+              "duration": 540483492,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 425350439,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I login with username \"tomsmith\" and password \"wrong\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "tomsmith",
+                  "offset": 23
+                },
+                {
+                  "val": "wrong",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginMessages.java:47"
+            },
+            "matchedColumns": [
+              1,
+              2
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 54405049,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I see the message \"Your password is invalid!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Your password is invalid!",
+                  "offset": 19
+                }
+              ],
+              "location": "LoginMessages.java:51"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 2430813739,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.before()"
+            }
+          }
+        ],
+        "line": 33,
+        "name": "Login Messages",
+        "description": "",
+        "id": "login-messages;login-messages;;11",
+        "after": [
+          {
+            "result": {
+              "duration": 540259887,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginMessages.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 458101005,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I login with username \"tomsmith\" and password \"SuperSecretPassword!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "tomsmith",
+                  "offset": 23
+                },
+                {
+                  "val": "SuperSecretPassword!",
+                  "offset": 47
+                }
+              ],
+              "location": "LoginMessages.java:47"
+            },
+            "matchedColumns": [
+              1,
+              2
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 54497099,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I see the message \"You logged into a secure area!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "You logged into a secure area!",
+                  "offset": 19
+                }
+              ],
+              "location": "LoginMessages.java:51"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Login Messages",
+    "description": "",
+    "id": "login-messages",
+    "keyword": "Feature",
+    "uri": "LoginMessages.feature"
+  }
+]

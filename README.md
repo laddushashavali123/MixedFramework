@@ -19,6 +19,7 @@ Example of cucumber framework to run in docker container in chrome and selenium 
 * mvn clean verify - will run feature file in specified amount of Threads;
 * sh run_docker.sh chrome - will run chrome in headless in Docker container;
 * sh run_docker.sh grid - will run on registered chrome node in Docker container;
+
 #ToDO:
 fix ReporterMerger class for parsable to this plugin:
 

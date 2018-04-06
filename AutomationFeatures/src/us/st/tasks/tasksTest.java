@@ -27,6 +27,8 @@ public class tasksTest {
 	public void test() {
 		//int[] B = {1,2,5,7,2,3,5};
 		//int[] test={1,2,3,4,4,5,6,7,9,10,11,12};
+		System.out.println(isSubstring("waterbottle", "elttob"));
+		System.out.println(isSubstring("waterbottle", "elttobee"));
 		System.out.println("=======================");
 		System.out.println(parseString("Some31203-12:{#()@() text"));
 		System.out.println("=======================");
@@ -816,27 +818,31 @@ static int countDuplicatesss(int[] numbers) {
 		Lets say I have a string "waterbottle" and I want to check if my second string is substring
 		of the first "ttlewa"? -> True
 	*/
-	public boolean isSubstring(String str1, String str2){
-	    char[] str1C=str1.toCharArray();
-	    char[] str2C=str2.toCharArray();
+	public boolean isSubstring(String Initstr, String Substr){
+		
+	    char[] InitArr=Initstr.toLowerCase().replace(" ", "").toCharArray();
+	    char[] SubArr=Substr.toLowerCase().replace(" ", "").toCharArray();
 	    
-	    for(int i=0; i<str2C.length; i++){
-	        if (str1.contains(String.valueOf(str1C[i]))){
+	    for(int i=0; i<SubArr.length;){
+	        if (Initstr.contains(String.valueOf(SubArr[i]))){
 	        
-	            for(int j=0; j<str1C.length; j++){
-	                
-	            	if(str2C[j]==str1C[i]){
-	                   str1C=ArrayUtils.removeElement(str1C, str1C[i]);
+	            for(int j=i; j<InitArr.length; j++){ 
+	            	if(InitArr[j]==SubArr[i]){
+	            		SubArr=ArrayUtils.removeElement(SubArr, SubArr[i]);
+	            		InitArr=ArrayUtils.removeElement(InitArr, InitArr[j]);
+	            		break;
 	                }
+	            	if(InitArr[j]!=SubArr[i] && j==InitArr.length-1){
+	            		return false;
+	            	}
 	            }
 	        
 	        } else {
-	        
+	        	System.out.println("Hello");
 	            return false;
 	        }
 	    }
 	    return true;
-
 	}
 
 /*

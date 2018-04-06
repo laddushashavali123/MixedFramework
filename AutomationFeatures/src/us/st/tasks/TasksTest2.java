@@ -9,7 +9,6 @@ import java.util.Set;
 
 public class TasksTest2 {
 	
-	
 	Map<String, Integer> globMap = new HashMap<String, Integer>();
 	
 	public static void main(String[] args) {

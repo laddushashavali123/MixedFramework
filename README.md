@@ -14,8 +14,18 @@ Project that contains improvements of framework:
 * us.st.java_features - features from Java core. Code samples taken from Book "Thinking in Java" Bruce Eckel. All related to Java SE + features of jdk 8
 * us.st.patterns - Java programing patterns
 * us.st.tasks - solutions to some HackerRank and TopTall tests
-# 4) BDD: 
-Comparison JBehave and Cucumber due to report and code style
+# 4) docker-cucumber framework: 
+Example of cucumber framework to run in docker container in chrome and selenium grid:
+* mvn clean verify - will run feature file in specified amount of Threads;
+* sh run_docker.sh chrome - will run chrome in headless in Docker container;
+* sh run_docker.sh grid - will run on registered chrome node in Docker container;
+
+*Report folder-location:* cucumber-docker/target/
+
+**#ToDO:**
+fix ReporterMerger class for parsable to this plugin:
+
+https://github.com/damianszczepanik/cucumber-reporting
 # 5) API-automation:
 Examples of automation of api testing using JSON parser and HttpClientBuilder:
 * us.st.API - automation of http get and set requests. Parsing JSON Responses using Jackson and GSON parsers. Added example of parsing response from:

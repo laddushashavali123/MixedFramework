@@ -48,7 +48,6 @@ public final class LambdaExpression{
 			sum= sum+ el;
 		});
 		
-		
 		return sum;
 	}
 	

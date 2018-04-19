@@ -3,7 +3,7 @@ package us.st.java_features;
 import java.awt.List;
 import java.util.AbstractList;
 
-public class ImmutableObject {
+public final class ImmutableObject {
 
 	private final int x;
 	private final int y;
@@ -21,7 +21,7 @@ public class ImmutableObject {
 	public static void main(String[] args){
 		
 		String first = "first";
-
+		
 		System.out.println(first.hashCode());
 		// prints something
 

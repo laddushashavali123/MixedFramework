@@ -22,5 +22,6 @@
 	<classpathentry kind="lib" path="C:/Users/yarkh/Desktop/Selenium_tests/AutomationFeatures/libs/xmlbeans-2.4.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/yarkh/Desktop/Selenium_tests/AutomationFeatures/libs/gson-2.8.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/yarkh/Desktop/Selenium_tests/AutomationFeatures/libs/rest-assured-3.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/yarkh/Desktop/Selenium_tests/AutomationFeatures/libs/json-simple-1.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

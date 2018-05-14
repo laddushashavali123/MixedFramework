@@ -47,7 +47,7 @@ public class HashMapImpl {
 		Dog d2 = new Dog("black");
 		Dog d3 = new Dog("white");
 		Dog d4 = new Dog("white");
-
+		
 		hashMap.put(d1, 10);
 		hashMap.put(d2, 15);
 		hashMap.put(d3, 5);

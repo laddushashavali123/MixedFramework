@@ -25,7 +25,7 @@ public class PalindromeTest {
 		Assert.assertTrue(istPalindrom("reviver"));
 	}
 	public static boolean istPalindrom(String str){
-		char[] word = str.toCharArray();
+		char[] word = str.replaceAll("\\s+","").toCharArray();
 	    int i1 = 0;
 	    int i2 = word.length - 1;
 	    while (i2 > i1) {

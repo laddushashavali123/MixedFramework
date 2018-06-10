@@ -13,6 +13,7 @@ Project that contains improvements of framework:
 # 3) Java Core features
 * us.st.java_features - features from Java core. Code samples taken from Book "Thinking in Java" Bruce Eckel. All related to Java SE + features of jdk 8
 * us.st.patterns - Java programing patterns
+* us.st.datastructure - implementation of Queue, Stack, List, And Hash
 * us.st.tasks - solutions to some HackerRank and TopTall tests
 # 4) docker-cucumber framework: 
 Example of cucumber framework to run in docker container in chrome and selenium grid:

@@ -81,8 +81,6 @@ public class StackClass implements Stack {
 	        */
 	        return maxItem;
 	    }
-	     
-	   
 
 	public static void main(String[] args) {
 

@@ -1,6 +1,6 @@
 package us.st.tasks;
 
-import java.util.AbstractCollection;;
+import java.util.AbstractCollection;
 import java.util.Collections;
 import java.util.Scanner;
 import java.util.Stack;
@@ -50,6 +50,55 @@ public class BracketChecker {
         
         
 	}
+	
+	static String[] braces(String[] values) {
+        
+        String[] result = new String[values.length];
+        
+        for (int i=0; i<values.length;i++){
+	            
+            Stack<Character> stack = new Stack<Character>();
+            boolean isBalanced = true;
+            char[] bracketsArr=values[i].toCharArray();
+            
+            for (int j=0;j<bracketsArr.length; j++){
+        	char bracket = 0;
+        	if(bracketsArr[j]=='{' || bracketsArr[j]=='[' || bracketsArr[j]=='('){
+        		
+        		stack.push(bracketsArr[i]);
+        		continue;
+        	}
+        	if(bracketsArr[j]=='}'){
+        		bracket='{';
+        	}else if(bracketsArr[j]==']'){
+        		bracket='[';
+        	}else if(bracketsArr[j]==')'){
+        		bracket='(';
+        	}
+        	if(stack.isEmpty()){
+            	isBalanced=false;
+            	break;
+            }
+        	if(stack.peek()==bracket){
+        		stack.pop();
+        	}else{
+        		isBalanced=false;
+            	break;
+        	}
+        }
+	            if(isBalanced){
+	                
+	                result[i]=new String("Yes");
+	            } else {
+	                
+	                result[i]=new String("No");
+	            }
+	        }
+	        return result;
+        
+        
+            
+    }
 	
 
 }

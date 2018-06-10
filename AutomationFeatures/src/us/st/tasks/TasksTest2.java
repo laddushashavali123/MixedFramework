@@ -164,6 +164,19 @@ public class TasksTest2 {
 		
 		
     }
+	
+	/* Problem Name is &&& Is Power of 10 &&& PLEASE DO NOT REMOVE THIS LINE. */
+	/**
+	 * Instructions to candidate.
+	 *  1) Run this code in the REPL to observe its behaviour. The
+	 *     execution entry point is main().
+	 *  2) Consider adding some additional tests in doTestsPass().
+	 *  3) Implement isPowerOf10() correctly.
+	 *  4) If time permits, some possible follow-ups.
+	 */
+
+
+	
 
 }
 

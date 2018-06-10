@@ -38,5 +38,6 @@ class FoodFactory {
             default : return new Food();
         }     
     }
+    final class C{}
 }
 

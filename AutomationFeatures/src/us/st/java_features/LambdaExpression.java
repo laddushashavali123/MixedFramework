@@ -60,6 +60,7 @@ public final class LambdaExpression{
 	public static int CountSum(List<Integer> arr){
 		AtomicInteger sum=new AtomicInteger();
 		
+		
 		arr.stream().forEach((el) ->{
 			sum.addAndGet(el);
 		});

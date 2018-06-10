@@ -7,10 +7,12 @@ public final class ImmutableObject {
 
 	private final int x;
 	private final int y;
+	private final String o;
 
-	ImmutableObject(int x, int y) {
+	ImmutableObject(int x, int y, String o) {
 	        this.x = x;
 	        this.y = y;
+	        this.o=o;
 	}
 	
 	ImmutableObject p = new ImmutableObject(5, 10);

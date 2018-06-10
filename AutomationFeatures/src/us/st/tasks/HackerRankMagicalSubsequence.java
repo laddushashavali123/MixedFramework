@@ -9,7 +9,7 @@ public class HackerRankMagicalSubsequence {
 	 public static void main(String[] args) throws Exception {
 		 
 		 System.out.println(longestSubsequence("aeiaaioooaauuaeiou"));
-		 System.out.println(maxDifference(new int[]{7, 9, 5, 6, 3, 2}));
+		 System.out.println(maxDifference(new int[]{100,99,100,101,80}));
 	 }
 	 /*
 	  * A string, s, consisting of one or more of the following letters: a, e, i, o, and u.

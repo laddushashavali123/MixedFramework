@@ -70,6 +70,7 @@ public class tasksTest {
 	//function #1 second implementation
 	public static String parseString(String input){
 		ArrayList<String> inputList=new ArrayList<String>();
+		
 		int index =0;
 		while (index<input.length()){
 			inputList.add(input.substring(index, Math.min(input.length(), index + 1)));
@@ -93,6 +94,7 @@ public class tasksTest {
 		ArrayList result = new ArrayList<String>();
 		String[] inputList = input.split(",");
 		Map<String, Integer> items = new HashMap<String, Integer>(); 
+		items.get(key)
 		for (int i = 0; i<inputList.length; i++){
 			if (!items.containsKey(inputList[i])){
 			items.put(inputList[i], 1);
@@ -249,10 +251,31 @@ public class tasksTest {
 	}
 	
 	public static int countDuplicates(int[] numbers) {
-		return 0;
-
-
-    }
+		
+		int count =0;
+		Map<String, Integer> nums = new HashMap<String, Integer>();
+		for (int i=0; i<numbers.length; i++){
+            String key =String.valueOf(numbers[i]);
+            if(nums.containsKey(key)){
+                
+                int value=nums.get(key);
+                nums.replace(key, value+1);
+            }else{
+            	nums.put(key, 1);	
+            }
+		}
+        for (String key: nums.keySet()){
+                
+                if (nums.get(key)>1){
+                    count++;
+                    continue;
+                }
+                
+            }
+            return count;
+	
+	
+	}
 	//method #9 remove duplicates from given list
 			/*
 			 *  "xyz", "abc", "xyz", "abc", "xyz"
@@ -460,6 +483,7 @@ static int countDuplicatesss(int[] numbers) {
 			             
 			         }
 			    }
+			    System.gc();
 			    return result;
 
 		}	
@@ -888,8 +912,13 @@ static int countDuplicatesss(int[] numbers) {
 	public static void main(String[] args) {
 		
         BufferedReader br = null;
-        List someList = new ArrayList(findAjustendNum(99));
-        System.out.println(findWrongElements(new int[]{1,2,3,4,4,5,6,7,9,10,11,12}));
+        //List someList = new ArrayList(findAjustendNum(99));
+        System.out.println("===================");
+        System.out.println(countDuplicates(new int[]{8,1,3,1,4,5,6,3,2}));
+        System.out.println("===================");
+        
+        
+        //System.out.println(findWrongElements(new int[]{1,2,3,4,4,5,6,7,9,10,11,12}));
        
         //System.out.println(countDuplicatess(new int[]{12,5,4,3,2,4,4,4,444,4,4,4,4}));
         /*
@@ -919,11 +948,12 @@ static int countDuplicatesss(int[] numbers) {
 
                 System.out.print("Enter IP : ");
                 String input = br.readLine();
-
+               input.length()
                 if ("q".equals(input)) {
                     System.out.println("Exit!");
                     System.exit(0);
                 }
+               System.out.println(new Integer((int) Math.floor(3/10)));
                 
                 	System.out.println("result : " + parseIP(input));
                 	System.out.println("-----------\n");

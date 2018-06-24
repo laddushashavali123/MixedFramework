@@ -8,6 +8,7 @@ public class HackerRankMagicalSubsequence {
 	
 	 public static void main(String[] args) throws Exception {
 		 
+		 System.out.println(getMinOperations(10));
 		 System.out.println(longestSubsequence("aeiaaioooaauuaeiou"));
 		 System.out.println(maxDifference(new int[]{100,99,100,101,80}));
 	 }
@@ -126,6 +127,26 @@ public class HackerRankMagicalSubsequence {
 		 }
 		 
 		 return max_diff;
+	 }
+	 
+	 /*
+	  * You have two operations: add by one and multiply by 2. 
+	  * Find  the minimum number of operations to get from 0 to any particular integer.
+	  * 
+	  */
+	 static int getMinOperations(int num){
+		 int count=0;
+		 int value=0;
+		 while(num!=1){
+			 if(num%2==0){
+				 num=num/2;
+				 count++;
+			 }else{
+				num--;
+				count++;
+			 }
+		 }
+		 return count;
 	 }
 	 
 	 

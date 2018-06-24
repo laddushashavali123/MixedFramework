@@ -46,6 +46,7 @@ public final class LambdaExpression{
 		
 		nums.stream().forEach((el) ->{
 			sum= sum+ el;
+			
 		});
 		
 		return sum;

@@ -2,8 +2,11 @@ package us.st.tasks;
 
 
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.Map;
 import java.util.Set;
 
@@ -164,6 +167,37 @@ public class TasksTest2 {
 		
 		
     }
+	
+static int reductionArray(int[] num) {
+		   
+		   Arrays.sort(num);
+		   int cost = 0;
+		   LinkedList<Integer> ll = new LinkedList<Integer>();
+		   for (int i : num)
+		   {
+			   ll.add(i);
+		   }
+		   
+		   for(int i=0; i<ll.size()-1; ) {
+			   int el=ll.get(i)+ll.get(i+1);
+			   ll.set(i+1, el);
+			   cost=cost+el;
+			   ll.remove(i);
+			   Collections.sort(ll);
+		   }
+		return cost;
+		   
+		      /*  
+	        Arrays.sort(num);
+			   int cost = 0;
+			   for(int i=0; i<num.length-1; i++) {
+				   num[i+1] = num[i] + num[i+1];
+				   cost = cost + num[i+1];
+			   }
+			return cost;
+	*/
+
+}
 	
 	/* Problem Name is &&& Is Power of 10 &&& PLEASE DO NOT REMOVE THIS LINE. */
 	/**

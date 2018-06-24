@@ -17,7 +17,6 @@ public class FoodFactory {
 		//System.out.println("Our superclass is: " + food1.getClass().getSuperclass().getSimpleName()); 
 		food1.serveFood(); 
 		food2.serveFood();
-
 	}
 }
 
@@ -72,8 +71,5 @@ public Food getFood(String name){
 			
 		}
 		return type;
-	}
-	
-	
-	
+	}	
 }

@@ -24,7 +24,15 @@ enum Dificulty{
 
 class Book{
 	
+	int amountofPages;
 	
+	Book(int amountofPages){
+		
+	}
+	Book(String type, int amountOfPages){
+		
+		
+	}
 	boolean checkedOut = false;
 	Book(boolean checkout){
 		this.checkedOut= checkout;
@@ -54,6 +62,21 @@ class Book{
 				e.printStackTrace();
 			} //call base class version
 		}
+	}
+	
+}
+
+class myBook extends Book{
+
+	myBook(String type, int amountOfPages) {
+		//super(type, amountOfPages);
+		super(amountOfPages);
+		// TODO Auto-generated constructor stub
+	}
+	
+	myBook(boolean type) {
+		super(type);
+		// TODO Auto-generated constructor stub
 	}
 	
 }
